@@ -13,12 +13,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('dil-sogus', 'Cold tongue with lemon', 'Dil söğüş',
  'Veal tongue simmered long, peeled, sliced thin and served cold with lemon and olive oil. Old-school Istanbul, and softer than anyone expects.',
- NULL, NULL, NULL, '🥩',
+ '/img/dil-sogus.webp', '/img/dil-sogus-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥩',
  'https://myhomediaryinturkey.blogspot.com/2021/09/turkish-food-recipe-dil-sogus-boiled.html', 'Citra''s Home Diary', 90, 5, 6),
 
 ('yaprak-ciger', 'Thin-sliced fried liver', 'Yaprak ciğer',
  'Calf''s liver cut leaf-thin, floured and fried for seconds only, with raw onion and sumac on top. Cook it a minute too long and you have made an eraser.',
- NULL, NULL, NULL, '🔥',
+ '/img/yaprak-ciger.webp', '/img/yaprak-ciger-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🔥',
  'https://yemek.com/tarif/yaprak-ciger/', 'Yemek.com', 20, 5, 4),
 
 ('pastirma-sucuk', 'Pastırma & sucuk plate', 'Pastırma sucuk tabağı',
@@ -28,7 +28,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('kokorec', 'Kokoreç', 'Kokoreç',
  'Lamb intestines wound tight around sweetbreads and grilled over charcoal, then chopped with oregano and pepper. Turkey''s most argued-about street food and not a thing to attempt casually.',
- NULL, NULL, NULL, '🔥',
+ '/img/kokorec.webp', '/img/kokorec-thumb.webp', 'Flickr (William Neuheisel), CC BY 2.0', '🔥',
  'https://zaffaron.com/recipe/kokorec-turkish-grilled-seasoned-lamb-intestines-sandwich', 'Zaffaron', 120, 6, 6),
 
 ('sac-kavurma', 'Lamb seared on the griddle', 'Sac kavurma',

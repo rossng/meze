@@ -23,7 +23,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('kasarli-mantar', 'Mushrooms baked with kaşar', 'Kaşarlı mantar',
  'Mushrooms cooked in butter and garlic, buried under kaşar and put under the grill until it bubbles. Nobody''s grandmother''s recipe, and always finished first.',
- NULL, NULL, NULL, '🍄',
+ '/img/kasarli-mantar.webp', '/img/kasarli-mantar-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🍄',
  'https://www.nefisyemektarifleri.com/firinda-kasarli-mantar-tarifi/', 'Nefis Yemek Tarifleri', 25, 5, 4),
 
 ('sucuk-izgara', 'Grilled sucuk', 'Sucuk ızgara',
@@ -33,17 +33,17 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('pastirmali-yumurta', 'Pastırma with eggs', 'Pastırmalı yumurta',
  'Pastırma crisped in a copper pan and eggs broken over the top, cooked until just set. Breakfast food that behaves perfectly well at midnight.',
- NULL, NULL, NULL, '🍳',
+ '/img/pastirmali-yumurta.webp', '/img/pastirmali-yumurta-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🍳',
  'https://www.turkishfoodandrecipes.com/2013/04/eggs-with-pastrami-pastirmali-yumurta.html', 'Turkish Food & Recipes', 15, 4, 4),
 
 ('muska-boregi', 'Triangle börek', 'Muska böreği',
  'Yufka folded into little triangles around cheese and parsley, then fried. Sigara böreği''s geometrically superior sibling — the folding is a whole argument.',
- NULL, NULL, NULL, '🔺',
+ '/img/muska-boregi.webp', '/img/muska-boregi-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🔺',
  'https://ozlemsturkishtable.com/2014/03/spinach-and-cheese-filled-filo-pastry-triangles-muska-boregi/', 'Ozlem''s Turkish Table', 35, 6, 4),
 
 ('ispanakli-borek', 'Spinach börek', 'Ispanaklı börek',
  'Spinach and onion cooked down with cheese and rolled in yufka, baked or fried in coils. Cut into fingers so everyone can take one without committing.',
- NULL, NULL, NULL, '🥬',
+ '/img/ispanakli-borek.webp', '/img/ispanakli-borek-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥬',
  'https://turkishstylecooking.com/spinach-borek.html', 'Turkish Style Cooking', 45, 8, 6),
 
 ('cokelekli-borek', 'Curd cheese börek', 'Çökelekli börek',
@@ -58,12 +58,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('kizarmis-peynir', 'Fried cheese', 'Kızarmış peynir',
  'Thick fingers of cheese floured, egged and fried until the crust goes and the middle gives. Squeeze lemon on while it is still too hot to eat, which it always is.',
- NULL, NULL, NULL, '🧀',
+ '/img/kizarmis-peynir.webp', '/img/kizarmis-peynir-thumb.webp', 'Wikimedia Commons (Andy Li), CC0', '🧀',
  'https://www.nefisyemektarifleri.com/kizartma-kasar-peyniri/', 'Nefis Yemek Tarifleri', 15, 5, 4),
 
 ('hellim-izgara', 'Grilled hellim with pomegranate', 'Hellim ızgara',
  'Halloumi griddled until it is striped and squeaking, then hit with pomegranate molasses and wild thyme. Cypriot by birth, thoroughly naturalised by now.',
- NULL, NULL, NULL, '🧀',
+ '/img/hellim-izgara.webp', '/img/hellim-izgara-thumb.webp', 'Wikimedia Commons, CC BY 3.0', '🧀',
  'https://www.spicekitchenuk.com/blogs/recipes/grilled-halloumi-with-pomegranate-glaze', 'Spice Kitchen UK', 10, 5, 4),
 
 ('mihlama', 'Cheese & cornmeal fondue', 'Mıhlama (kuymak)',

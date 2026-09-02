@@ -157,5 +157,104 @@
   },
   "meyve-tabagi": {
     "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Tropical_Fruit_Platter.JPG"
+  },
+  "pirasa": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Zeytinya%C4%9Fl%C4%B1_p%C4%B1rasa.jpg"
+  },
+  "kereviz": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Zeytinya%C4%9Fl%C4%B1_kereviz.jpg"
+  },
+  "bamya": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Zeytinya%C4%9Fl%C4%B1_bamya.jpg"
+  },
+  "yogurtlu-kabak": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Kabak_kalye_ve_yogurt.jpg"
+  },
+  "cokelek-ezmesi": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%BCrk_%C3%A7%C3%B6kelek.jpg"
+  },
+  "kozlenmis-biber": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_biber_mezesi.jpg"
+  },
+  "patates-salatasi": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Patates_Salatas%C4%B1.jpg"
+  },
+  "peynir-tabagi": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkish_cheeses.jpg"
+  },
+  "otlu-peynir": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Otlu_peynir_from_Van.jpg"
+  },
+  "tulum-peyniri": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Tulum_peyniri.jpg"
+  },
+  "zeytin-tabagi": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Black_%26_Green_Olive.JPG"
+  },
+  "ekmek": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Bread_basket.jpg"
+  },
+  "hamsi-tava": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamsi_tava_-_roka.jpg"
+  },
+  "patlican-kizartma": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Fried_Eggplant.jpg"
+  },
+  "dil-sogus": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%B6%C4%9F%C3%BC%C5%9F_dil.jpg"
+  },
+  "yaprak-ciger": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Fried_liver_a_la_turca_(Ci%C4%9Fer_tava).jpg"
+  },
+  "karides-salatasi": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Shrimp_salad_from_Turkey.jpg"
+  },
+  "kasarli-mantar": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ka%C5%9Farl%C4%B1_mantar.jpg"
+  },
+  "pastirmali-yumurta": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Past%C4%B1rmali_yumurta.jpg"
+  },
+  "muska-boregi": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Muska_B%C3%B6rek.jpg"
+  },
+  "ispanakli-borek": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ispanakl%C4%B1_tepsi_b%C3%B6re%C4%9Fi.jpg"
+  },
+  "sardalya-tava": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Sardalya_tava.jpg"
+  },
+  "kokorec": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Kokore%C3%A7_(6377122133).jpg"
+  },
+  "hellim-izgara": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Grilled_Halloumi.jpg"
+  },
+  "kizarmis-peynir": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Deep_Fried_Halloumi_-_Sheppy's_2025-07-27.jpg"
+  },
+  "incirli-peynir": {
+    "source": "https://live.staticflickr.com/8015/7481084948_2d9f6bd8b5_b.jpg"
+  },
+  "kuru-domates": {
+    "source": "https://live.staticflickr.com/3202/2821840036_dc3d7a7a8e_o.jpg"
+  },
+  "kavun-peynir": {
+    "source": "https://live.staticflickr.com/2255/2250588188_d207fcd0ee_b.jpg"
+  },
+  "cevizli-incir-dolmasi": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Cevizli_incir.jpg"
+  },
+  "kayisi-hosafi": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Домашен_компот_од_кајсии.jpg"
+  },
+  "fatus": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Arabic_Fattoush_Salad_(24934823760).png"
+  },
+  "acuka": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Antakya_usulü_Muhammara.jpg"
+  },
+  "borani": {
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ispanaklı_boranı.JPG"
   }
 }

@@ -51,6 +51,7 @@
  "ing":[[300,"g","fine bulgur",null],[2,"tbsp","pepper paste (biber salçası)",null],[1,"bunch","spring onions",null],[1,"bunch","parsley",null],[2,"tbsp","pomegranate molasses",null],[4,"tbsp","olive oil",null],[1,null,"lemon","juiced"],[1,"tsp","pul biber (chilli flakes)",null]]},
 
 {"id":"hamsi-tava","name":"Fried Black Sea anchovies","tr":"Hamsi tava","file":"08-seafood","emoji":"🐟","serves":4,"prep":25,"count":5,"recipe":"https://www.giverecipe.com/how-to-fry-anchovies/","recipeSource":"Give Recipe",
+ "photo":"/img/hamsi-tava.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Fresh anchovies rolled in coarse cornmeal and fried in a pan, fanned out like a wheel. Eaten head, tail and all, with raw onion and lemon.",
  "tags":["origin:blacksea","diet:seafood","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:moderate","ingredients:few","main:seafood","temp:hot","theme:fried","theme:arasicak","theme:street"],
  "ing":[[600,"g","fresh anchovies (hamsi)","cleaned"],[150,"g","coarse cornmeal",null],[300,"ml","sunflower oil","for frying"],[1,null,"lemon",null],[1,null,"red onion","to serve"]]},
@@ -61,6 +62,7 @@
  "ing":[[3,null,"large aubergines","charred over a flame"],[3,null,"long green peppers","charred"],[2,"clove","garlic",null],[4,"tbsp","olive oil",null],[1,null,"lemon","juiced"]]},
 
 {"id":"patlican-kizartma","name":"Fried aubergine with yoghurt","tr":"Patlıcan kızartma","file":"02-aubergine","emoji":"🍆","serves":4,"prep":35,"count":7,"recipe":"https://www.nefisyemektarifleri.com/yogurtlu-patlican-kizartmasi-4571443/","recipeSource":"Nefis Yemek Tarifleri",
+ "photo":"/img/patlican-kizartma.webp","credit":"Wikimedia Commons, public domain",
  "desc":"Aubergine slices fried until collapsing, layered with garlic yoghurt and a quick tomato sauce. The smell of this is the smell of a Turkish summer kitchen.",
  "tags":["origin:istanbul","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:easy","time:moderate","ingredients:some","main:aubergine","temp:hot","theme:fried","theme:classic","theme:crowd"],
  "ing":[[3,null,"aubergines","sliced and salted"],[300,"g","plain yoghurt",null],[2,"clove","garlic",null],[3,null,"tomatoes","grated"],[2,null,"green peppers",null],[300,"ml","sunflower oil","for frying"],[1,"tsp","dried mint",null]]},
@@ -72,11 +74,13 @@
  "ing":[[2,null,"lamb's brains","soaked and cleaned"],[2,"tbsp","white vinegar","for the poaching water"],[1,null,"lemon","juiced"],[4,"tbsp","olive oil",null],[1,"bunch","parsley",null]]},
 
 {"id":"dil-sogus","name":"Cold tongue with lemon","tr":"Dil söğüş","file":"09-meat","emoji":"🥩","serves":6,"prep":90,"count":5,"recipe":"https://myhomediaryinturkey.blogspot.com/2021/09/turkish-food-recipe-dil-sogus-boiled.html","recipeSource":"Citra's Home Diary",
+ "photo":"/img/dil-sogus.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Veal tongue simmered long, peeled, sliced thin and served cold with lemon and olive oil. Old-school Istanbul, and softer than anyone expects.",
  "tags":["origin:istanbul","diet:meat","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:medium","time:slow","ingredients:few","main:meat","temp:cold","theme:adventurous","theme:make-ahead"],
  "ing":[[1,null,"veal or lamb tongue",null],[1,null,"onion","for the pot"],[1,null,"bay leaf",null],[1,null,"lemon","juiced"],[4,"tbsp","olive oil",null]]},
 
 {"id":"yaprak-ciger","name":"Thin-sliced fried liver","tr":"Yaprak ciğer","file":"09-meat","emoji":"🔥","serves":4,"prep":20,"count":5,"recipe":"https://yemek.com/tarif/yaprak-ciger/","recipeSource":"Yemek.com",
+ "photo":"/img/yaprak-ciger.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Calf's liver cut leaf-thin, floured and fried for seconds only, with raw onion and sumac on top. Cook it a minute too long and you have made an eraser.",
  "tags":["origin:thrace","diet:meat","diet:dairy-free","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:meat","temp:hot","theme:fried","theme:arasicak","theme:adventurous"],
  "ing":[[500,"g","calf's liver","sliced very thin"],[100,"g","plain flour",null],[300,"ml","sunflower oil","for frying"],[1,null,"red onion","sliced, with sumac"],[1,"tsp","pul biber (chilli flakes)",null]]},
@@ -131,6 +135,7 @@
  "ing":[[600,"g","shelled mussels",null],[2,null,"potatoes","diced"],[2,null,"carrots",null],[2,null,"onions",null],[3,"clove","garlic",null],[2,null,"tomatoes","grated"],[100,"ml","olive oil",null],[1,"tsp","sugar",null],[1,"bunch","parsley",null]]},
 
 {"id":"karides-salatasi","name":"Prawn salad","tr":"Karides salatası","file":"08-seafood","emoji":"🦐","serves":4,"prep":20,"count":6,"recipe":"https://www.lezzet.com.tr/yemek-tarifleri/et-yemekleri/balik-yemekleri/karides-salatasi","recipeSource":"Lezzet.com.tr",
+ "photo":"/img/karides-salatasi.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Poached prawns folded through a lemony dressing with dill and a little yoghurt. The polite end of the seafood mezes.",
  "tags":["origin:istanbul","diet:seafood","diet:gluten-free","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:seafood","temp:cold","theme:salad","theme:seaside"],
  "ing":[[400,"g","prawns","peeled and poached"],[3,"tbsp","thick yoghurt or mayonnaise",null],[1,null,"lemon","juiced"],[1,"bunch","dill",null],[1,"stick","celery","finely diced"],[3,"tbsp","olive oil",null]]},
@@ -146,6 +151,7 @@
  "ing":[[500,"g","prawns","peeled"],[50,"g","butter",null],[4,"clove","garlic",null],[1,"tsp","pul biber (chilli flakes)",null],[1,null,"lemon",null],[1,"bunch","parsley",null]]},
 
 {"id":"kasarli-mantar","name":"Mushrooms baked with kaşar","tr":"Kaşarlı mantar","file":"07-arasicak","emoji":"🍄","serves":4,"prep":25,"count":5,"recipe":"https://www.nefisyemektarifleri.com/firinda-kasarli-mantar-tarifi/","recipeSource":"Nefis Yemek Tarifleri",
+ "photo":"/img/kasarli-mantar.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Mushrooms cooked in butter and garlic, buried under kaşar and put under the grill until it bubbles. Nobody's grandmother's recipe, and always finished first.",
  "tags":["origin:istanbul","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:easy","time:moderate","ingredients:few","main:mushroom","temp:hot","theme:arasicak","theme:crowd"],
  "ing":[[400,"g","mushrooms","sliced"],[200,"g","kaşar cheese","grated"],[30,"g","butter",null],[2,"clove","garlic",null],[1,"bunch","parsley",null]]},
@@ -156,16 +162,19 @@
  "ing":[[300,"g","sucuk","sliced thick"],[1,null,"lemon","optional"]]},
 
 {"id":"pastirmali-yumurta","name":"Pastırma with eggs","tr":"Pastırmalı yumurta","file":"07-arasicak","emoji":"🍳","serves":4,"prep":15,"count":4,"recipe":"https://www.turkishfoodandrecipes.com/2013/04/eggs-with-pastrami-pastirmali-yumurta.html","recipeSource":"Turkish Food & Recipes",
+ "photo":"/img/pastirmali-yumurta.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Pastırma crisped in a copper pan and eggs broken over the top, cooked until just set. Breakfast food that behaves perfectly well at midnight.",
  "tags":["origin:anatolia","diet:meat","diet:gluten-free","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:egg","temp:hot","theme:arasicak","theme:crowd"],
  "ing":[[100,"g","pastırma","sliced"],[4,null,"eggs",null],[20,"g","butter",null],[1,"tsp","pul biber (chilli flakes)",null]]},
 
 {"id":"muska-boregi","name":"Triangle börek","tr":"Muska böreği","file":"07-arasicak","emoji":"🔺","serves":4,"prep":35,"count":6,"recipe":"https://ozlemsturkishtable.com/2014/03/spinach-and-cheese-filled-filo-pastry-triangles-muska-boregi/","recipeSource":"Ozlem's Turkish Table",
+ "photo":"/img/muska-boregi.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Yufka folded into little triangles around cheese and parsley, then fried. Sigara böreği's geometrically superior sibling — the folding is a whole argument.",
  "tags":["origin:istanbul","diet:vegetarian","diet:nut-free","complexity:medium","time:moderate","ingredients:few","main:cheese","temp:hot","theme:fried","theme:arasicak"],
  "ing":[[6,null,"sheets of yufka",null],[250,"g","white cheese (beyaz peynir)",null],[0.5,"bunch","parsley",null],[1,null,"egg",null],[1,"tsp","pul biber (chilli flakes)",null],[500,"ml","sunflower oil","for frying"]]},
 
 {"id":"ispanakli-borek","name":"Spinach börek","tr":"Ispanaklı börek","file":"07-arasicak","emoji":"🥬","serves":6,"prep":45,"count":8,"recipe":"https://turkishstylecooking.com/spinach-borek.html","recipeSource":"Turkish Style Cooking",
+ "photo":"/img/ispanakli-borek.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Spinach and onion cooked down with cheese and rolled in yufka, baked or fried in coils. Cut into fingers so everyone can take one without committing.",
  "tags":["origin:thrace","diet:vegetarian","diet:nut-free","complexity:medium","time:moderate","ingredients:some","main:greens","temp:hot","theme:fried","theme:arasicak"],
  "ing":[[500,"g","spinach",null],[200,"g","white cheese (beyaz peynir)",null],[1,null,"onion",null],[6,null,"sheets of yufka",null],[2,null,"eggs",null],[100,"ml","milk",null],[4,"tbsp","olive oil",null],[1,"tsp","black pepper",null]]},
@@ -186,6 +195,7 @@
  "ing":[[500,"g","white fish fillet","poached and flaked"],[2,null,"potatoes","boiled and mashed"],[1,null,"onion",null],[1,"bunch","dill",null],[1,null,"egg",null],[100,"g","breadcrumbs",null],[1,null,"lemon",null],[1,"tsp","black pepper",null],[300,"ml","sunflower oil","for frying"]]},
 
 {"id":"sardalya-tava","name":"Fried sardines","tr":"Sardalya tava","file":"08-seafood","emoji":"🐟","serves":4,"prep":25,"count":5,"recipe":"https://www.turkishfoodandrecipes.com/2009/08/pan-fried-sardines-sardalya-tava.html","recipeSource":"Turkish Food & Recipes",
+ "photo":"/img/sardalya-tava.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Sardines floured and fried whole, piled up with lemon and raw onion. Cheap, oily, perfect — the Aegean's answer to hamsi.",
  "tags":["origin:aegean","origin:blacksea","diet:seafood","diet:dairy-free","diet:nut-free","complexity:easy","time:moderate","ingredients:few","main:seafood","temp:hot","theme:fried","theme:arasicak","theme:seaside"],
  "ing":[[600,"g","sardines","cleaned"],[150,"g","plain flour",null],[300,"ml","sunflower oil","for frying"],[1,null,"lemon",null],[1,null,"red onion","with sumac"]]},
@@ -197,6 +207,7 @@
  "ing":[[1,null,"octopus","about 1kg, cleaned"],[1,null,"onion","for the pot"],[100,"ml","olive oil",null],[1,null,"lemon",null],[1,"tsp","dried oregano",null],[1,"tsp","black pepper",null]]},
 
 {"id":"kokorec","name":"Kokoreç","tr":"Kokoreç","file":"09-meat","emoji":"🔥","serves":6,"prep":120,"count":6,"recipe":"https://zaffaron.com/recipe/kokorec-turkish-grilled-seasoned-lamb-intestines-sandwich","recipeSource":"Zaffaron",
+ "photo":"/img/kokorec.webp","credit":"Flickr (William Neuheisel), CC BY 2.0",
  "desc":"Lamb intestines wound tight around sweetbreads and grilled over charcoal, then chopped with oregano and pepper. Turkey's most argued-about street food and not a thing to attempt casually.",
  "tags":["origin:istanbul","diet:meat","diet:nut-free","complexity:showoff","time:slow","ingredients:few","main:meat","temp:hot","theme:street","theme:adventurous","theme:arasicak"],
  "ing":[[1,"kg","lamb intestines","cleaned thoroughly"],[400,"g","lamb sweetbreads",null],[1,"tbsp","dried oregano",null],[1,"tbsp","pul biber (chilli flakes)",null],[1,"tsp","cumin",null],[4,null,"bread rolls","to serve"]]},

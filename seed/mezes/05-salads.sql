@@ -13,7 +13,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('kozlenmis-biber', 'Roasted pepper salad', 'Közlenmiş biber salatası',
  'Long green peppers blackened over the flame, peeled and left in garlicky olive oil. Half a dish and half a condiment.',
- NULL, NULL, NULL, '🌶️',
+ '/img/kozlenmis-biber.webp', '/img/kozlenmis-biber-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🌶️',
  'https://www.turkishfoodandrecipes.com/2009/06/roasted-pepper-salad-kozlenmis-biber.html', 'Turkish Food & Recipes', 35, 5, 4),
 
 ('sogus', 'Tomato, onion & sumac', 'Söğüş',
@@ -43,7 +43,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('patates-salatasi', 'Potato salad, Turkish style', 'Patates salatası',
  'Waxy potatoes dressed warm with olive oil, lemon, spring onion and lots of parsley — no mayonnaise anywhere near it. Dress them while hot or the flavour never gets in.',
- NULL, NULL, NULL, '🥔',
+ '/img/patates-salatasi.webp', '/img/patates-salatasi-thumb.webp', 'Wikimedia Commons, CC0', '🥔',
  'https://www.giverecipe.com/turkish-potato-salad/', 'Give Recipe', 30, 7, 6),
 
 ('zahter', 'Wild thyme salad', 'Zahter salatası',
@@ -58,8 +58,13 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('fatus', 'Fattoush with toasted bread', 'Fatuş',
  'Vegetables cut deliberately big, dressed hard with sumac and lemon, and shot through with fried flatbread that half-softens in the bowl. Antakya''s, by way of Syria, and the salad that improves while it sits.',
- NULL, NULL, NULL, '🥗',
- 'https://www.lezzet.com.tr/yemek-tarifleri/dunya-mutfaklari/lubnan/fettus-salata', 'Lezzet', 20, 9, 6)
+ '/img/fatus.webp', '/img/fatus-thumb.webp', 'Wikimedia Commons (Gaurav Nemade), CC BY-SA 2.0', '🥗',
+ 'https://www.lezzet.com.tr/yemek-tarifleri/dunya-mutfaklari/lubnan/fettus-salata', 'Lezzet', 20, 9, 6),
+
+('politiki-salata', 'Istanbul-style cabbage salad', 'Politiki salata',
+ 'Cabbage and carrot shredded fine and quick-pickled until glossy and sharp. Named for Constantinople — ''the City'' — by the Rum families who carried it there, and a fixture on any proper Beyoğlu meze table.',
+ NULL, NULL, NULL, '🥬',
+ 'https://www.chefspencil.com/politiki-salad/', 'Chef''s Pencil', 20, 8, 6)
 ON CONFLICT (id) DO UPDATE SET
   name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
   photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
@@ -90,7 +95,9 @@ INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- rus-salatasi
 ('rus-salatasi','origin:istanbul'),('rus-salatasi','heritage:greek'),('rus-salatasi','diet:vegetarian'),('rus-salatasi','diet:gluten-free'),('rus-salatasi','diet:nut-free'),('rus-salatasi','complexity:easy'),('rus-salatasi','time:moderate'),('rus-salatasi','ingredients:some'),('rus-salatasi','main:potato'),('rus-salatasi','temp:cold'),('rus-salatasi','theme:classic'),('rus-salatasi','theme:crowd'),('rus-salatasi','theme:make-ahead'),
 -- fatus
-('fatus','origin:hatay'),('fatus','origin:levant'),('fatus','heritage:arab'),('fatus','diet:vegetarian'),('fatus','diet:vegan'),('fatus','diet:dairy-free'),('fatus','diet:nut-free'),('fatus','complexity:easy'),('fatus','time:quick'),('fatus','ingredients:some'),('fatus','main:veg'),('fatus','temp:cold'),('fatus','theme:salad'),('fatus','theme:bread'),('fatus','theme:crowd');
+('fatus','origin:hatay'),('fatus','origin:levant'),('fatus','heritage:arab'),('fatus','diet:vegetarian'),('fatus','diet:vegan'),('fatus','diet:dairy-free'),('fatus','diet:nut-free'),('fatus','complexity:easy'),('fatus','time:quick'),('fatus','ingredients:some'),('fatus','main:veg'),('fatus','temp:cold'),('fatus','theme:salad'),('fatus','theme:bread'),('fatus','theme:crowd'),
+-- politiki-salata
+('politiki-salata','origin:istanbul'),('politiki-salata','heritage:greek'),('politiki-salata','diet:vegetarian'),('politiki-salata','diet:vegan'),('politiki-salata','diet:gluten-free'),('politiki-salata','diet:dairy-free'),('politiki-salata','diet:nut-free'),('politiki-salata','complexity:easy'),('politiki-salata','time:quick'),('politiki-salata','ingredients:some'),('politiki-salata','main:veg'),('politiki-salata','temp:cold'),('politiki-salata','theme:salad'),('politiki-salata','theme:pickle'),('politiki-salata','theme:no-cook'),('politiki-salata','theme:make-ahead');
 
 INSERT INTO meze_ingredients (meze_id, sort, quantity, unit, item, note) VALUES
 ('gavurdagi',1,4,NULL,'ripe tomatoes','finely diced'),('gavurdagi',2,1,NULL,'red onion',NULL),('gavurdagi',3,1,'bunch','parsley',NULL),('gavurdagi',4,100,'g','walnuts','roughly chopped'),('gavurdagi',5,2,'tbsp','pomegranate molasses',NULL),('gavurdagi',6,3,'tbsp','olive oil',NULL),('gavurdagi',7,1,'tsp','sumac',NULL),('gavurdagi',8,1,'tsp','pul biber (chilli flakes)',NULL),
@@ -104,4 +111,5 @@ INSERT INTO meze_ingredients (meze_id, sort, quantity, unit, item, note) VALUES
 ('patates-salatasi',1,800,'g','waxy potatoes','boiled, in chunks'),('patates-salatasi',2,1,'bunch','spring onions',NULL),('patates-salatasi',3,1,'bunch','parsley',NULL),('patates-salatasi',4,1,NULL,'lemon','juiced'),('patates-salatasi',5,5,'tbsp','olive oil',NULL),('patates-salatasi',6,1,'tsp','sumac',NULL),('patates-salatasi',7,100,'g','black olives','optional'),
 ('zahter',1,200,'g','fresh zahter (wild thyme) leaves',NULL),('zahter',2,1,NULL,'red onion',NULL),('zahter',3,60,'g','walnuts',NULL),('zahter',4,2,'tbsp','pomegranate molasses',NULL),('zahter',5,3,'tbsp','olive oil',NULL),('zahter',6,1,'tsp','sumac',NULL),
 ('rus-salatasi',1,500,'g','waxy potatoes','boiled, in 1cm dice'),('rus-salatasi',2,2,NULL,'carrots','boiled and diced'),('rus-salatasi',3,150,'g','peas','cooked'),('rus-salatasi',4,4,NULL,'pickled gherkins','diced'),('rus-salatasi',5,200,'g','mayonnaise',NULL),('rus-salatasi',6,1,'tsp','mustard',NULL),('rus-salatasi',7,2,NULL,'eggs','hard-boiled, to garnish'),('rus-salatasi',8,1,'handful','black olives','to garnish'),
-('fatus',1,2,NULL,'flatbreads','torn and fried or toasted'),('fatus',2,3,NULL,'tomatoes','in big pieces'),('fatus',3,2,NULL,'cucumbers','in big pieces'),('fatus',4,1,'bunch','purslane','or cos lettuce'),('fatus',5,6,NULL,'radishes','halved'),('fatus',6,1,'bunch','mint & parsley',NULL),('fatus',7,1,'tbsp','sumac',NULL),('fatus',8,1,NULL,'lemon','juiced'),('fatus',9,4,'tbsp','olive oil',NULL);
+('fatus',1,2,NULL,'flatbreads','torn and fried or toasted'),('fatus',2,3,NULL,'tomatoes','in big pieces'),('fatus',3,2,NULL,'cucumbers','in big pieces'),('fatus',4,1,'bunch','purslane','or cos lettuce'),('fatus',5,6,NULL,'radishes','halved'),('fatus',6,1,'bunch','mint & parsley',NULL),('fatus',7,1,'tbsp','sumac',NULL),('fatus',8,1,NULL,'lemon','juiced'),('fatus',9,4,'tbsp','olive oil',NULL),
+('politiki-salata',1,0.5,NULL,'white cabbage','shredded fine'),('politiki-salata',2,2,NULL,'carrots','grated'),('politiki-salata',3,1,NULL,'red pepper','roasted, sliced'),('politiki-salata',4,2,'clove','garlic',NULL),('politiki-salata',5,4,'tbsp','olive oil',NULL),('politiki-salata',6,3,'tbsp','white wine vinegar',NULL),('politiki-salata',7,0.5,NULL,'lemon','juiced'),('politiki-salata',8,NULL,NULL,'salt',NULL);

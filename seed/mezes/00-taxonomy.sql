@@ -36,3 +36,10 @@ INSERT INTO tags (id, type_id, label, emoji, sort) VALUES
   ('theme:sweet', 'theme', 'Sweet finish', '🍯', 19)
 ON CONFLICT (id) DO UPDATE SET
   type_id = excluded.type_id, label = excluded.label, emoji = excluded.emoji, sort = excluded.sort;
+
+-- Heritage tags for mezes already seeded in seed/seed.sql — the tag itself
+-- doesn't exist until this file runs, so these can't live in seed.sql's own
+-- meze_tags insert.
+INSERT OR IGNORE INTO meze_tags (meze_id, tag_id) VALUES
+  ('topik', 'heritage:armenian'),
+  ('muhammara', 'heritage:armenian');

@@ -3,17 +3,17 @@
 INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, photo_credit, art_emoji, recipe_url, recipe_source, prep_minutes, ingredient_count, serves) VALUES
 ('peynir-tabagi', 'Cheese plate', 'Peynir tabağı',
  'Tulum, kaşar, örgü and a wedge of mihaliç, cut into blocks and left alone. The one meze where doing less is doing it right.',
- NULL, NULL, NULL, '🧀',
+ '/img/peynir-tabagi.webp', '/img/peynir-tabagi-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🧀',
  NULL, NULL, 5, 4, 6),
 
 ('otlu-peynir', 'Van herb cheese', 'Otlu peynir',
  'Salty white cheese shot through with wild mountain herbs from around Van. Smells like a hillside and tastes like one too.',
- NULL, NULL, NULL, '🌿',
+ '/img/otlu-peynir.webp', '/img/otlu-peynir-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🌿',
  'https://www.nefisyemektarifleri.com/evde-otlu-peynir/', 'Nefis Yemek Tarifleri', 5, 2, 6),
 
 ('tulum-peyniri', 'Tulum cheese with walnuts', 'Tulum peyniri',
  'Crumbly, pungent goat''s cheese aged in a skin, broken up with walnuts. Strong enough that people either love it immediately or hand the plate on.',
- NULL, NULL, NULL, '🌰',
+ '/img/tulum-peyniri.webp', '/img/tulum-peyniri-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🌰',
  'https://rabbitmeal.com/salad-with-tulum-cheese-and-walnuts/', 'Rabbitmeal', 5, 3, 6),
 
 ('tursu', 'Pickle plate', 'Turşu',
@@ -23,17 +23,17 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('zeytin-tabagi', 'Olive plate', 'Zeytin tabağı',
  'Black Gemlik olives and cracked green ones, warmed slightly with olive oil, oregano and lemon zest. Costs nothing and anchors the whole table.',
- NULL, NULL, NULL, '🫒',
+ '/img/zeytin-tabagi.webp', '/img/zeytin-tabagi-thumb.webp', 'Wikimedia Commons, CC BY-SA 3.0', '🫒',
  'https://vidarbergum.com/recipe/olive-salad-with-pomegranate-molasses-zeytin-salatasi/', 'A Kitchen in Istanbul', 5, 3, 8),
 
 ('ekmek', 'Bread basket', 'Bazlama, lavaş, somun',
  'Warm flatbread and a crusty white loaf, torn not sliced. Every dip on this list is technically a bread-delivery mechanism.',
- NULL, NULL, NULL, '🍞',
+ '/img/ekmek.webp', '/img/ekmek-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🍞',
  'https://cookingorgeous.com/blog/bazlama-turkish-bread/', 'Cooking Gorgeous', 5, 4, 8),
 
 ('kuru-domates', 'Sun-dried tomatoes in oil', 'Zeytinyağlı kuru domates',
  'Dried tomatoes softened in hot water, then left in olive oil with garlic and oregano until they taste like August. Keeps for weeks in the fridge and improves for the first of them.',
- NULL, NULL, NULL, '🍅',
+ '/img/kuru-domates.webp', '/img/kuru-domates-thumb.webp', 'Flickr (jo9ce4line0), CC BY 2.0', '🍅',
  'https://www.nefisyemektarifleri.com/kurutulmus-domates-mezesi/', 'Nefis Yemek Tarifleri', 15, 5, 6)
 ON CONFLICT (id) DO UPDATE SET
   name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,

@@ -18,7 +18,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('patlican-kizartma', 'Fried aubergine with yoghurt', 'Patlıcan kızartma',
  'Aubergine slices fried until collapsing, layered with garlic yoghurt and a quick tomato sauce. The smell of this is the smell of a Turkish summer kitchen.',
- NULL, NULL, NULL, '🍆',
+ '/img/patlican-kizartma.webp', '/img/patlican-kizartma-thumb.webp', 'Wikimedia Commons, public domain', '🍆',
  'https://www.nefisyemektarifleri.com/yogurtlu-patlican-kizartmasi-4571443/', 'Nefis Yemek Tarifleri', 35, 7, 4),
 
 ('kuru-patlican-dolma', 'Stuffed dried aubergines', 'Kuru patlıcan dolması',
@@ -29,7 +29,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('mutebbel', 'Aubergine with tahini & yoghurt', 'Mütebbel',
  'Charred aubergine beaten with tahini, yoghurt, garlic and lemon until it goes pale and silky. Babaganuş''s richer cousin: the yoghurt is what tells them apart.',
  '/img/mutebbel.webp', '/img/mutebbel-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🍆',
- 'https://www.yayla.de/en/recipes/mutebbel', 'Yayla', 35, 6, 6)
+ 'https://www.yayla.de/en/recipes/mutebbel', 'Yayla', 35, 6, 6),
+
+('almodrote', 'Roasted aubergine & kaşar bake', 'Almodrote',
+ 'Roasted aubergine flesh beaten with egg and kaşar and baked until the top crisps and browns. A Sephardic Istanbul standard — closer to a savoury pie than a dip, and not the meze board''s usual register, but the table empties it fastest.',
+ NULL, NULL, NULL, '🍆',
+ 'https://www.jewishfoodsociety.org/recipes/almodrote-roasted-eggplant-and-kashkaval-pie', 'Jewish Food Society', 60, 7, 6)
 ON CONFLICT (id) DO UPDATE SET
   name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
   photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
@@ -48,7 +53,9 @@ INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- kuru-patlican-dolma
 ('kuru-patlican-dolma','origin:southeast'),('kuru-patlican-dolma','diet:vegetarian'),('kuru-patlican-dolma','diet:vegan'),('kuru-patlican-dolma','diet:gluten-free'),('kuru-patlican-dolma','diet:dairy-free'),('kuru-patlican-dolma','diet:nut-free'),('kuru-patlican-dolma','complexity:showoff'),('kuru-patlican-dolma','time:slow'),('kuru-patlican-dolma','ingredients:many'),('kuru-patlican-dolma','main:aubergine'),('kuru-patlican-dolma','temp:hot'),('kuru-patlican-dolma','theme:stuffed'),('kuru-patlican-dolma','theme:centrepiece'),
 -- mutebbel
-('mutebbel','origin:hatay'),('mutebbel','origin:levant'),('mutebbel','heritage:arab'),('mutebbel','diet:vegetarian'),('mutebbel','diet:gluten-free'),('mutebbel','diet:nut-free'),('mutebbel','complexity:easy'),('mutebbel','time:moderate'),('mutebbel','ingredients:few'),('mutebbel','main:aubergine'),('mutebbel','temp:cold'),('mutebbel','theme:dip'),('mutebbel','theme:classic'),('mutebbel','theme:crowd');
+('mutebbel','origin:hatay'),('mutebbel','origin:levant'),('mutebbel','heritage:arab'),('mutebbel','diet:vegetarian'),('mutebbel','diet:gluten-free'),('mutebbel','diet:nut-free'),('mutebbel','complexity:easy'),('mutebbel','time:moderate'),('mutebbel','ingredients:few'),('mutebbel','main:aubergine'),('mutebbel','temp:cold'),('mutebbel','theme:dip'),('mutebbel','theme:classic'),('mutebbel','theme:crowd'),
+-- almodrote
+('almodrote','origin:istanbul'),('almodrote','heritage:jewish'),('almodrote','diet:vegetarian'),('almodrote','complexity:medium'),('almodrote','time:moderate'),('almodrote','ingredients:some'),('almodrote','main:aubergine'),('almodrote','main:cheese'),('almodrote','main:egg'),('almodrote','temp:hot'),('almodrote','theme:arasicak'),('almodrote','theme:crowd');
 
 INSERT INTO meze_ingredients (meze_id, sort, quantity, unit, item, note) VALUES
 ('ali-nazik',1,3,NULL,'large aubergines','charred over a flame'),('ali-nazik',2,300,'g','minced lamb',NULL),('ali-nazik',3,200,'g','thick strained yoghurt (süzme)',NULL),('ali-nazik',4,2,'clove','garlic',NULL),('ali-nazik',5,1,NULL,'tomato','grated'),('ali-nazik',6,30,'g','butter',NULL),('ali-nazik',7,1,'tsp','pul biber (chilli flakes)',NULL),('ali-nazik',8,NULL,NULL,'salt',NULL),
@@ -56,4 +63,5 @@ INSERT INTO meze_ingredients (meze_id, sort, quantity, unit, item, note) VALUES
 ('patlican-sogurme',1,3,NULL,'large aubergines','charred over a flame'),('patlican-sogurme',2,3,NULL,'long green peppers','charred'),('patlican-sogurme',3,2,'clove','garlic',NULL),('patlican-sogurme',4,4,'tbsp','olive oil',NULL),('patlican-sogurme',5,1,NULL,'lemon','juiced'),
 ('patlican-kizartma',1,3,NULL,'aubergines','sliced and salted'),('patlican-kizartma',2,300,'g','plain yoghurt',NULL),('patlican-kizartma',3,2,'clove','garlic',NULL),('patlican-kizartma',4,3,NULL,'tomatoes','grated'),('patlican-kizartma',5,2,NULL,'green peppers',NULL),('patlican-kizartma',6,300,'ml','sunflower oil','for frying'),('patlican-kizartma',7,1,'tsp','dried mint',NULL),
 ('kuru-patlican-dolma',1,20,NULL,'dried aubergine shells','soaked'),('kuru-patlican-dolma',2,300,'g','short-grain rice',NULL),('kuru-patlican-dolma',3,2,NULL,'onions',NULL),('kuru-patlican-dolma',4,2,'tbsp','pepper paste (biber salçası)',NULL),('kuru-patlican-dolma',5,1,'tbsp','tomato paste',NULL),('kuru-patlican-dolma',6,100,'ml','olive oil',NULL),('kuru-patlican-dolma',7,1,'tsp','allspice',NULL),('kuru-patlican-dolma',8,1,'tsp','pul biber (chilli flakes)',NULL),('kuru-patlican-dolma',9,1,'bunch','parsley',NULL),('kuru-patlican-dolma',10,1,NULL,'lemon',NULL),
-('mutebbel',1,3,NULL,'large aubergines','charred over a flame'),('mutebbel',2,3,'tbsp','tahini',NULL),('mutebbel',3,200,'g','thick strained yoghurt (süzme)',NULL),('mutebbel',4,2,'clove','garlic',NULL),('mutebbel',5,1,NULL,'lemon','juiced'),('mutebbel',6,2,'tbsp','olive oil','to finish');
+('mutebbel',1,3,NULL,'large aubergines','charred over a flame'),('mutebbel',2,3,'tbsp','tahini',NULL),('mutebbel',3,200,'g','thick strained yoghurt (süzme)',NULL),('mutebbel',4,2,'clove','garlic',NULL),('mutebbel',5,1,NULL,'lemon','juiced'),('mutebbel',6,2,'tbsp','olive oil','to finish'),
+('almodrote',1,4,NULL,'aubergines','roasted whole'),('almodrote',2,1,'clove','garlic',NULL),('almodrote',3,1,'tbsp','butter',NULL),('almodrote',4,2,'tbsp','flour',NULL),('almodrote',5,2,NULL,'eggs',NULL),('almodrote',6,250,'g','kaşar cheese','grated'),('almodrote',7,NULL,NULL,'salt',NULL);

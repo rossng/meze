@@ -23,12 +23,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('yogurtlu-kabak', 'Courgette with yoghurt', 'Yoğurtlu kabak',
  'Courgette grated and fried gently in olive oil, then cooled into garlic yoghurt with mint. Mücver''s lazy sibling, and no worse for it.',
- NULL, NULL, NULL, '🥒',
+ '/img/yogurtlu-kabak.webp', '/img/yogurtlu-kabak-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥒',
  'https://www.almostturkishrecipes.com/2008/07/zucchini-salad-with-yogurt-yourtlu.html', 'Almost Turkish Recipes', 30, 5, 6),
 
 ('cokelek-ezmesi', 'Curd cheese with pepper paste', 'Çökelek ezmesi',
  'Dry curd cheese mashed with pepper paste, olive oil and thyme until it goes brick-red. Antakya breakfast food that quietly moved to the rakı table.',
- NULL, NULL, NULL, '🧀',
+ '/img/cokelek-ezmesi.webp', '/img/cokelek-ezmesi-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🧀',
  'https://www.eskitadinda.com/biberli-cokelek-tarifi-323-c', 'Eski Tadında', 10, 5, 6),
 
 ('kuru-cacik', 'Thick walnut cacık', 'Kuru cacık',
@@ -43,12 +43,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('acuka', 'Circassian pepper & walnut paste', 'Acuka',
  'Pepper paste worked with ground walnut, garlic and coriander seed into something between a dip and a condiment. Abkhaz in origin — the name is simply their word for salt — and it keeps for weeks, which is how it earned its place.',
- NULL, NULL, NULL, '🌶️',
+ '/img/acuka.webp', '/img/acuka-thumb.webp', 'Wikimedia Commons (Masisoz), CC BY-SA 4.0', '🌶️',
  'https://ozlemsturkishtable.com/2025/04/acuka-spiced-walnut-and-red-pepper-paste-dip/', 'Ozlem''s Turkish Table', 15, 7, 6),
 
 ('borani', 'Spinach borani with chickpeas', 'Ispanak boranisi',
  'Spinach cooked down with rice and chickpeas, then cooled under garlic yoghurt. The old Persian-court version of yoğurtlu ıspanak, and substantial enough to be a dish rather than a dip.',
- NULL, NULL, NULL, '🥬',
+ '/img/borani.webp', '/img/borani-thumb.webp', 'Wikimedia Commons (Maderibeyza), CC BY-SA 3.0', '🥬',
  'https://www.greatbritishchefs.com/recipes/spinach-borani-fried-chickpeas-recipe', 'Great British Chefs', 40, 7, 6)
 ON CONFLICT (id) DO UPDATE SET
   name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,

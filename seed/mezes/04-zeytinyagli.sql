@@ -8,17 +8,17 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('pirasa', 'Braised leeks with carrot', 'Zeytinyağlı pırasa',
  'Leeks and carrot cooked down in olive oil with a spoonful of rice to hold it together. The dish that makes people who claim to dislike leeks go quiet.',
- NULL, NULL, NULL, '🥬',
+ '/img/pirasa.webp', '/img/pirasa-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥬',
  'https://www.themediterraneandish.com/turkish-braised-leeks/', 'The Mediterranean Dish', 50, 6, 6),
 
 ('kereviz', 'Celeriac with orange & dill', 'Zeytinyağlı kereviz',
  'Celeriac and carrot poached in olive oil with orange juice, served cold with a lot of dill. Tastes like winter behaving itself.',
- NULL, NULL, NULL, '🥕',
+ '/img/kereviz.webp', '/img/kereviz-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥕',
  'https://www.turkeysforlife.com/2025/11/turkish-celeriac-olive-oil-orange.html', 'Turkey''s For Life', 50, 8, 6),
 
 ('bamya', 'Okra in olive oil', 'Zeytinyağlı bamya',
  'Small okra kept whole and stewed with tomato and a good hit of lemon, which is the trick that keeps them from going slimy. Best with the tiny ones, if you can find them.',
- NULL, NULL, NULL, '🌿',
+ '/img/bamya.webp', '/img/bamya-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🌿',
  'https://www.turkeysforlife.com/2011/08/turkish-okra-recipes-zeytinyagli-bamya.html', 'Turkey''s For Life', 40, 6, 4),
 
 ('biber-dolma', 'Stuffed peppers in olive oil', 'Zeytinyağlı biber dolması',

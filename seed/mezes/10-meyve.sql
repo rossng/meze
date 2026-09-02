@@ -3,17 +3,17 @@
 INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, photo_credit, art_emoji, recipe_url, recipe_source, prep_minutes, ingredient_count, serves) VALUES
 ('kavun-peynir', 'Melon & white cheese', 'Kavun peynir',
  'Cold melon in wedges next to slabs of salty white cheese, and nothing else at all. The oldest rakı pairing there is, and the one that makes people stop talking for a second.',
- NULL, NULL, NULL, '🍈',
+ '/img/kavun-peynir.webp', '/img/kavun-peynir-thumb.webp', 'Flickr (fifikins), CC BY 2.0', '🍈',
  NULL, NULL, 5, 3, 6),
 
 ('incirli-peynir', 'Figs with cheese & walnuts', 'İncir, ceviz ve peynir',
  'Ripe figs torn open beside sharp tulum, walnuts and a thread of honey. Late-summer assembly rather than cooking, and better than most things that take an hour.',
- NULL, NULL, NULL, '🫐',
+ '/img/incirli-peynir.webp', '/img/incirli-peynir-thumb.webp', 'Flickr (Deb Nystrom), CC BY 2.0', '🫐',
  'https://www.turkeysforlife.com/2021/09/figs-blue-cheese.html', 'Turkey''s For Life', 10, 4, 4),
 
 ('cevizli-incir-dolmasi', 'Walnut-stuffed dried figs', 'Cevizli kuru incir dolması',
  'Dried figs simmered soft in sweetened milk, each one opened and given a walnut half. Made in the afternoon, eaten cold at the point where the table has stopped pretending it wants more rakı.',
- NULL, NULL, NULL, '🫐',
+ '/img/cevizli-incir-dolmasi.webp', '/img/cevizli-incir-dolmasi-thumb.webp', 'Wikimedia Commons (E4024), CC BY-SA 4.0', '🫐',
  'https://yaseminskitchen.com/walnut-stuffed-figs-cevizli-kuru-incir-tatlisi/', 'Yasemin''s Kitchen', 35, 5, 6),
 
 ('incir-receli-peynir', 'Fig jam with tulum', 'İncir reçeli ve tulum peyniri',
@@ -28,7 +28,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('kayisi-hosafi', 'Apricot compote', 'Kayısı hoşafı',
  'Dried apricots stewed with a little sugar and a clove, served cold in the juice they made. Not quite a pudding, exactly the thing after anything fried.',
- NULL, NULL, NULL, '🍑',
+ '/img/kayisi-hosafi.webp', '/img/kayisi-hosafi-thumb.webp', 'Wikimedia Commons (Ivanadukoska), CC BY-SA 4.0', '🍑',
  'https://www.turkishfoodandrecipes.com/2009/01/apricot-compote-kayisi-kompostosu.html', 'Turkish Food & Recipes', 25, 4, 6),
 
 ('meyve-tabagi', 'The fruit plate', 'Meyve tabağı',

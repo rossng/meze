@@ -18,7 +18,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('hamsi-tava', 'Fried Black Sea anchovies', 'Hamsi tava',
  'Fresh anchovies rolled in coarse cornmeal and fried in a pan, fanned out like a wheel. Eaten head, tail and all, with raw onion and lemon.',
- NULL, NULL, NULL, '🐟',
+ '/img/hamsi-tava.webp', '/img/hamsi-tava-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🐟',
  'https://www.giverecipe.com/how-to-fry-anchovies/', 'Give Recipe', 25, 5, 4),
 
 ('uskumru-dolmasi', 'Stuffed mackerel', 'Uskumru dolması',
@@ -48,7 +48,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('karides-salatasi', 'Prawn salad', 'Karides salatası',
  'Poached prawns folded through a lemony dressing with dill and a little yoghurt. The polite end of the seafood mezes.',
- NULL, NULL, NULL, '🦐',
+ '/img/karides-salatasi.webp', '/img/karides-salatasi-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🦐',
  'https://www.lezzet.com.tr/yemek-tarifleri/et-yemekleri/balik-yemekleri/karides-salatasi', 'Lezzet.com.tr', 20, 6, 4),
 
 ('kalamar-salatasi', 'Cold squid salad', 'Kalamar salatası',
@@ -63,7 +63,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('sardalya-tava', 'Fried sardines', 'Sardalya tava',
  'Sardines floured and fried whole, piled up with lemon and raw onion. Cheap, oily, perfect — the Aegean''s answer to hamsi.',
- NULL, NULL, NULL, '🐟',
+ '/img/sardalya-tava.webp', '/img/sardalya-tava-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🐟',
  'https://www.turkishfoodandrecipes.com/2009/08/pan-fried-sardines-sardalya-tava.html', 'Turkish Food & Recipes', 25, 5, 4),
 
 ('ahtapot-izgara', 'Grilled octopus', 'Ahtapot ızgara',

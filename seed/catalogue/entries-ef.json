@@ -1,10 +1,12 @@
 [
 {"id":"kizarmis-peynir","name":"Fried cheese","tr":"Kızarmış peynir","file":"07-arasicak","emoji":"🧀","serves":4,"prep":15,"count":5,"recipe":"https://www.nefisyemektarifleri.com/kizartma-kasar-peyniri/","recipeSource":"Nefis Yemek Tarifleri",
+ "photo":"/img/kizarmis-peynir.webp","credit":"Wikimedia Commons (Andy Li), CC0",
  "desc":"Thick fingers of cheese floured, egged and fried until the crust goes and the middle gives. Squeeze lemon on while it is still too hot to eat, which it always is.",
  "tags":["origin:istanbul","diet:vegetarian","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:cheese","temp:hot","theme:fried","theme:arasicak","theme:crowd","theme:raki"],
  "ing":[[250,"g","kaşar or sepet cheese","in thick fingers"],[3,"tbsp","plain flour",null],[1,null,"egg","beaten"],[200,"ml","sunflower oil","for frying"],[1,null,"lemon","to serve"]]},
 
 {"id":"hellim-izgara","name":"Grilled hellim with pomegranate","tr":"Hellim ızgara","file":"07-arasicak","emoji":"🧀","serves":4,"prep":10,"count":5,"recipe":"https://www.spicekitchenuk.com/blogs/recipes/grilled-halloumi-with-pomegranate-glaze","recipeSource":"Spice Kitchen UK",
+ "photo":"/img/hellim-izgara.webp","credit":"Wikimedia Commons, CC BY 3.0",
  "desc":"Halloumi griddled until it is striped and squeaking, then hit with pomegranate molasses and wild thyme. Cypriot by birth, thoroughly naturalised by now.",
  "tags":["origin:mediterranean","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:cheese","temp:hot","theme:arasicak","theme:crowd","theme:raki"],
  "ing":[[250,"g","hellim (halloumi)","sliced thick"],[1,"tbsp","olive oil",null],[1,"tbsp","pomegranate molasses",null],[1,"tsp","dried thyme",null],[1,"tsp","pul biber (chilli flakes)",null]]},
@@ -26,21 +28,25 @@
  "ing":[[600,"g","chard (pazı)","leaves and thin stalks"],[400,"g","thick strained yoghurt (süzme)",null],[2,"clove","garlic",null],[1,"tbsp","dried mint",null],[2,"tbsp","olive oil",null],[null,null,"salt",null]]},
 
 {"id":"kuru-domates","name":"Sun-dried tomatoes in oil","tr":"Zeytinyağlı kuru domates","file":"06-board","emoji":"🍅","serves":6,"prep":15,"count":5,"recipe":"https://www.nefisyemektarifleri.com/kurutulmus-domates-mezesi/","recipeSource":"Nefis Yemek Tarifleri",
+ "photo":"/img/kuru-domates.webp","credit":"Flickr (jo9ce4line0), CC BY 2.0",
  "desc":"Dried tomatoes softened in hot water, then left in olive oil with garlic and oregano until they taste like August. Keeps for weeks in the fridge and improves for the first of them.",
  "tags":["origin:aegean","diet:vegetarian","diet:vegan","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:tomato","temp:cold","theme:pickle","theme:make-ahead","theme:bread"],
  "ing":[[150,"g","sun-dried tomatoes","soaked and drained"],[3,"clove","garlic","sliced"],[1,"tsp","dried oregano",null],[150,"ml","olive oil",null],[1,"tsp","pul biber (chilli flakes)",null]]},
 
 {"id":"kavun-peynir","name":"Melon & white cheese","tr":"Kavun peynir","file":"10-meyve","emoji":"🍈","serves":6,"prep":5,"count":3,
+ "photo":"/img/kavun-peynir.webp","credit":"Flickr (fifikins), CC BY 2.0",
  "desc":"Cold melon in wedges next to slabs of salty white cheese, and nothing else at all. The oldest rakı pairing there is, and the one that makes people stop talking for a second.",
  "tags":["origin:istanbul","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:fruit","main:cheese","temp:cold","theme:classic","theme:raki","theme:no-cook","theme:seaside"],
  "ing":[[1,null,"ripe melon","chilled, in wedges"],[300,"g","white cheese (beyaz peynir)","in thick slices"],[0.5,"bunch","mint","leaves only"]]},
 
 {"id":"incirli-peynir","name":"Figs with cheese & walnuts","tr":"İncir, ceviz ve peynir","file":"10-meyve","emoji":"🫐","serves":4,"prep":10,"count":4,"recipe":"https://www.turkeysforlife.com/2021/09/figs-blue-cheese.html","recipeSource":"Turkey's For Life",
+ "photo":"/img/incirli-peynir.webp","credit":"Flickr (Deb Nystrom), CC BY 2.0",
  "desc":"Ripe figs torn open beside sharp tulum, walnuts and a thread of honey. Late-summer assembly rather than cooking, and better than most things that take an hour.",
  "tags":["origin:aegean","diet:vegetarian","diet:gluten-free","complexity:easy","time:quick","ingredients:few","main:fruit","main:cheese","main:nuts","temp:cold","theme:no-cook","theme:raki","theme:crowd"],
  "ing":[[8,null,"ripe figs","torn in half"],[200,"g","tulum cheese","or aged white cheese"],[60,"g","walnuts","halves"],[2,"tbsp","honey",null]]},
 
 {"id":"cevizli-incir-dolmasi","name":"Walnut-stuffed dried figs","tr":"Cevizli kuru incir dolması","file":"10-meyve","emoji":"🫐","serves":6,"prep":35,"count":5,"recipe":"https://yaseminskitchen.com/walnut-stuffed-figs-cevizli-kuru-incir-tatlisi/","recipeSource":"Yasemin's Kitchen",
+ "photo":"/img/cevizli-incir-dolmasi.webp","credit":"Wikimedia Commons (E4024), CC BY-SA 4.0",
  "desc":"Dried figs simmered soft in sweetened milk, each one opened and given a walnut half. Made in the afternoon, eaten cold at the point where the table has stopped pretending it wants more rakı.",
  "tags":["origin:aegean","diet:vegetarian","diet:gluten-free","complexity:easy","time:moderate","ingredients:few","main:fruit","main:nuts","temp:cold","theme:sweet","theme:make-ahead"],
  "ing":[[12,null,"dried figs","stems trimmed"],[12,null,"walnut halves",null],[400,"ml","milk",null],[2,"tbsp","sugar",null],[1,"tsp","cinnamon",null]]},
@@ -56,6 +62,7 @@
  "ing":[[20,null,"dried apricots","Malatya, if you can"],[400,"ml","water",null],[100,"g","sugar",null],[200,"g","kaymak (clotted cream)",null],[50,"g","pistachios","chopped"]]},
 
 {"id":"kayisi-hosafi","name":"Apricot compote","tr":"Kayısı hoşafı","file":"10-meyve","emoji":"🍑","serves":6,"prep":25,"count":4,"recipe":"https://www.turkishfoodandrecipes.com/2009/01/apricot-compote-kayisi-kompostosu.html","recipeSource":"Turkish Food & Recipes",
+ "photo":"/img/kayisi-hosafi.webp","credit":"Wikimedia Commons (Ivanadukoska), CC BY-SA 4.0",
  "desc":"Dried apricots stewed with a little sugar and a clove, served cold in the juice they made. Not quite a pudding, exactly the thing after anything fried.",
  "tags":["origin:anatolia","diet:vegetarian","diet:vegan","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:moderate","ingredients:few","main:fruit","temp:cold","theme:sweet","theme:make-ahead"],
  "ing":[[250,"g","dried apricots",null],[1,"l","water",null],[3,"tbsp","sugar",null],[3,null,"cloves","or a strip of lemon peel"]]},

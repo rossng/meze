@@ -24,7 +24,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('simit-salatasi', 'Fine bulgur salad', 'Simit salatası',
  'Antep''s plainer take on kısır: fine bulgur worked with pepper paste, spring onion and lemon, and no tomato to muddy it. Named for the bulgur, not the bread ring.',
  NULL, NULL, NULL, '🌾',
- NULL, NULL, 20, 8, 6)
+ NULL, NULL, 20, 8, 6),
+
+('ermeni-pilaki', 'Armenian bean pilaki', 'Ermeni pilakisi',
+ 'White haricot beans cooked slow in olive oil, dressed cold with lemon and a fistful of parsley — no tomato, no fuss. The pilaki served at Kumkapı''s old Armenian meyhanes, plainer than its cousins and better for it.',
+ NULL, NULL, NULL, '🫘',
+ 'https://globaltableadventure.com/recipe/armenian-white-bean-plaki-lupia-plaki/', 'Global Table Adventure', 60, 8, 6)
 ON CONFLICT (id) DO UPDATE SET
   name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
   photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
@@ -41,11 +46,14 @@ INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- fellah-koftesi
 ('fellah-koftesi','origin:hatay'),('fellah-koftesi','heritage:arab'),('fellah-koftesi','diet:vegetarian'),('fellah-koftesi','diet:vegan'),('fellah-koftesi','diet:dairy-free'),('fellah-koftesi','diet:nut-free'),('fellah-koftesi','complexity:medium'),('fellah-koftesi','time:moderate'),('fellah-koftesi','ingredients:some'),('fellah-koftesi','main:grains'),('fellah-koftesi','temp:cold'),('fellah-koftesi','theme:classic'),('fellah-koftesi','theme:crowd'),
 -- simit-salatasi
-('simit-salatasi','origin:southeast'),('simit-salatasi','diet:vegetarian'),('simit-salatasi','diet:vegan'),('simit-salatasi','diet:dairy-free'),('simit-salatasi','diet:nut-free'),('simit-salatasi','complexity:easy'),('simit-salatasi','time:quick'),('simit-salatasi','ingredients:some'),('simit-salatasi','main:grains'),('simit-salatasi','temp:cold'),('simit-salatasi','theme:salad'),('simit-salatasi','theme:spicy');
+('simit-salatasi','origin:southeast'),('simit-salatasi','diet:vegetarian'),('simit-salatasi','diet:vegan'),('simit-salatasi','diet:dairy-free'),('simit-salatasi','diet:nut-free'),('simit-salatasi','complexity:easy'),('simit-salatasi','time:quick'),('simit-salatasi','ingredients:some'),('simit-salatasi','main:grains'),('simit-salatasi','temp:cold'),('simit-salatasi','theme:salad'),('simit-salatasi','theme:spicy'),
+-- ermeni-pilaki
+('ermeni-pilaki','origin:istanbul'),('ermeni-pilaki','heritage:armenian'),('ermeni-pilaki','diet:vegetarian'),('ermeni-pilaki','diet:vegan'),('ermeni-pilaki','diet:gluten-free'),('ermeni-pilaki','diet:dairy-free'),('ermeni-pilaki','diet:nut-free'),('ermeni-pilaki','complexity:easy'),('ermeni-pilaki','time:slow'),('ermeni-pilaki','ingredients:some'),('ermeni-pilaki','main:pulses'),('ermeni-pilaki','temp:cold'),('ermeni-pilaki','theme:zeytinyagli'),('ermeni-pilaki','theme:classic'),('ermeni-pilaki','theme:make-ahead');
 
 INSERT INTO meze_ingredients (meze_id, sort, quantity, unit, item, note) VALUES
 ('mercimek-koftesi',1,250,'g','red lentils',NULL),('mercimek-koftesi',2,150,'g','fine bulgur',NULL),('mercimek-koftesi',3,1,NULL,'onion','finely chopped'),('mercimek-koftesi',4,2,'tbsp','pepper paste (biber salçası)',NULL),('mercimek-koftesi',5,1,'tbsp','tomato paste',NULL),('mercimek-koftesi',6,4,'tbsp','olive oil',NULL),('mercimek-koftesi',7,1,'bunch','spring onions',NULL),('mercimek-koftesi',8,1,'bunch','parsley',NULL),('mercimek-koftesi',9,1,NULL,'lemon','and lettuce leaves, to serve'),
 ('nohut-salatasi',1,400,'g','cooked chickpeas','1 large tin'),('nohut-salatasi',2,1,NULL,'red onion',NULL),('nohut-salatasi',3,2,NULL,'tomatoes',NULL),('nohut-salatasi',4,1,'bunch','parsley',NULL),('nohut-salatasi',5,1,NULL,'lemon','juiced'),('nohut-salatasi',6,4,'tbsp','olive oil',NULL),('nohut-salatasi',7,1,'tsp','sumac',NULL),('nohut-salatasi',8,1,'tsp','cumin',NULL),
 ('yesil-mercimek-salatasi',1,250,'g','green lentils',NULL),('yesil-mercimek-salatasi',2,1,'bunch','spring onions',NULL),('yesil-mercimek-salatasi',3,1,NULL,'red pepper','diced'),('yesil-mercimek-salatasi',4,1,'bunch','parsley',NULL),('yesil-mercimek-salatasi',5,2,'tbsp','pomegranate molasses',NULL),('yesil-mercimek-salatasi',6,4,'tbsp','olive oil',NULL),('yesil-mercimek-salatasi',7,1,'tbsp','dried mint',NULL),('yesil-mercimek-salatasi',8,1,NULL,'lemon','juiced'),
 ('fellah-koftesi',1,300,'g','fine bulgur',NULL),('fellah-koftesi',2,100,'g','semolina',NULL),('fellah-koftesi',3,2,'tbsp','tomato paste',NULL),('fellah-koftesi',4,3,NULL,'tomatoes','grated, for the sauce'),('fellah-koftesi',5,3,'clove','garlic',NULL),('fellah-koftesi',6,4,'tbsp','olive oil',NULL),('fellah-koftesi',7,1,'tbsp','dried mint',NULL),('fellah-koftesi',8,1,'tsp','pul biber (chilli flakes)',NULL),
-('simit-salatasi',1,300,'g','fine bulgur',NULL),('simit-salatasi',2,2,'tbsp','pepper paste (biber salçası)',NULL),('simit-salatasi',3,1,'bunch','spring onions',NULL),('simit-salatasi',4,1,'bunch','parsley',NULL),('simit-salatasi',5,2,'tbsp','pomegranate molasses',NULL),('simit-salatasi',6,4,'tbsp','olive oil',NULL),('simit-salatasi',7,1,NULL,'lemon','juiced'),('simit-salatasi',8,1,'tsp','pul biber (chilli flakes)',NULL);
+('simit-salatasi',1,300,'g','fine bulgur',NULL),('simit-salatasi',2,2,'tbsp','pepper paste (biber salçası)',NULL),('simit-salatasi',3,1,'bunch','spring onions',NULL),('simit-salatasi',4,1,'bunch','parsley',NULL),('simit-salatasi',5,2,'tbsp','pomegranate molasses',NULL),('simit-salatasi',6,4,'tbsp','olive oil',NULL),('simit-salatasi',7,1,NULL,'lemon','juiced'),('simit-salatasi',8,1,'tsp','pul biber (chilli flakes)',NULL),
+('ermeni-pilaki',1,400,'g','dried haricot (white) beans',NULL),('ermeni-pilaki',2,1,NULL,'onion',NULL),('ermeni-pilaki',3,2,'clove','garlic',NULL),('ermeni-pilaki',4,100,'ml','olive oil',NULL),('ermeni-pilaki',5,1,NULL,'lemon','juiced'),('ermeni-pilaki',6,1,'bunch','parsley',NULL),('ermeni-pilaki',7,1,NULL,'bay leaf',NULL),('ermeni-pilaki',8,NULL,NULL,'salt',NULL);
