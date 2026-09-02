@@ -180,6 +180,12 @@ button.chip:hover { border-color: var(--gold); }
   display: flex; flex-direction: column; background: var(--cream); color: var(--ink);
   border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
   border: 4px solid var(--cream); transition: transform 0.15s ease;
+  /* Skip layout/paint for cards scrolled out of view. The catalogue renders every
+     match at once and most cards are inline SVG plate art, which lazy images can't
+     help with. `auto` keeps them findable (Ctrl+F, anchors) and remembers each
+     card's real height once it has been rendered; the fallback is a typical card. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 340px;
 }
 .meze-card:hover { transform: translateY(-3px) rotate(-0.4deg); }
 .meze-surprise { border-color: var(--gold); animation: shine 1s ease; }
