@@ -29,7 +29,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('mutebbel', 'Aubergine with tahini & yoghurt', 'Mütebbel',
  'Charred aubergine beaten with tahini, yoghurt, garlic and lemon until it goes pale and silky. Babaganuş''s richer cousin: the yoghurt is what tells them apart.',
  '/img/mutebbel.webp', '/img/mutebbel-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🍆',
- 'https://www.yayla.de/en/recipes/mutebbel', 'Yayla', 35, 6, 6);
+ 'https://www.yayla.de/en/recipes/mutebbel', 'Yayla', 35, 6, 6)
+ON CONFLICT (id) DO UPDATE SET
+  name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
+  photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
+  art_emoji = excluded.art_emoji, recipe_url = excluded.recipe_url, recipe_source = excluded.recipe_source,
+  prep_minutes = excluded.prep_minutes, ingredient_count = excluded.ingredient_count, serves = excluded.serves;
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- ali-nazik

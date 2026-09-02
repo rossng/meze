@@ -49,7 +49,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('borani', 'Spinach borani with chickpeas', 'Ispanak boranisi',
  'Spinach cooked down with rice and chickpeas, then cooled under garlic yoghurt. The old Persian-court version of yoğurtlu ıspanak, and substantial enough to be a dish rather than a dip.',
  NULL, NULL, NULL, '🥬',
- 'https://www.greatbritishchefs.com/recipes/spinach-borani-fried-chickpeas-recipe', 'Great British Chefs', 40, 7, 6);
+ 'https://www.greatbritishchefs.com/recipes/spinach-borani-fried-chickpeas-recipe', 'Great British Chefs', 40, 7, 6)
+ON CONFLICT (id) DO UPDATE SET
+  name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
+  photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
+  art_emoji = excluded.art_emoji, recipe_url = excluded.recipe_url, recipe_source = excluded.recipe_source,
+  prep_minutes = excluded.prep_minutes, ingredient_count = excluded.ingredient_count, serves = excluded.serves;
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- havuc-tarator

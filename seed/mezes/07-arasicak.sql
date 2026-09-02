@@ -69,7 +69,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('mihlama', 'Cheese & cornmeal fondue', 'Mıhlama (kuymak)',
  'Butter, cornmeal and a young stretchy cheese beaten in a pan until it pulls into ropes. Black Sea food that arrives at the table still bubbling and is gone in four minutes.',
  '/img/mihlama.webp', '/img/mihlama-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🫕',
- 'https://cookingorgeous.com/blog/kuymak-mihlama/', 'Cooking Gorgeous', 25, 4, 4);
+ 'https://cookingorgeous.com/blog/kuymak-mihlama/', 'Cooking Gorgeous', 25, 4, 4)
+ON CONFLICT (id) DO UPDATE SET
+  name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
+  photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
+  art_emoji = excluded.art_emoji, recipe_url = excluded.recipe_url, recipe_source = excluded.recipe_source,
+  prep_minutes = excluded.prep_minutes, ingredient_count = excluded.ingredient_count, serves = excluded.serves;
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- pacanga-boregi

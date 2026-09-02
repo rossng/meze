@@ -34,7 +34,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('kuru-domates', 'Sun-dried tomatoes in oil', 'Zeytinyağlı kuru domates',
  'Dried tomatoes softened in hot water, then left in olive oil with garlic and oregano until they taste like August. Keeps for weeks in the fridge and improves for the first of them.',
  NULL, NULL, NULL, '🍅',
- 'https://www.nefisyemektarifleri.com/kurutulmus-domates-mezesi/', 'Nefis Yemek Tarifleri', 15, 5, 6);
+ 'https://www.nefisyemektarifleri.com/kurutulmus-domates-mezesi/', 'Nefis Yemek Tarifleri', 15, 5, 6)
+ON CONFLICT (id) DO UPDATE SET
+  name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
+  photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
+  art_emoji = excluded.art_emoji, recipe_url = excluded.recipe_url, recipe_source = excluded.recipe_source,
+  prep_minutes = excluded.prep_minutes, ingredient_count = excluded.ingredient_count, serves = excluded.serves;
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- peynir-tabagi

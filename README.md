@@ -57,7 +57,10 @@ npm run deploy              # esbuild bundle + worker + public/ assets
 ```
 
 Only `npm run deploy` is needed for subsequent code changes; re-run the seed only when
-`seed/` changes. The app lands at `https://meze.<your-subdomain>.workers.dev`.
+`seed/` changes. `db:seed:remote` is safe to re-run against a live database: mezes, tag_types
+and tags are upserted by id rather than deleted, so a night that has already voted on or
+menu'd a catalogue dish keeps that history even if the dish's copy, photo or tags change.
+The app lands at `https://meze.<your-subdomain>.workers.dev`.
 
 **Custom domains.** A Worker route like `example.com/meze*` requires the zone's nameservers to
 point at Cloudflare — there's no CNAME-only option on the free plan. Serving the frontend from

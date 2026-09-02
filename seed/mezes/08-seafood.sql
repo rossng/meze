@@ -69,7 +69,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('ahtapot-izgara', 'Grilled octopus', 'Ahtapot ızgara',
  'Octopus boiled tender, then charred hard on the grill and dressed with oil and oregano. Two cooking methods, one tentacle, no shortcuts.',
  '/img/ahtapot-izgara.webp', '/img/ahtapot-izgara-thumb.webp', 'Flickr (T.Tseng), CC BY 2.0', '🐙',
- 'https://turkishfoodie.com/grilled-octopus/', 'Turkish Foodie', 100, 6, 4);
+ 'https://turkishfoodie.com/grilled-octopus/', 'Turkish Foodie', 100, 6, 4)
+ON CONFLICT (id) DO UPDATE SET
+  name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
+  photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
+  art_emoji = excluded.art_emoji, recipe_url = excluded.recipe_url, recipe_source = excluded.recipe_source,
+  prep_minutes = excluded.prep_minutes, ingredient_count = excluded.ingredient_count, serves = excluded.serves;
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- tarama

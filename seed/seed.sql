@@ -1,9 +1,10 @@
--- Sample data. Safe to re-run: clears the catalogue first (nights are kept).
+-- Sample data. Safe to re-run against a live database: mezes, tag_types and
+-- tags are upserted (never deleted), so their ids stay stable and nothing
+-- that references them by id — night_options, option_votes, menu_items — is
+-- ever cascade-deleted. meze_ingredients and meze_tags are pure per-meze leaf
+-- tables nothing else points to, so those are safe to wipe and rebuild.
 DELETE FROM meze_ingredients WHERE meze_id IN (SELECT id FROM mezes WHERE night_id IS NULL);
 DELETE FROM meze_tags WHERE meze_id IN (SELECT id FROM mezes WHERE night_id IS NULL);
-DELETE FROM tags;
-DELETE FROM tag_types;
-DELETE FROM mezes WHERE night_id IS NULL;
 
 -- ---------------------------------------------------------------------------
 -- Taxonomy. To add a facet: insert a tag_type. To add a value: insert a tag.
@@ -16,7 +17,9 @@ INSERT INTO tag_types (id, label, emoji, multi, sort) VALUES
   ('ingredients', 'Ingredient count',  '🧺', 0, 50),
   ('main',        'Main ingredient',   '🍆', 1, 60),
   ('temp',        'Served',            '🌡️', 0, 70),
-  ('theme',       'Theme',             '🎭', 1, 80);
+  ('theme',       'Theme',             '🎭', 1, 80)
+ON CONFLICT (id) DO UPDATE SET
+  label = excluded.label, emoji = excluded.emoji, multi = excluded.multi, sort = excluded.sort;
 
 INSERT INTO tags (id, type_id, label, emoji, sort) VALUES
   ('origin:aegean',        'origin', 'Aegean',                 '🌊', 1),
@@ -74,7 +77,9 @@ INSERT INTO tags (id, type_id, label, emoji, sort) VALUES
   ('theme:crowd',       'theme', 'Crowd pleaser',     '🎉', 9),
   ('theme:centrepiece', 'theme', 'Table centrepiece', '👑', 10),
   ('theme:street',      'theme', 'Street food',       '🚶', 11),
-  ('theme:seaside',     'theme', 'Seaside',           '⛵', 12);
+  ('theme:seaside',     'theme', 'Seaside',           '⛵', 12)
+ON CONFLICT (id) DO UPDATE SET
+  type_id = excluded.type_id, label = excluded.label, emoji = excluded.emoji, sort = excluded.sort;
 
 -- ---------------------------------------------------------------------------
 -- Mezes. Photos are Wikimedia Commons files (CC licensed) served via
@@ -235,7 +240,13 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('kopoglu', 'Köpoğlu', 'Köpoğlu',
  'Fried aubergine and peppers in tomato sauce with garlicky yoghurt spooned over the top. Şakşuka''s indulgent cousin.',
- NULL, NULL, NULL, 'https://culinarybackstreets.com/cities-category/istanbul/2024/recipe-24/', 'Culinary Backstreets', 45, 9, 4, '🍆');
+ NULL, NULL, NULL, 'https://culinarybackstreets.com/cities-category/istanbul/2024/recipe-24/', 'Culinary Backstreets', 45, 9, 4, '🍆')
+ON CONFLICT (id) DO UPDATE SET
+  name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
+  photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
+  recipe_url = excluded.recipe_url, recipe_source = excluded.recipe_source,
+  prep_minutes = excluded.prep_minutes, ingredient_count = excluded.ingredient_count, serves = excluded.serves,
+  art_emoji = excluded.art_emoji;
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- hummus

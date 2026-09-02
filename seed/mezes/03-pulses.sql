@@ -24,7 +24,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('simit-salatasi', 'Fine bulgur salad', 'Simit salatası',
  'Antep''s plainer take on kısır: fine bulgur worked with pepper paste, spring onion and lemon, and no tomato to muddy it. Named for the bulgur, not the bread ring.',
  NULL, NULL, NULL, '🌾',
- NULL, NULL, 20, 8, 6);
+ NULL, NULL, 20, 8, 6)
+ON CONFLICT (id) DO UPDATE SET
+  name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
+  photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
+  art_emoji = excluded.art_emoji, recipe_url = excluded.recipe_url, recipe_source = excluded.recipe_source,
+  prep_minutes = excluded.prep_minutes, ingredient_count = excluded.ingredient_count, serves = excluded.serves;
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- mercimek-koftesi

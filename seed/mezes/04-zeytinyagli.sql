@@ -69,7 +69,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('hardalotu', 'Mustard greens in olive oil', 'Hardal otu',
  'Mustard greens boiled until the bite goes soft, squeezed and dressed cold with olive oil and lemon. Peppery where radika is bitter, and worth asking the market woman for by name.',
  NULL, NULL, NULL, '🌿',
- 'https://www.nefisyemektarifleri.com/hardal-otu-salatasi/', 'Nefis Yemek Tarifleri', 25, 5, 4);
+ 'https://www.nefisyemektarifleri.com/hardal-otu-salatasi/', 'Nefis Yemek Tarifleri', 25, 5, 4)
+ON CONFLICT (id) DO UPDATE SET
+  name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
+  photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
+  art_emoji = excluded.art_emoji, recipe_url = excluded.recipe_url, recipe_source = excluded.recipe_source,
+  prep_minutes = excluded.prep_minutes, ingredient_count = excluded.ingredient_count, serves = excluded.serves;
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- taze-fasulye

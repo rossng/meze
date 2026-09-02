@@ -34,7 +34,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('sac-kavurma', 'Lamb seared on the griddle', 'Sac kavurma',
  'Diced lamb thrown onto a screaming hot sac with onion, pepper and tomato and kept moving until it catches. Urfa keeps it to meat, fat and pepper alone; everywhere else adds the vegetables.',
  '/img/sac-kavurma.webp', '/img/sac-kavurma-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥩',
- 'https://cookingorgeous.com/blog/sac-kavurma-turkish-lamb-saute/', 'Cooking Gorgeous', 30, 7, 6);
+ 'https://cookingorgeous.com/blog/sac-kavurma-turkish-lamb-saute/', 'Cooking Gorgeous', 30, 7, 6)
+ON CONFLICT (id) DO UPDATE SET
+  name = excluded.name, name_tr = excluded.name_tr, description = excluded.description,
+  photo_url = excluded.photo_url, photo_thumb_url = excluded.photo_thumb_url, photo_credit = excluded.photo_credit,
+  art_emoji = excluded.art_emoji, recipe_url = excluded.recipe_url, recipe_source = excluded.recipe_source,
+  prep_minutes = excluded.prep_minutes, ingredient_count = excluded.ingredient_count, serves = excluded.serves;
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- cerkez-tavugu
