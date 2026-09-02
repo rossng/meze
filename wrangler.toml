@@ -1,0 +1,27 @@
+name = "meze"
+main = "src/server/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "meze"
+database_id = "dbfae80b-619f-4a9d-b40b-575e06ef87fa"
+migrations_dir = "migrations"
+
+[[durable_objects.bindings]]
+name = "NIGHT_ROOM"
+class_name = "NightRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["NightRoom"]
+
+[observability]
+enabled = true
