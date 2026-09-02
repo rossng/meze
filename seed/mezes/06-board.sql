@@ -9,32 +9,32 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('otlu-peynir', 'Van herb cheese', 'Otlu peynir',
  'Salty white cheese shot through with wild mountain herbs from around Van. Smells like a hillside and tastes like one too.',
  NULL, NULL, NULL, '🌿',
- NULL, NULL, 5, 2, 6),
+ 'https://www.nefisyemektarifleri.com/evde-otlu-peynir/', 'Nefis Yemek Tarifleri', 5, 2, 6),
 
 ('tulum-peyniri', 'Tulum cheese with walnuts', 'Tulum peyniri',
  'Crumbly, pungent goat''s cheese aged in a skin, broken up with walnuts. Strong enough that people either love it immediately or hand the plate on.',
  NULL, NULL, NULL, '🌰',
- NULL, NULL, 5, 3, 6),
+ 'https://rabbitmeal.com/salad-with-tulum-cheese-and-walnuts/', 'Rabbitmeal', 5, 3, 6),
 
 ('tursu', 'Pickle plate', 'Turşu',
  'Whatever the pickle shop had: gherkins, green tomatoes, cabbage, hot peppers. Drinking the brine afterwards is traditional and, the following morning, medicinal.',
  NULL, NULL, NULL, '🥒',
- NULL, NULL, 5, 4, 8),
+ 'https://www.turkeysforlife.com/2021/04/turkish-pickles-recipe-tursu.html', 'Turkey''s For Life', 5, 4, 8),
 
 ('zeytin-tabagi', 'Olive plate', 'Zeytin tabağı',
  'Black Gemlik olives and cracked green ones, warmed slightly with olive oil, oregano and lemon zest. Costs nothing and anchors the whole table.',
  NULL, NULL, NULL, '🫒',
- NULL, NULL, 5, 3, 8),
+ 'https://vidarbergum.com/recipe/olive-salad-with-pomegranate-molasses-zeytin-salatasi/', 'A Kitchen in Istanbul', 5, 3, 8),
 
 ('ekmek', 'Bread basket', 'Bazlama, lavaş, somun',
  'Warm flatbread and a crusty white loaf, torn not sliced. Every dip on this list is technically a bread-delivery mechanism.',
  NULL, NULL, NULL, '🍞',
- NULL, NULL, 5, 4, 8),
+ 'https://cookingorgeous.com/blog/bazlama-turkish-bread/', 'Cooking Gorgeous', 5, 4, 8),
 
 ('kuru-domates', 'Sun-dried tomatoes in oil', 'Zeytinyağlı kuru domates',
  'Dried tomatoes softened in hot water, then left in olive oil with garlic and oregano until they taste like August. Keeps for weeks in the fridge and improves for the first of them.',
  NULL, NULL, NULL, '🍅',
- NULL, NULL, 15, 5, 6);
+ 'https://www.nefisyemektarifleri.com/kurutulmus-domates-mezesi/', 'Nefis Yemek Tarifleri', 15, 5, 6);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- peynir-tabagi

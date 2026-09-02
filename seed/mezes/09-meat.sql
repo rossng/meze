@@ -4,22 +4,22 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('cerkez-tavugu', 'Circassian chicken', 'Çerkez tavuğu',
  'Poached chicken shredded into a thick walnut and garlic sauce, spread flat and finished with red pepper oil. Made the day before and better for it.',
  NULL, NULL, NULL, '🍗',
- NULL, NULL, 60, 9, 8),
+ 'https://ozlemsturkishtable.com/2010/08/cerkez-tavugu-circassian-chicken-with-walnut-sauce/', 'Ozlem''s Turkish Table', 60, 9, 8),
 
 ('beyin-salatasi', 'Brain salad', 'Beyin salatası',
  'Lamb''s brain poached in vinegared water, cooled and dressed with lemon, olive oil and parsley. A genuine meyhane classic that has quietly gone out of fashion, texture being what it is.',
  NULL, NULL, NULL, '😈',
- NULL, NULL, 40, 5, 4),
+ 'https://yemek.com/tarif/beyin-salatasi/', 'Yemek.com', 40, 5, 4),
 
 ('dil-sogus', 'Cold tongue with lemon', 'Dil söğüş',
  'Veal tongue simmered long, peeled, sliced thin and served cold with lemon and olive oil. Old-school Istanbul, and softer than anyone expects.',
  NULL, NULL, NULL, '🥩',
- NULL, NULL, 90, 5, 6),
+ 'https://myhomediaryinturkey.blogspot.com/2021/09/turkish-food-recipe-dil-sogus-boiled.html', 'Citra''s Home Diary', 90, 5, 6),
 
 ('yaprak-ciger', 'Thin-sliced fried liver', 'Yaprak ciğer',
  'Calf''s liver cut leaf-thin, floured and fried for seconds only, with raw onion and sumac on top. Cook it a minute too long and you have made an eraser.',
  NULL, NULL, NULL, '🔥',
- NULL, NULL, 20, 5, 4),
+ 'https://yemek.com/tarif/yaprak-ciger/', 'Yemek.com', 20, 5, 4),
 
 ('pastirma-sucuk', 'Pastırma & sucuk plate', 'Pastırma sucuk tabağı',
  'Air-dried beef under its coat of fenugreek paste, sliced tissue-thin, with cured sausage alongside. Kayseri''s contribution to every serious table.',
@@ -29,12 +29,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('kokorec', 'Kokoreç', 'Kokoreç',
  'Lamb intestines wound tight around sweetbreads and grilled over charcoal, then chopped with oregano and pepper. Turkey''s most argued-about street food and not a thing to attempt casually.',
  NULL, NULL, NULL, '🔥',
- NULL, NULL, 120, 6, 6),
+ 'https://zaffaron.com/recipe/kokorec-turkish-grilled-seasoned-lamb-intestines-sandwich', 'Zaffaron', 120, 6, 6),
 
 ('sac-kavurma', 'Lamb seared on the griddle', 'Sac kavurma',
  'Diced lamb thrown onto a screaming hot sac with onion, pepper and tomato and kept moving until it catches. Urfa keeps it to meat, fat and pepper alone; everywhere else adds the vegetables.',
  NULL, NULL, NULL, '🥩',
- NULL, NULL, 30, 7, 6);
+ 'https://cookingorgeous.com/blog/sac-kavurma-turkish-lamb-saute/', 'Cooking Gorgeous', 30, 7, 6);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- cerkez-tavugu

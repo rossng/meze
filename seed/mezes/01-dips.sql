@@ -4,52 +4,52 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('havuc-tarator', 'Carrot & yoghurt', 'Havuç tarator',
  'Grated carrot softened in olive oil then folded through garlic yoghurt, so it goes an improbable coral colour. Sweet, cooling, and the first bowl to empty.',
  NULL, NULL, NULL, '🥕',
- NULL, NULL, 25, 5, 6),
+ 'https://www.giverecipe.com/havuc-tarator-turkish-carrot-dip/', 'Give Recipe', 25, 5, 6),
 
 ('yogurtlu-patlican', 'Aubergine with garlic yoghurt', 'Yoğurtlu patlıcan',
  'Charred aubergine chopped rough and stirred into garlic yoghurt with dill. Somewhere between the smoky salad and haydari, and arguably better than both.',
  NULL, NULL, NULL, '🍆',
- NULL, NULL, 35, 6, 6),
+ 'https://ozlemsturkishtable.com/2010/06/smoked-eggplant-salad-with-garlic-yoghurt-patlicanli-yogurtlama/', 'Ozlem''s Turkish Table', 35, 6, 6),
 
 ('yogurtlu-ispanak', 'Spinach with yoghurt', 'Yoğurtlu ıspanak',
  'Spinach wilted down, squeezed dry and cooled into garlic yoghurt. The squeezing is not optional unless you want soup.',
  NULL, NULL, NULL, '🥬',
- NULL, NULL, 25, 5, 6),
+ 'https://www.almostturkishrecipes.com/2006/08/spinach-with-yogurt-yourtlu-ispanak.html', 'Almost Turkish Recipes', 25, 5, 6),
 
 ('yogurtlu-pancar', 'Beetroot with yoghurt', 'Yoğurtlu pancar',
  'Roasted beetroot grated into garlic yoghurt, which turns the whole bowl an alarming magenta. Nothing else on the table looks like it.',
  NULL, NULL, NULL, '🟣',
- NULL, NULL, 60, 5, 6),
+ 'https://www.almostturkishrecipes.com/2010/02/beet-salad-with-yogurt-yogurtlu-pancar.html', 'Almost Turkish Recipes', 60, 5, 6),
 
 ('yogurtlu-kabak', 'Courgette with yoghurt', 'Yoğurtlu kabak',
  'Courgette grated and fried gently in olive oil, then cooled into garlic yoghurt with mint. Mücver''s lazy sibling, and no worse for it.',
  NULL, NULL, NULL, '🥒',
- NULL, NULL, 30, 5, 6),
+ 'https://www.almostturkishrecipes.com/2008/07/zucchini-salad-with-yogurt-yourtlu.html', 'Almost Turkish Recipes', 30, 5, 6),
 
 ('cokelek-ezmesi', 'Curd cheese with pepper paste', 'Çökelek ezmesi',
  'Dry curd cheese mashed with pepper paste, olive oil and thyme until it goes brick-red. Antakya breakfast food that quietly moved to the rakı table.',
  NULL, NULL, NULL, '🧀',
- NULL, NULL, 10, 5, 6),
+ 'https://www.eskitadinda.com/biberli-cokelek-tarifi-323-c', 'Eski Tadında', 10, 5, 6),
 
 ('kuru-cacik', 'Thick walnut cacık', 'Kuru cacık',
  'Cacık with the water taken out: strained yoghurt, squeezed cucumber, garlic and walnut, stiff enough to stand a spoon in. Eaten with bread rather than drunk, which is the whole point of the kuru.',
  NULL, NULL, NULL, '🥣',
- NULL, NULL, 15, 6, 6),
+ 'https://yaseminskitchen.com/cucumber-yogurt-dip-kuru-cacik/', 'Yasemin''s Kitchen', 15, 6, 6),
 
 ('yogurtlu-pazi', 'Chard with garlic yoghurt', 'Yoğurtlu pazı mezesi',
  'Chard leaves blanched, squeezed hard and chopped into garlic yoghurt with dried mint. Earthier than the spinach version and worth the extra minute the stalks take.',
  NULL, NULL, NULL, '🥬',
- NULL, NULL, 30, 6, 6),
+ 'https://www.nefisyemektarifleri.com/yogurtlu-pazi-mezesi-hafif-lezzet/', 'Nefis Yemek Tarifleri', 30, 6, 6),
 
 ('acuka', 'Circassian pepper & walnut paste', 'Acuka',
  'Pepper paste worked with ground walnut, garlic and coriander seed into something between a dip and a condiment. Abkhaz in origin — the name is simply their word for salt — and it keeps for weeks, which is how it earned its place.',
  NULL, NULL, NULL, '🌶️',
- NULL, NULL, 15, 7, 6),
+ 'https://ozlemsturkishtable.com/2025/04/acuka-spiced-walnut-and-red-pepper-paste-dip/', 'Ozlem''s Turkish Table', 15, 7, 6),
 
 ('borani', 'Spinach borani with chickpeas', 'Ispanak boranisi',
  'Spinach cooked down with rice and chickpeas, then cooled under garlic yoghurt. The old Persian-court version of yoğurtlu ıspanak, and substantial enough to be a dish rather than a dip.',
  NULL, NULL, NULL, '🥬',
- NULL, NULL, 40, 7, 6);
+ 'https://www.greatbritishchefs.com/recipes/spinach-borani-fried-chickpeas-recipe', 'Great British Chefs', 40, 7, 6);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- havuc-tarator

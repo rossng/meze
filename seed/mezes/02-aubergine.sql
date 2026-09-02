@@ -4,32 +4,32 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('ali-nazik', 'Ali Nazik', 'Ali Nazik',
  'Smoked aubergine beaten into garlic yoghurt, spread on a plate and topped with buttery minced lamb. Named for a compliment from a sultan, and it does rather live up to it.',
  NULL, NULL, NULL, '🍆',
- NULL, NULL, 45, 8, 4),
+ 'https://ozlemsturkishtable.com/2014/09/ali-nazik-kebab-lamb-stew-over-smoked-eggplant-and-yoghurt-puree/', 'Ozlem''s Turkish Table', 45, 8, 4),
 
 ('abagannuc', 'Antakya aubergine & walnut', 'Abagannuç',
  'Smoked aubergine pounded with walnut, pepper paste and pomegranate molasses. Sharper and darker than babaganuş, and it does not miss the tahini.',
  NULL, NULL, NULL, '🍆',
- NULL, NULL, 40, 8, 6),
+ 'https://ozlemsturkishtable.com/2014/07/baba-ghanoush-or-abagannuc-burnt-eggplant-salad-with-lemon-olive-oil/', 'Ozlem''s Turkish Table', 40, 8, 6),
 
 ('patlican-sogurme', 'Charred aubergine with peppers', 'Patlıcan söğürme',
  'Aubergine and green peppers charred together, torn by hand rather than chopped, dressed with garlic and olive oil. Rougher than patlıcan salatası and all the better for it.',
  NULL, NULL, NULL, '🍆',
- NULL, NULL, 35, 5, 4),
+ 'https://yemek.com/tarif/patlican-sogurme/', 'Yemek.com', 35, 5, 4),
 
 ('patlican-kizartma', 'Fried aubergine with yoghurt', 'Patlıcan kızartma',
  'Aubergine slices fried until collapsing, layered with garlic yoghurt and a quick tomato sauce. The smell of this is the smell of a Turkish summer kitchen.',
  NULL, NULL, NULL, '🍆',
- NULL, NULL, 35, 7, 4),
+ 'https://www.nefisyemektarifleri.com/yogurtlu-patlican-kizartmasi-4571443/', 'Nefis Yemek Tarifleri', 35, 7, 4),
 
 ('kuru-patlican-dolma', 'Stuffed dried aubergines', 'Kuru patlıcan dolması',
  'Aubergines dried on strings through the winter, soaked back to life and stuffed with spiced rice. Southeastern pantry cooking, and it tastes of nothing else.',
  NULL, NULL, NULL, '🍆',
- NULL, NULL, 90, 10, 6),
+ 'https://ozlemsturkishtable.com/2014/03/stuffed-dried-eggplant-and-pepper-dolma-kuru-patlican-dolmasi/', 'Ozlem''s Turkish Table', 90, 10, 6),
 
 ('mutebbel', 'Aubergine with tahini & yoghurt', 'Mütebbel',
  'Charred aubergine beaten with tahini, yoghurt, garlic and lemon until it goes pale and silky. Babaganuş''s richer cousin: the yoghurt is what tells them apart.',
  NULL, NULL, NULL, '🍆',
- NULL, NULL, 35, 6, 6);
+ 'https://www.yayla.de/en/recipes/mutebbel', 'Yayla', 35, 6, 6);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- ali-nazik

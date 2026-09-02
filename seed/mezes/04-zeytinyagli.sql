@@ -4,72 +4,72 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('taze-fasulye', 'Green beans in olive oil', 'Zeytinyağlı taze fasulye',
  'Flat green beans stewed gently with tomato and onion in a lot of olive oil, then left to cool. Never eat these hot; they are a cold dish and they know it.',
  NULL, NULL, NULL, '🫛',
- NULL, NULL, 50, 6, 6),
+ 'https://ozlemsturkishtable.com/2010/05/runner-green-beans-onions-and-tomatoes-cooked-in-olive-oil-zeytinyagli-taze-fasulye/', 'Ozlem''s Turkish Table', 50, 6, 6),
 
 ('pirasa', 'Braised leeks with carrot', 'Zeytinyağlı pırasa',
  'Leeks and carrot cooked down in olive oil with a spoonful of rice to hold it together. The dish that makes people who claim to dislike leeks go quiet.',
  NULL, NULL, NULL, '🥬',
- NULL, NULL, 50, 6, 6),
+ 'https://www.themediterraneandish.com/turkish-braised-leeks/', 'The Mediterranean Dish', 50, 6, 6),
 
 ('kereviz', 'Celeriac with orange & dill', 'Zeytinyağlı kereviz',
  'Celeriac and carrot poached in olive oil with orange juice, served cold with a lot of dill. Tastes like winter behaving itself.',
  NULL, NULL, NULL, '🥕',
- NULL, NULL, 50, 8, 6),
+ 'https://www.turkeysforlife.com/2025/11/turkish-celeriac-olive-oil-orange.html', 'Turkey''s For Life', 50, 8, 6),
 
 ('bamya', 'Okra in olive oil', 'Zeytinyağlı bamya',
  'Small okra kept whole and stewed with tomato and a good hit of lemon, which is the trick that keeps them from going slimy. Best with the tiny ones, if you can find them.',
  NULL, NULL, NULL, '🌿',
- NULL, NULL, 40, 6, 4),
+ 'https://www.turkeysforlife.com/2011/08/turkish-okra-recipes-zeytinyagli-bamya.html', 'Turkey''s For Life', 40, 6, 4),
 
 ('biber-dolma', 'Stuffed peppers in olive oil', 'Zeytinyağlı biber dolması',
  'Sweet peppers packed with the same currant-and-pine-nut rice as the vine leaves, then cooked slowly and cooled. A stuffed thing on the table always reads as effort.',
  NULL, NULL, NULL, '🫑',
- NULL, NULL, 75, 9, 6),
+ 'https://www.turkeysforlife.com/2012/01/turkish-recipes-biber-dolmasi-stuffed.html', 'Turkey''s For Life', 75, 9, 6),
 
 ('zeytinyagli-bakla', 'Fresh broad beans in olive oil', 'Zeytinyağlı bakla',
  'Young broad beans cooked in their pods with spring onion and dill, finished with garlic yoghurt on the side. A dish with a season of about three weeks, so seize it.',
  NULL, NULL, NULL, '🫛',
- NULL, NULL, 40, 6, 4),
+ 'https://www.sbs.com.au/food/recipe/olive-oil-braised-beans-with-lemon-and-tomato-zeytinyagli-bakla/dhprko50g', 'SBS Food', 40, 6, 4),
 
 ('sevketibostan', 'Blessed thistle in olive oil', 'Şevketibostan',
  'A spiny Aegean thistle root, trimmed down to its pale hearts and stewed in olive oil with lemon. Preparing it draws blood; eating it is worth it.',
  NULL, NULL, NULL, '🌾',
- NULL, NULL, 60, 6, 4),
+ 'https://www.nefisyemektarifleri.com/zeytinyagli-sevketi-bostan-5919379/', 'Nefis Yemek Tarifleri', 60, 6, 4),
 
 ('ot-kavurma', 'Wild greens with egg', 'Ot kavurma',
  'Whatever the market had — nettle, chard tops, wild fennel — wilted in olive oil and finished with an egg stirred through. Aegean cooking at its most improvised.',
  NULL, NULL, NULL, '🍳',
- NULL, NULL, 20, 5, 4),
+ 'https://yemek.com/tarif/yumurtali-ot-kavurma/', 'Yemek.com', 20, 5, 4),
 
 ('radika', 'Chicory greens in olive oil', 'Radika',
  'Wild chicory boiled, squeezed and dressed cold with a great deal of olive oil and lemon. Properly bitter, which is the point.',
  NULL, NULL, NULL, '🌱',
- NULL, NULL, 25, 4, 4),
+ 'https://mutfaksirlari.com/radika-salatasi.html', 'Mutfak Sırları', 25, 4, 4),
 
 ('arapsaci', 'Wild fennel in olive oil', 'Arapsaçı',
  'Wild fennel fronds cooked down soft with onion and olive oil. Smells like aniseed, which makes it rakı''s blood relative.',
  NULL, NULL, NULL, '🌿',
- NULL, NULL, 30, 5, 4),
+ 'https://yemek.com/tarif/arapsaci-yemegi/', 'Yemek.com', 30, 5, 4),
 
 ('ebegumeci', 'Mallow greens', 'Ebegümeci',
  'Common mallow, the weed in everyone''s garden, stewed with onion and rice until silky. Free food that tastes expensive.',
  NULL, NULL, NULL, '🍃',
- NULL, NULL, 30, 5, 4),
+ 'https://www.nefisyemektarifleri.com/cok-lezzetli-ebegumeci-yemegi/', 'Nefis Yemek Tarifleri', 30, 5, 4),
 
 ('turp-otu', 'Radish greens, quick-fried', 'Turp otu kavurması',
  'The tops you were about to throw away, thrown in a hot pan with garlic and olive oil instead. Peppery, quick, faintly smug.',
  NULL, NULL, NULL, '🥬',
- NULL, NULL, 15, 4, 4),
+ 'https://www.nefisyemektarifleri.com/turp-otu-kavurmasi/', 'Nefis Yemek Tarifleri', 15, 4, 4),
 
 ('kabak-cicegi-dolma', 'Stuffed courgette flowers', 'Kabak çiçeği dolması',
  'Courgette flowers filled with herbed rice and poached in olive oil, served cold. Fragile, seasonal and impossible to hurry.',
  NULL, NULL, NULL, '🌼',
- NULL, NULL, 75, 9, 4),
+ 'https://www.almostturkishrecipes.com/2008/08/vegetarian-stuffed-zucchini-flowers.html', 'Almost Turkish Recipes', 75, 9, 4),
 
 ('hardalotu', 'Mustard greens in olive oil', 'Hardal otu',
  'Mustard greens boiled until the bite goes soft, squeezed and dressed cold with olive oil and lemon. Peppery where radika is bitter, and worth asking the market woman for by name.',
  NULL, NULL, NULL, '🌿',
- NULL, NULL, 25, 5, 4);
+ 'https://www.nefisyemektarifleri.com/hardal-otu-salatasi/', 'Nefis Yemek Tarifleri', 25, 5, 4);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- taze-fasulye

@@ -4,32 +4,32 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('tarama', 'Fish roe dip', 'Tarama',
  'Cured cod roe beaten with soaked bread, lemon and oil until it turns pale and fluffy. The real thing is beige, not pink — be suspicious of anything the colour of a birthday cake.',
  NULL, NULL, NULL, '🐟',
- NULL, NULL, 15, 6, 6),
+ 'https://www.196flavors.com/taramosalata/', '196 flavors', 15, 6, 6),
 
 ('ahtapot-salatasi', 'Octopus salad', 'Ahtapot salatası',
  'Octopus simmered slow until a knife slides through, then dressed cold with olive oil, lemon and parsley. Half the work is waiting, which is what rakı is for.',
  NULL, NULL, NULL, '🐙',
- NULL, NULL, 90, 8, 6),
+ 'http://www.cypnet.co.uk/ncyprus/culture/cuisine/seafood/ahtapot.html', 'Turkish-Cypriot Cuisine (Cypnet)', 90, 8, 6),
 
 ('midye-tava', 'Fried mussels with tarator', 'Midye tava',
  'Mussels in a beer batter, fried hard and fast, with a walnut tarator to drag them through. Sold on skewers on the street, and just as good on a plate.',
  NULL, NULL, NULL, '🦪',
- NULL, NULL, 40, 9, 4),
+ 'https://www.sbs.com.au/food/recipe/fried-mussels-with-tarator-midye-tava/kqxrcu79m', 'SBS Food', 40, 9, 4),
 
 ('hamsi-tava', 'Fried Black Sea anchovies', 'Hamsi tava',
  'Fresh anchovies rolled in coarse cornmeal and fried in a pan, fanned out like a wheel. Eaten head, tail and all, with raw onion and lemon.',
  NULL, NULL, NULL, '🐟',
- NULL, NULL, 25, 5, 4),
+ 'https://www.giverecipe.com/how-to-fry-anchovies/', 'Give Recipe', 25, 5, 4),
 
 ('uskumru-dolmasi', 'Stuffed mackerel', 'Uskumru dolması',
  'The mackerel is emptied through its neck without breaking the skin, the flesh cooked with nuts and spices, then packed back in and fried. The hardest dish in the Istanbul repertoire and the one worth boasting about.',
  NULL, NULL, NULL, '🐠',
- NULL, NULL, 120, 12, 6),
+ 'https://yemek.com/tarif/uskumru-dolmasi/', 'Yemek.com', 120, 12, 6),
 
 ('ciroz', 'Dried mackerel', 'Çiroz',
  'Mackerel split and dried in the wind until board-stiff, then beaten soft and dressed with vinegar and oil. Deeply old-fashioned and a serious drinker''s meze.',
  NULL, NULL, NULL, '🐟',
- NULL, NULL, 15, 5, 4),
+ 'https://www.lezzet.com.tr/yemek-tarifleri/salata-ve-meze-tarifleri/salata-tarifleri/ciroz-salatasi', 'Lezzet.com.tr', 15, 5, 4),
 
 ('balik-marin', 'Marinated bonito', 'Torik marin',
  'Bonito fillets cured in vinegar and salt for a day, then kept under olive oil with garlic and dill. Lakerda''s sharper, quicker cousin.',
@@ -39,37 +39,37 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('levrek-marin', 'Cured sea bass', 'Levrek marin',
  'Sea bass sliced thin and cured briefly in lemon and olive oil with pink peppercorns. The modern meyhane''s nod to ceviche, and it works.',
  NULL, NULL, NULL, '🍋',
- NULL, NULL, 25, 6, 4),
+ 'https://www.greatbritishchefs.com/recipes/levrek-marin-recipe', 'Great British Chefs', 25, 6, 4),
 
 ('midye-pilaki', 'Mussels pilaki', 'Midye pilaki',
  'Mussels stewed cold with potato, carrot and a lot of olive oil, in the pilaki style. Made the day before, eaten straight from the fridge.',
  NULL, NULL, NULL, '🦪',
- NULL, NULL, 45, 9, 6),
+ 'https://www.lezzet.com.tr/yemek-tarifleri/salata-ve-meze-tarifleri/meze-tarifleri/midye-pilaki', 'Lezzet.com.tr', 45, 9, 6),
 
 ('karides-salatasi', 'Prawn salad', 'Karides salatası',
  'Poached prawns folded through a lemony dressing with dill and a little yoghurt. The polite end of the seafood mezes.',
  NULL, NULL, NULL, '🦐',
- NULL, NULL, 20, 6, 4),
+ 'https://www.lezzet.com.tr/yemek-tarifleri/et-yemekleri/balik-yemekleri/karides-salatasi', 'Lezzet.com.tr', 20, 6, 4),
 
 ('kalamar-salatasi', 'Cold squid salad', 'Kalamar salatası',
  'Squid poached just long enough to stay tender, then dressed cold with lemon, olive oil and celery. The unfried half of the calamari question.',
  NULL, NULL, NULL, '🦑',
- NULL, NULL, 40, 7, 4),
+ 'https://yemek.com/tarif/kalamar-salatasi/', 'Yemek.com', 40, 7, 4),
 
 ('balik-koftesi', 'Fish cakes', 'Balık köftesi',
  'White fish flaked into potato and herbs, shaped into patties and fried crisp. What the Black Sea does with yesterday''s catch.',
  NULL, NULL, NULL, '🐟',
- NULL, NULL, 40, 9, 4),
+ 'https://yaseminskitchen.com/fish-cakes-balik-koftesi/', 'Yasemin''s Kitchen', 40, 9, 4),
 
 ('sardalya-tava', 'Fried sardines', 'Sardalya tava',
  'Sardines floured and fried whole, piled up with lemon and raw onion. Cheap, oily, perfect — the Aegean''s answer to hamsi.',
  NULL, NULL, NULL, '🐟',
- NULL, NULL, 25, 5, 4),
+ 'https://www.turkishfoodandrecipes.com/2009/08/pan-fried-sardines-sardalya-tava.html', 'Turkish Food & Recipes', 25, 5, 4),
 
 ('ahtapot-izgara', 'Grilled octopus', 'Ahtapot ızgara',
  'Octopus boiled tender, then charred hard on the grill and dressed with oil and oregano. Two cooking methods, one tentacle, no shortcuts.',
  NULL, NULL, NULL, '🐙',
- NULL, NULL, 100, 6, 4);
+ 'https://turkishfoodie.com/grilled-octopus/', 'Turkish Foodie', 100, 6, 4);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- tarama

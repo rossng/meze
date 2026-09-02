@@ -4,72 +4,72 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('pacanga-boregi', 'Pastırma & kaşar börek', 'Paçanga böreği',
  'Yufka rolled around pastırma, kaşar and peppers, then fried until it blisters. The hot meze that empties a meyhane table fastest.',
  NULL, NULL, NULL, '🌯',
- NULL, NULL, 30, 6, 4),
+ 'https://www.turkeysforlife.com/2016/01/pacanga-boregi.html', 'Turkey''s For Life', 30, 6, 4),
 
 ('icli-kofte', 'Stuffed bulgur kibbeh', 'İçli köfte',
  'A thin bulgur shell moulded around spiced lamb and walnuts, then deep-fried. Getting the shell thin without tearing it is a skill measured in years.',
  NULL, NULL, NULL, '🥚',
- NULL, NULL, 120, 11, 6),
+ 'https://turkishstylecooking.com/icli-kofte-turkish-kibbeh-recipe.html', 'Turkish Style Cooking', 120, 11, 6),
 
 ('kabak-cicegi-tava', 'Fried courgette flowers', 'Kabak çiçeği tava',
  'The same flowers, this time stuffed with cheese, dipped in a light batter and fried hot. Eat them standing at the stove; they do not survive the walk to the table.',
  NULL, NULL, NULL, '🌻',
- NULL, NULL, 30, 6, 4),
+ 'https://yemek.com/tarif/peynirli-kabak-cicegi-kizartmasi/', 'Yemek.com', 30, 6, 4),
 
 ('karides-tava', 'Garlic butter prawns', 'Karides tava',
  'Prawns thrown into foaming garlic butter with chilli and finished with lemon, served in the pan. Order bread first; the sauce is the real dish.',
  NULL, NULL, NULL, '🦐',
- NULL, NULL, 20, 6, 4),
+ 'https://www.thenavagepatch.com/shrimp-garlic-butter-turkish-style-tereyagli-karides/', 'The Navage Patch', 20, 6, 4),
 
 ('kasarli-mantar', 'Mushrooms baked with kaşar', 'Kaşarlı mantar',
  'Mushrooms cooked in butter and garlic, buried under kaşar and put under the grill until it bubbles. Nobody''s grandmother''s recipe, and always finished first.',
  NULL, NULL, NULL, '🍄',
- NULL, NULL, 25, 5, 4),
+ 'https://www.nefisyemektarifleri.com/firinda-kasarli-mantar-tarifi/', 'Nefis Yemek Tarifleri', 25, 5, 4),
 
 ('sucuk-izgara', 'Grilled sucuk', 'Sucuk ızgara',
  'Cured garlic sausage sliced thick and grilled until the edges curl and the fat runs. Two ingredients, one of which is optional.',
  NULL, NULL, NULL, '🌭',
- NULL, NULL, 10, 2, 4),
+ 'https://www.egetuerk.de/en/recipe/grilled-sucuk/', 'Egetürk', 10, 2, 4),
 
 ('pastirmali-yumurta', 'Pastırma with eggs', 'Pastırmalı yumurta',
  'Pastırma crisped in a copper pan and eggs broken over the top, cooked until just set. Breakfast food that behaves perfectly well at midnight.',
  NULL, NULL, NULL, '🍳',
- NULL, NULL, 15, 4, 4),
+ 'https://www.turkishfoodandrecipes.com/2013/04/eggs-with-pastrami-pastirmali-yumurta.html', 'Turkish Food & Recipes', 15, 4, 4),
 
 ('muska-boregi', 'Triangle börek', 'Muska böreği',
  'Yufka folded into little triangles around cheese and parsley, then fried. Sigara böreği''s geometrically superior sibling — the folding is a whole argument.',
  NULL, NULL, NULL, '🔺',
- NULL, NULL, 35, 6, 4),
+ 'https://ozlemsturkishtable.com/2014/03/spinach-and-cheese-filled-filo-pastry-triangles-muska-boregi/', 'Ozlem''s Turkish Table', 35, 6, 4),
 
 ('ispanakli-borek', 'Spinach börek', 'Ispanaklı börek',
  'Spinach and onion cooked down with cheese and rolled in yufka, baked or fried in coils. Cut into fingers so everyone can take one without committing.',
  NULL, NULL, NULL, '🥬',
- NULL, NULL, 45, 8, 6),
+ 'https://turkishstylecooking.com/spinach-borek.html', 'Turkish Style Cooking', 45, 8, 6),
 
 ('cokelekli-borek', 'Curd cheese börek', 'Çökelekli börek',
  'Dry curd cheese seasoned with pepper paste and mint, wrapped in yufka and fried. Drier and sharper inside than the feta version.',
  NULL, NULL, NULL, '🧀',
- NULL, NULL, 40, 7, 4),
+ 'https://www.lezzet.com.tr/yemek-tarifleri/hamurisi-tarifleri/borek-tarifleri/cokelek-boregi', 'Lezzet', 40, 7, 4),
 
 ('patates-koftesi', 'Potato croquettes', 'Patates köftesi',
  'Mashed potato bound with cheese and egg, rolled in flour and fried into little logs. Children''s food that adults eat more of.',
  NULL, NULL, NULL, '🥔',
- NULL, NULL, 40, 8, 6),
+ 'https://www.turkishfoodandrecipes.com/2009/01/potato-patties-patates-koftesi.html', 'Turkish Food & Recipes', 40, 8, 6),
 
 ('kizarmis-peynir', 'Fried cheese', 'Kızarmış peynir',
  'Thick fingers of cheese floured, egged and fried until the crust goes and the middle gives. Squeeze lemon on while it is still too hot to eat, which it always is.',
  NULL, NULL, NULL, '🧀',
- NULL, NULL, 15, 5, 4),
+ 'https://www.nefisyemektarifleri.com/kizartma-kasar-peyniri/', 'Nefis Yemek Tarifleri', 15, 5, 4),
 
 ('hellim-izgara', 'Grilled hellim with pomegranate', 'Hellim ızgara',
  'Halloumi griddled until it is striped and squeaking, then hit with pomegranate molasses and wild thyme. Cypriot by birth, thoroughly naturalised by now.',
  NULL, NULL, NULL, '🧀',
- NULL, NULL, 10, 5, 4),
+ 'https://www.spicekitchenuk.com/blogs/recipes/grilled-halloumi-with-pomegranate-glaze', 'Spice Kitchen UK', 10, 5, 4),
 
 ('mihlama', 'Cheese & cornmeal fondue', 'Mıhlama (kuymak)',
  'Butter, cornmeal and a young stretchy cheese beaten in a pan until it pulls into ropes. Black Sea food that arrives at the table still bubbling and is gone in four minutes.',
  NULL, NULL, NULL, '🫕',
- NULL, NULL, 25, 4, 4);
+ 'https://cookingorgeous.com/blog/kuymak-mihlama/', 'Cooking Gorgeous', 25, 4, 4);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- pacanga-boregi

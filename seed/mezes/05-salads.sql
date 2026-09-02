@@ -4,62 +4,62 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('gavurdagi', 'Walnut & tomato salad', 'Gavurdağı salatası',
  'Tomatoes, onion and walnuts chopped small and dressed with pomegranate molasses. Antep''s answer to the shepherd''s salad, and the one that actually goes with rakı.',
  NULL, NULL, NULL, '🍅',
- NULL, NULL, 15, 8, 6),
+ 'https://ozlemsturkishtable.com/2012/08/gavurdagi-salad-of-ripe-tomatoes-onion-parsley-and-walnuts-with-olive-oil-pomegranate-sauce-dressing-gavurdagi-salatasi/', 'Ozlem''s Turkish Table', 15, 8, 6),
 
 ('zeytin-piyazi', 'Olive & walnut salad', 'Zeytin piyazı',
  'Cracked green olives chopped with walnut, pomegranate molasses and a lot of spring onion. Antakya''s contribution, and the sharpest thing on the table.',
  NULL, NULL, NULL, '🫒',
- NULL, NULL, 15, 7, 4),
+ 'https://www.ardaninmutfagi.com/yemek-tarifleri/salatalar/zeytin-piyazi', 'Arda''nın Mutfağı', 15, 7, 4),
 
 ('kozlenmis-biber', 'Roasted pepper salad', 'Közlenmiş biber salatası',
  'Long green peppers blackened over the flame, peeled and left in garlicky olive oil. Half a dish and half a condiment.',
  NULL, NULL, NULL, '🌶️',
- NULL, NULL, 35, 5, 4),
+ 'https://www.turkishfoodandrecipes.com/2009/06/roasted-pepper-salad-kozlenmis-biber.html', 'Turkish Food & Recipes', 35, 5, 4),
 
 ('sogus', 'Tomato, onion & sumac', 'Söğüş',
  'Sliced tomato and onion with sumac and parsley, and that is the whole recipe. Every kebab in Turkey arrives with it and there is a reason.',
  NULL, NULL, NULL, '🧅',
- NULL, NULL, 10, 5, 6),
+ 'https://yemek.com/tarif/sogus/', 'Yemek.com', 10, 5, 6),
 
 ('roka-salatasi', 'Rocket with lemon', 'Roka salatası',
  'Wild rocket, lemon, olive oil, salt. What every fish in the Aegean is served next to, and it never needs anything more.',
  NULL, NULL, NULL, '🌿',
- NULL, NULL, 5, 4, 4),
+ 'https://yemek.com/tarif/roka-salatasi/', 'Yemek.com', 5, 4, 4),
 
 ('marul-salatasi', 'Cos lettuce salad', 'Kıvırcık salatası',
  'Shredded lettuce with spring onion, dill and a lemon dressing. The green thing that stops a meze table from being entirely beige.',
  NULL, NULL, NULL, '🥗',
- NULL, NULL, 10, 5, 4),
+ 'https://www.lezzet.com.tr/yemek-tarifleri/salata-ve-meze-tarifleri/salata-tarifleri/kivircik-salatasi-tarifi', 'Lezzet', 10, 5, 4),
 
 ('kirmizi-lahana', 'Red cabbage salad', 'Kırmızı lahana salatası',
  'Red cabbage shredded fine and worked with salt and lemon until it softens and goes violently pink. Keeps for days and gets better.',
  NULL, NULL, NULL, '🥬',
- NULL, NULL, 15, 5, 6),
+ 'https://www.giverecipe.com/turkish-red-cabbage-salad/', 'Give Recipe', 15, 5, 6),
 
 ('turp-sogus', 'Radish & herb plate', 'Turp söğüş',
  'A pile of radishes, rocket and spring onions, cold and unarranged. Bare-minimum meze, and no rakı table is complete without it.',
  NULL, NULL, NULL, '🌶️',
- NULL, NULL, 5, 3, 6),
+ 'https://yummyistanbul.com/turkish-radish-salad-recipe/', 'Yummy Istanbul', 5, 3, 6),
 
 ('patates-salatasi', 'Potato salad, Turkish style', 'Patates salatası',
  'Waxy potatoes dressed warm with olive oil, lemon, spring onion and lots of parsley — no mayonnaise anywhere near it. Dress them while hot or the flavour never gets in.',
  NULL, NULL, NULL, '🥔',
- NULL, NULL, 30, 7, 6),
+ 'https://www.giverecipe.com/turkish-potato-salad/', 'Give Recipe', 30, 7, 6),
 
 ('zahter', 'Wild thyme salad', 'Zahter salatası',
  'Fresh wild thyme leaves tossed with onion, walnut, olive oil and pomegranate molasses. Antakya on a plate, and unlike anything else here.',
  NULL, NULL, NULL, '🌿',
- NULL, NULL, 10, 6, 4),
+ 'https://www.aglaiakremezi.com/zahter-salad/', 'Aglaia''s Table', 10, 6, 4),
 
 ('rus-salatasi', 'Russian salad', 'Rus salatası',
  'Diced potato, peas, carrot and gherkin bound in mayonnaise, domed on a plate and studded with olives. Brought to Istanbul by White Russian émigrés, and on every meyhane list since — briefly renamed ''American salad'' during the Cold War, which fooled nobody.',
  NULL, NULL, NULL, '🥔',
- NULL, NULL, 40, 8, 8),
+ 'https://www.turkishfoodandrecipes.com/2009/01/russian-salad-rus-salatasi.html', 'Turkish Food & Recipes', 40, 8, 8),
 
 ('fatus', 'Fattoush with toasted bread', 'Fatuş',
  'Vegetables cut deliberately big, dressed hard with sumac and lemon, and shot through with fried flatbread that half-softens in the bowl. Antakya''s, by way of Syria, and the salad that improves while it sits.',
  NULL, NULL, NULL, '🥗',
- NULL, NULL, 20, 9, 6);
+ 'https://www.lezzet.com.tr/yemek-tarifleri/dunya-mutfaklari/lubnan/fettus-salata', 'Lezzet', 20, 9, 6);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES
 -- gavurdagi

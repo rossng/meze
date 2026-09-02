@@ -9,27 +9,27 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('incirli-peynir', 'Figs with cheese & walnuts', 'İncir, ceviz ve peynir',
  'Ripe figs torn open beside sharp tulum, walnuts and a thread of honey. Late-summer assembly rather than cooking, and better than most things that take an hour.',
  NULL, NULL, NULL, '🫐',
- NULL, NULL, 10, 4, 4),
+ 'https://www.turkeysforlife.com/2021/09/figs-blue-cheese.html', 'Turkey''s For Life', 10, 4, 4),
 
 ('cevizli-incir-dolmasi', 'Walnut-stuffed dried figs', 'Cevizli kuru incir dolması',
  'Dried figs simmered soft in sweetened milk, each one opened and given a walnut half. Made in the afternoon, eaten cold at the point where the table has stopped pretending it wants more rakı.',
  NULL, NULL, NULL, '🫐',
- NULL, NULL, 35, 5, 6),
+ 'https://yaseminskitchen.com/walnut-stuffed-figs-cevizli-kuru-incir-tatlisi/', 'Yasemin''s Kitchen', 35, 5, 6),
 
 ('incir-receli-peynir', 'Fig jam with tulum', 'İncir reçeli ve tulum peyniri',
  'A spoon of fig jam pressed against the saltiest crumbly cheese you can find, on bread. Breakfast logic applied at midnight, and it holds up.',
  NULL, NULL, NULL, '🍯',
- NULL, NULL, 5, 3, 6),
+ 'https://www.whats4eats.com/preserves/incir-receli-recipe', 'Whats4eats', 5, 3, 6),
 
 ('kaymakli-kayisi', 'Apricots with clotted cream', 'Kaymaklı kayısı tatlısı',
  'Malatya''s dried apricots poached in light syrup until plump, then split and packed with kaymak and pistachio. The dessert that requires no baking and still looks like you tried.',
  NULL, NULL, NULL, '🍑',
- NULL, NULL, 40, 5, 6),
+ 'https://ozlemsturkishtable.com/2025/07/poached-dried-apricots-in-light-syrup-with-kaymak/', 'Ozlem''s Turkish Table', 40, 5, 6),
 
 ('kayisi-hosafi', 'Apricot compote', 'Kayısı hoşafı',
  'Dried apricots stewed with a little sugar and a clove, served cold in the juice they made. Not quite a pudding, exactly the thing after anything fried.',
  NULL, NULL, NULL, '🍑',
- NULL, NULL, 25, 4, 6),
+ 'https://www.turkishfoodandrecipes.com/2009/01/apricot-compote-kayisi-kompostosu.html', 'Turkish Food & Recipes', 25, 4, 6),
 
 ('meyve-tabagi', 'The fruit plate', 'Meyve tabağı',
  'Melon, grapes, figs and whatever else is in season, cut cold and brought out unasked at the end of the night. The meyhane''s way of saying it is time, gently.',

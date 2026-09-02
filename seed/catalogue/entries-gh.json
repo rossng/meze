@@ -1,35 +1,35 @@
 [
-{"id":"rus-salatasi","name":"Russian salad","tr":"Rus salatası","file":"05-salads","emoji":"🥔","serves":8,"prep":40,"count":8,
+{"id":"rus-salatasi","name":"Russian salad","tr":"Rus salatası","file":"05-salads","emoji":"🥔","serves":8,"prep":40,"count":8,"recipe":"https://www.turkishfoodandrecipes.com/2009/01/russian-salad-rus-salatasi.html","recipeSource":"Turkish Food & Recipes",
  "desc":"Diced potato, peas, carrot and gherkin bound in mayonnaise, domed on a plate and studded with olives. Brought to Istanbul by White Russian émigrés, and on every meyhane list since — briefly renamed 'American salad' during the Cold War, which fooled nobody.",
  "tags":["origin:istanbul","heritage:greek","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:easy","time:moderate","ingredients:some","main:potato","temp:cold","theme:classic","theme:crowd","theme:make-ahead"],
  "ing":[[500,"g","waxy potatoes","boiled, in 1cm dice"],[2,null,"carrots","boiled and diced"],[150,"g","peas","cooked"],[4,null,"pickled gherkins","diced"],[200,"g","mayonnaise",null],[1,"tsp","mustard",null],[2,null,"eggs","hard-boiled, to garnish"],[1,"handful","black olives","to garnish"]]},
 
-{"id":"mutebbel","name":"Aubergine with tahini & yoghurt","tr":"Mütebbel","file":"02-aubergine","emoji":"🍆","serves":6,"prep":35,"count":6,
+{"id":"mutebbel","name":"Aubergine with tahini & yoghurt","tr":"Mütebbel","file":"02-aubergine","emoji":"🍆","serves":6,"prep":35,"count":6,"recipe":"https://www.yayla.de/en/recipes/mutebbel","recipeSource":"Yayla",
  "desc":"Charred aubergine beaten with tahini, yoghurt, garlic and lemon until it goes pale and silky. Babaganuş's richer cousin: the yoghurt is what tells them apart.",
  "tags":["origin:hatay","origin:levant","heritage:arab","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:easy","time:moderate","ingredients:few","main:aubergine","temp:cold","theme:dip","theme:classic","theme:crowd"],
  "ing":[[3,null,"large aubergines","charred over a flame"],[3,"tbsp","tahini",null],[200,"g","thick strained yoghurt (süzme)",null],[2,"clove","garlic",null],[1,null,"lemon","juiced"],[2,"tbsp","olive oil","to finish"]]},
 
-{"id":"fatus","name":"Fattoush with toasted bread","tr":"Fatuş","file":"05-salads","emoji":"🥗","serves":6,"prep":20,"count":9,
+{"id":"fatus","name":"Fattoush with toasted bread","tr":"Fatuş","file":"05-salads","emoji":"🥗","serves":6,"prep":20,"count":9,"recipe":"https://www.lezzet.com.tr/yemek-tarifleri/dunya-mutfaklari/lubnan/fettus-salata","recipeSource":"Lezzet",
  "desc":"Vegetables cut deliberately big, dressed hard with sumac and lemon, and shot through with fried flatbread that half-softens in the bowl. Antakya's, by way of Syria, and the salad that improves while it sits.",
  "tags":["origin:hatay","origin:levant","heritage:arab","diet:vegetarian","diet:vegan","diet:dairy-free","diet:nut-free","complexity:easy","time:quick","ingredients:some","main:veg","temp:cold","theme:salad","theme:bread","theme:crowd"],
  "ing":[[2,null,"flatbreads","torn and fried or toasted"],[3,null,"tomatoes","in big pieces"],[2,null,"cucumbers","in big pieces"],[1,"bunch","purslane","or cos lettuce"],[6,null,"radishes","halved"],[1,"bunch","mint & parsley",null],[1,"tbsp","sumac",null],[1,null,"lemon","juiced"],[4,"tbsp","olive oil",null]]},
 
-{"id":"acuka","name":"Circassian pepper & walnut paste","tr":"Acuka","file":"01-dips","emoji":"🌶️","serves":6,"prep":15,"count":7,
+{"id":"acuka","name":"Circassian pepper & walnut paste","tr":"Acuka","file":"01-dips","emoji":"🌶️","serves":6,"prep":15,"count":7,"recipe":"https://ozlemsturkishtable.com/2025/04/acuka-spiced-walnut-and-red-pepper-paste-dip/","recipeSource":"Ozlem's Turkish Table",
  "desc":"Pepper paste worked with ground walnut, garlic and coriander seed into something between a dip and a condiment. Abkhaz in origin — the name is simply their word for salt — and it keeps for weeks, which is how it earned its place.",
  "tags":["origin:anatolia","heritage:circassian","diet:vegetarian","diet:vegan","diet:dairy-free","complexity:easy","time:quick","ingredients:some","main:tomato","main:nuts","temp:cold","theme:dip","theme:spicy","theme:make-ahead","theme:bread"],
  "ing":[[4,"tbsp","pepper paste (biber salçası)",null],[120,"g","walnuts","ground"],[3,"clove","garlic",null],[1,"tsp","coriander seed","crushed"],[2,"tbsp","breadcrumbs",null],[80,"ml","olive oil",null],[1,"tsp","pul biber (chilli flakes)",null]]},
 
-{"id":"borani","name":"Spinach borani with chickpeas","tr":"Ispanak boranisi","file":"01-dips","emoji":"🥬","serves":6,"prep":40,"count":7,
+{"id":"borani","name":"Spinach borani with chickpeas","tr":"Ispanak boranisi","file":"01-dips","emoji":"🥬","serves":6,"prep":40,"count":7,"recipe":"https://www.greatbritishchefs.com/recipes/spinach-borani-fried-chickpeas-recipe","recipeSource":"Great British Chefs",
  "desc":"Spinach cooked down with rice and chickpeas, then cooled under garlic yoghurt. The old Persian-court version of yoğurtlu ıspanak, and substantial enough to be a dish rather than a dip.",
  "tags":["origin:anatolia","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:medium","time:moderate","ingredients:some","main:greens","main:yoghurt","temp:cold","theme:make-ahead","theme:crowd"],
  "ing":[[600,"g","spinach",null],[150,"g","cooked chickpeas",null],[3,"tbsp","short-grain rice",null],[400,"g","plain yoghurt",null],[2,"clove","garlic",null],[1,null,"onion","finely chopped"],[3,"tbsp","olive oil",null]]},
 
-{"id":"hardalotu","name":"Mustard greens in olive oil","tr":"Hardal otu","file":"04-zeytinyagli","emoji":"🌿","serves":4,"prep":25,"count":5,
+{"id":"hardalotu","name":"Mustard greens in olive oil","tr":"Hardal otu","file":"04-zeytinyagli","emoji":"🌿","serves":4,"prep":25,"count":5,"recipe":"https://www.nefisyemektarifleri.com/hardal-otu-salatasi/","recipeSource":"Nefis Yemek Tarifleri",
  "desc":"Mustard greens boiled until the bite goes soft, squeezed and dressed cold with olive oil and lemon. Peppery where radika is bitter, and worth asking the market woman for by name.",
  "tags":["origin:aegean","origin:hatay","diet:vegetarian","diet:vegan","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:moderate","ingredients:few","main:greens","temp:cold","theme:zeytinyagli","theme:salad"],
  "ing":[[600,"g","mustard greens (hardal otu)","thick stalks trimmed"],[4,"tbsp","olive oil",null],[1,null,"lemon","juiced"],[2,"clove","garlic","optional"],[null,null,"salt",null]]},
 
-{"id":"sac-kavurma","name":"Lamb seared on the griddle","tr":"Sac kavurma","file":"09-meat","emoji":"🥩","serves":6,"prep":30,"count":7,
+{"id":"sac-kavurma","name":"Lamb seared on the griddle","tr":"Sac kavurma","file":"09-meat","emoji":"🥩","serves":6,"prep":30,"count":7,"recipe":"https://cookingorgeous.com/blog/sac-kavurma-turkish-lamb-saute/","recipeSource":"Cooking Gorgeous",
  "desc":"Diced lamb thrown onto a screaming hot sac with onion, pepper and tomato and kept moving until it catches. Urfa keeps it to meat, fat and pepper alone; everywhere else adds the vegetables.",
  "tags":["origin:southeast","origin:anatolia","diet:meat","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:moderate","ingredients:some","main:meat","temp:hot","theme:arasicak","theme:centrepiece","theme:raki","theme:crowd"],
  "ing":[[600,"g","lamb shoulder or loin","in small dice"],[2,null,"onions","sliced"],[3,null,"green peppers","sliced"],[2,null,"tomatoes","diced"],[30,"g","butter or tail fat",null],[1,"tsp","dried oregano",null],[null,null,"salt & black pepper",null]]}

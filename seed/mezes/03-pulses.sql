@@ -4,22 +4,22 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 ('mercimek-koftesi', 'Red lentil balls', 'Mercimek köftesi',
  'Red lentils and fine bulgur worked into a paste with pepper paste and spring onion, then squeezed into little ridged patties in your fist. Eaten wrapped in a lettuce leaf with a squeeze of lemon.',
  NULL, NULL, NULL, '🫘',
- NULL, NULL, 40, 9, 8),
+ 'https://www.themediterraneandish.com/mercimek-koftesi-turkish-lentil-balls/', 'The Mediterranean Dish', 40, 9, 8),
 
 ('nohut-salatasi', 'Chickpea salad', 'Nohut salatası',
  'Chickpeas with onion, tomato, parsley and a sharp lemon dressing. Piyaz''s cheaper cousin and a reliable vegan anchor for the table.',
  NULL, NULL, NULL, '🫘',
- NULL, NULL, 15, 8, 6),
+ 'https://www.turkeysforlife.com/2016/08/chickpea-salad-recipe-turkish.html', 'Turkey''s For Life', 15, 8, 6),
 
 ('yesil-mercimek-salatasi', 'Green lentil salad', 'Yeşil mercimek salatası',
  'Green lentils cooked just short of collapse and dressed with pomegranate molasses, spring onion and mint. Sturdy enough to sit out all evening.',
  NULL, NULL, NULL, '🫒',
- NULL, NULL, 35, 8, 6),
+ 'https://www.almostturkishrecipes.com/2020/09/green-lentil-salad-yesil-mercimek.html', 'Almost Turkish Recipes', 35, 8, 6),
 
 ('fellah-koftesi', 'Bulgur balls in tomato sauce', 'Fellah köftesi',
  'Thumb-pressed bulgur dumplings boiled and then tossed in a garlicky tomato sauce with mint. Hatay''s party food — someone always ends up making them all evening.',
  NULL, NULL, NULL, '🔴',
- NULL, NULL, 45, 8, 6),
+ 'https://cinnamonsnail.com/fellah-koftesi/', 'Cinnamon Snail', 45, 8, 6),
 
 ('simit-salatasi', 'Fine bulgur salad', 'Simit salatası',
  'Antep''s plainer take on kısır: fine bulgur worked with pepper paste, spring onion and lemon, and no tomato to muddy it. Named for the bulgur, not the bread ring.',
