@@ -1,4 +1,4 @@
-import type { Catalogue, NightState, NightSummary, VoteValue } from '../shared/types';
+import type { Catalogue, DeviceLink, DeviceLinkClaim, NightState, NightSummary, VoteValue } from '../shared/types';
 
 const USER_KEY = 'meze:userId';
 
@@ -14,6 +14,11 @@ export function getUserId(): string {
     localStorage.setItem(USER_KEY, id);
   }
   return id;
+}
+
+/** Adopt an identity handed over from another device. */
+export function setUserId(id: string) {
+  localStorage.setItem(USER_KEY, id);
 }
 
 export class ApiError extends Error {
@@ -59,5 +64,7 @@ export const api = {
   choose: (code: string, menuId: string | null) => call('PUT', `/api/nights/${code}/chosen`, { menuId }),
   addCustom: (code: string, name: string) => call<{ id: string }>('POST', `/api/nights/${code}/custom`, { name }),
   removeMember: (code: string, userId: string) => call('DELETE', `/api/nights/${code}/members/${userId}`),
+  createLink: () => call<DeviceLink>('POST', '/api/me/link'),
+  claimLink: (code: string) => call<DeviceLinkClaim>('POST', `/api/me/link/${code}/claim`),
   cheers: (code: string, text: string) => call('POST', `/api/nights/${code}/cheers`, { text }),
 };

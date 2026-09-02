@@ -33,6 +33,14 @@ export function rememberNight(n: JoinedNight) {
   emit();
 }
 
+/** Add tables joined on another device, keeping whatever this one already knows. */
+export function rememberNights(nights: JoinedNight[]) {
+  const existing = getJoinedNights();
+  const merged = [...nights, ...existing.filter((x) => !nights.some((n) => n.code === x.code))];
+  localStorage.setItem(NIGHTS_KEY, JSON.stringify(merged.slice(0, 30)));
+  emit();
+}
+
 export function forgetNight(code: string) {
   localStorage.setItem(NIGHTS_KEY, JSON.stringify(getJoinedNights().filter((x) => x.code !== code)));
   if (getActiveNight() === code) setActiveNight(null);

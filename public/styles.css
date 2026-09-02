@@ -153,6 +153,16 @@ input::placeholder { color: rgba(255, 246, 229, 0.4); }
 .night-link:hover { background: rgba(255, 255, 255, 0.1); }
 .night-name { font-weight: 800; font-size: 1.05rem; }
 
+.your-nights-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.8rem; flex-wrap: wrap; }
+
+/* ---- Pairing a second device ----------------------------------------------- */
+.pair { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin: 0.6rem 0; }
+.qr { width: 180px; height: 180px; flex: none; border-radius: 8px; box-shadow: var(--shadow); }
+.pair-side { flex: 1; min-width: 180px; }
+.pair-code { display: block; font-size: 1.6rem; font-weight: 800; color: var(--wine); margin: 0.3rem 0; }
+.link-card { max-width: 520px; margin: 0 auto; }
+.link-error { color: var(--red); font-weight: 700; }
+
 /* ---- Explore --------------------------------------------------------------- */
 .page-head { margin-bottom: 1rem; }
 .explore-tools { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.8rem; }

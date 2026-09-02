@@ -79,6 +79,16 @@ echo "# delete menu clears chosen"
 j $A -X DELETE "$BASE/api/nights/$CODE/menus/$M" >/dev/null
 j $A "$BASE/api/nights/$CODE" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const st=JSON.parse(s);if(st.menus.length!==0||st.night.chosenMenuId!==null){console.error("FAIL delete");process.exit(1)}console.log("ok")})'
 
+echo "# pairing a second device"
+PH=phone000000003
+LINK=$(j $A -X POST "$BASE/api/me/link")
+LC=$(echo "$LINK" | node -pe 'JSON.parse(require("fs").readFileSync(0)).code')
+j $PH -X POST "$BASE/api/me/link/$LC/claim" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const c=JSON.parse(s);if(c.userId!=="'"$A"'"){console.error("FAIL wrong identity handed over");process.exit(1)}if(!c.nights.some(n=>n.code==="'"$CODE"'")){console.error("FAIL tables not handed over");process.exit(1)}console.log("ok-claim")})'
+curl -s -o /dev/null -w '%{http_code}\n' -H "x-user-id: $PH" -X POST "$BASE/api/me/link/$LC/claim" | grep -q 404 && echo ok-404-code-spent
+NEW=$(j $A -X POST "$BASE/api/me/link" | node -pe 'JSON.parse(require("fs").readFileSync(0)).code')
+j $A -X POST "$BASE/api/me/link" >/dev/null
+curl -s -o /dev/null -w '%{http_code}\n' -H "x-user-id: $PH" -X POST "$BASE/api/me/link/$NEW/claim" | grep -q 404 && echo ok-404-code-superseded
+
 echo "# SPA fallback"
 curl -sf "$BASE/n/$CODE" | grep -q '<div id="app">' && echo ok-spa
 echo "SMOKE OK ($CODE)"

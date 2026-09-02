@@ -3,6 +3,7 @@ import type { Catalogue, Menu, Meze, NightOption, NightState, VoteValue } from '
 import { api, ApiError, getUserId } from '../api';
 import { useCatalogue } from '../catalogue';
 import { connectRoom } from '../live';
+import { PairDeviceButton } from '../pair';
 import { navigate } from '../router';
 import { rememberNight, setActiveNight } from '../store';
 import { useToast } from '../toast';
@@ -135,6 +136,7 @@ export function Night({ code }: { code: string }) {
             <button class="btn btn-small btn-ghost" type="button" onClick={copyLink}>
               🔗 Copy invite link
             </button>
+            <PairDeviceButton />
             <button class="btn btn-small btn-cheers" type="button" onClick={cheers}>
               🥃 Şerefe!
             </button>

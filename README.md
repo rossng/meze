@@ -74,6 +74,7 @@ src/server/room.ts    NightRoom Durable Object: WebSocket hibernation, presence,
 src/shared/types.ts   Types shared by server and client.
 src/client/           Preact SPA: Home (create/join), Explore (filter catalogue), Night (vote, menus).
 src/client/lexicon.ts Turkish <-> English ingredient words used to widen a search.
+src/client/qr.ts      Small QR encoder, used to hand an identity to a second device.
 migrations/           D1 schema.  seed/seed.sql   taxonomy + the original mezes.
 seed/catalogue/       Authored entries (JSON) -> seed/mezes/*.sql via npm run catalogue.
 public/               index.html, styles.css, and the built app.js.
@@ -82,6 +83,17 @@ public/               index.html, styles.css, and the built app.js.
 **Identity.** There are no accounts. The browser generates an id, keeps it in `localStorage`,
 and sends it as `x-user-id`. A person names themselves per night, and can rename at any time.
 Joined nights are remembered locally so you can switch between tables from the nav.
+
+**A second device.** Because the id is a bearer token kept in one browser, being the same guest
+on another device means copying it there. "Use this on another device" (on the home page and in
+the night header) calls `POST /api/me/link` for a pairing code and shows it as a QR; the phone opens
+`/link/<code>` and `POST`s to claim it, which hands back the id and the list of tables that
+identity belongs to. The QR deliberately carries the code and not the id itself: a `device_links`
+row lives two minutes and can only be claimed once, so a photographed screen is worthless
+afterwards, whereas the id never rotates. Only the device showing the QR can be scanned, so the
+other direction means reading the code out instead.
+`src/client/qr.ts` is a ~250-line QR encoder (byte mode, level L, versions 1–5) so nothing has
+to be fetched to draw one.
 
 **Live updates.** D1 is the only source of truth. After every mutation the worker POSTs a
 `refresh` to the night's Durable Object, which fans it out to connected sockets; clients then
@@ -130,6 +142,9 @@ the catalogue is baked into the code.
 
 `nights` (code, creator, chosen_menu_id) → `night_members`, `night_options` (candidate mezes),
 `option_votes` (2 / 1 / −1 per person per meze), `menus` → `menu_items`, `menu_votes`.
+
+`device_links` (code → user_id, short-lived, single use) sits off to the side: it only exists to
+move an identity between devices.
 
 ## Credits
 

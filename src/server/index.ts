@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import type { Env } from './env';
 import { ensureUser, findNightByCode, getCatalogue, getNightState, getNightSummaries } from './db';
-import type { RoomServerMessage, VoteValue } from '../shared/types';
+import type { DeviceLink, DeviceLinkClaim, RoomServerMessage, VoteValue } from '../shared/types';
 
 export { NightRoom } from './room';
 
@@ -71,6 +71,50 @@ app.get('/api/me/nights', async (c) => {
     .slice(0, 50);
   const nights = await getNightSummaries(c.env.DB, codes);
   return c.json({ nights });
+});
+
+// --- device links -----------------------------------------------------------
+//
+// Move an identity to a second device. The code is short enough to read aloud
+// or put in a QR, and safe to be short because it lives for two minutes and
+// can only be redeemed once. Guessing one inside that window means finding a
+// live code among 31^8 of them.
+
+const LINK_TTL_MS = 2 * 60 * 1000;
+
+app.post('/api/me/link', async (c) => {
+  const userId = c.get('userId');
+  await ensureUser(c.env.DB, userId);
+  const now = Date.now();
+  const code = randomCode(8);
+  await c.env.DB.batch([
+    // Only one live link per person, and sweep away anything long dead.
+    c.env.DB.prepare('DELETE FROM device_links WHERE user_id = ? OR expires_at < ?').bind(userId, new Date(now - 60 * 60 * 1000).toISOString()),
+    c.env.DB.prepare('INSERT INTO device_links (code, user_id, expires_at) VALUES (?, ?, ?)').bind(code, userId, new Date(now + LINK_TTL_MS).toISOString()),
+  ]);
+  return c.json({ code, url: new URL(`/link/${code}`, c.req.url).toString(), expiresAt: new Date(now + LINK_TTL_MS).toISOString() } satisfies DeviceLink, 201);
+});
+
+app.post('/api/me/link/:code/claim', async (c) => {
+  const code = c.req.param('code').toLowerCase();
+  const now = new Date().toISOString();
+  // Spend the code and read it back in one statement, so two devices racing on
+  // the same code cannot both win.
+  const row = await c.env.DB.prepare('UPDATE device_links SET claimed_at = ? WHERE code = ? AND claimed_at IS NULL AND expires_at > ? RETURNING user_id')
+    .bind(now, code, now)
+    .first<{ user_id: string }>();
+  if (!row) return c.json({ error: 'that code has expired or been used already' }, 404);
+
+  // The joined-nights list lives in localStorage on the first device, so hand
+  // the new one its tables too — otherwise it arrives as the right person with
+  // an empty home page.
+  const nights = await c.env.DB.prepare(
+    `SELECT n.code, n.name FROM nights n JOIN night_members m ON m.night_id = n.id
+     WHERE m.user_id = ? ORDER BY n.created_at DESC LIMIT 30`,
+  )
+    .bind(row.user_id)
+    .all<{ code: string; name: string }>();
+  return c.json({ userId: row.user_id, nights: nights.results } satisfies DeviceLinkClaim);
 });
 
 // --- nights -----------------------------------------------------------------

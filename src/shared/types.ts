@@ -64,6 +64,18 @@ export interface NightSummary {
   memberCount: number;
 }
 
+/** A short-lived, single-use code that moves an identity to another device. */
+export interface DeviceLink {
+  code: string;
+  url: string;
+  expiresAt: string;
+}
+
+export interface DeviceLinkClaim {
+  userId: string;
+  nights: { code: string; name: string }[];
+}
+
 export interface Member {
   userId: string;
   displayName: string;

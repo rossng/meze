@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import type { NightSummary } from '../../shared/types';
 import { api } from '../api';
+import { PairDeviceButton } from '../pair';
 import { navigate } from '../router';
 import { forgetNight, rememberNight, setActiveNight, useStore } from '../store';
 import { useToast } from '../toast';
@@ -104,7 +105,10 @@ export function Home() {
 
       {nights.length > 0 && (
         <section class="card your-nights">
-          <h2>🪑 Your tables</h2>
+          <div class="your-nights-head">
+            <h2>🪑 Your tables</h2>
+            <PairDeviceButton />
+          </div>
           <ul class="night-list">
             {nights.map((n) => {
               const s = summaries[n.code];

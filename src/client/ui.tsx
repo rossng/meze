@@ -1,6 +1,7 @@
 import type { ComponentChildren } from 'preact';
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useMemo, useState } from 'preact/hooks';
 import type { Catalogue, Ingredient, Member, Meze, Tag, Vote, VoteValue } from '../shared/types';
+import { qrMatrix } from './qr';
 
 // --- catalogue helpers --------------------------------------------------------
 
@@ -137,6 +138,21 @@ export function Modal({ title, children, onClose }: { title: string; children: C
         {children}
       </div>
     </div>
+  );
+}
+
+/** Renders a QR matrix as one SVG path, so it stays crisp at any size. */
+export function QrCode({ text, label }: { text: string; label: string }) {
+  const modules = useMemo(() => qrMatrix(text), [text]);
+  const n = modules.length;
+  const d = modules
+    .flatMap((row, y) => row.map((dark, x) => (dark ? `M${x} ${y}h1v1h-1z` : '')))
+    .join('');
+  return (
+    <svg class="qr" viewBox={`-2 -2 ${n + 4} ${n + 4}`} role="img" aria-label={label} shape-rendering="crispEdges">
+      <rect x={-2} y={-2} width={n + 4} height={n + 4} fill="#fff6e5" />
+      <path d={d} fill="#10192e" />
+    </svg>
   );
 }
 
