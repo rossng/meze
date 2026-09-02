@@ -40,6 +40,7 @@
  "ing":[[3,null,"large aubergines","charred over a flame"],[80,"g","walnuts",null],[2,"tbsp","pepper paste (biber salçası)",null],[2,"tbsp","pomegranate molasses",null],[2,"clove","garlic",null],[4,"tbsp","olive oil",null],[1,"tsp","cumin",null],[1,"tsp","pul biber (chilli flakes)",null]]},
 
 {"id":"fellah-koftesi","name":"Bulgur balls in tomato sauce","tr":"Fellah köftesi","file":"03-pulses","emoji":"🔴","serves":6,"prep":45,"count":8,"recipe":"https://cinnamonsnail.com/fellah-koftesi/","recipeSource":"Cinnamon Snail",
+ "photo":"/img/fellah-koftesi.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Thumb-pressed bulgur dumplings boiled and then tossed in a garlicky tomato sauce with mint. Hatay's party food — someone always ends up making them all evening.",
  "tags":["origin:hatay","heritage:arab","diet:vegetarian","diet:vegan","diet:dairy-free","diet:nut-free","complexity:medium","time:moderate","ingredients:some","main:grains","temp:cold","theme:classic","theme:crowd"],
  "ing":[[300,"g","fine bulgur",null],[100,"g","semolina",null],[2,"tbsp","tomato paste",null],[3,null,"tomatoes","grated, for the sauce"],[3,"clove","garlic",null],[4,"tbsp","olive oil",null],[1,"tbsp","dried mint",null],[1,"tsp","pul biber (chilli flakes)",null]]},
@@ -65,6 +66,7 @@
  "ing":[[3,null,"aubergines","sliced and salted"],[300,"g","plain yoghurt",null],[2,"clove","garlic",null],[3,null,"tomatoes","grated"],[2,null,"green peppers",null],[300,"ml","sunflower oil","for frying"],[1,"tsp","dried mint",null]]},
 
 {"id":"beyin-salatasi","name":"Brain salad","tr":"Beyin salatası","file":"09-meat","emoji":"😈","serves":4,"prep":40,"count":5,"recipe":"https://yemek.com/tarif/beyin-salatasi/","recipeSource":"Yemek.com",
+ "photo":"/img/beyin-salatasi.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Lamb's brain poached in vinegared water, cooled and dressed with lemon, olive oil and parsley. A genuine meyhane classic that has quietly gone out of fashion, texture being what it is.",
  "tags":["origin:istanbul","diet:meat","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:medium","time:moderate","ingredients:few","main:meat","temp:cold","theme:adventurous","theme:classic","theme:raki"],
  "ing":[[2,null,"lamb's brains","soaked and cleaned"],[2,"tbsp","white vinegar","for the poaching water"],[1,null,"lemon","juiced"],[4,"tbsp","olive oil",null],[1,"bunch","parsley",null]]},
@@ -80,6 +82,7 @@
  "ing":[[500,"g","calf's liver","sliced very thin"],[100,"g","plain flour",null],[300,"ml","sunflower oil","for frying"],[1,null,"red onion","sliced, with sumac"],[1,"tsp","pul biber (chilli flakes)",null]]},
 
 {"id":"pastirma-sucuk","name":"Pastırma & sucuk plate","tr":"Pastırma sucuk tabağı","file":"09-meat","emoji":"🥩","serves":6,"prep":5,"count":3,
+ "photo":"/img/pastirma-sucuk.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Air-dried beef under its coat of fenugreek paste, sliced tissue-thin, with cured sausage alongside. Kayseri's contribution to every serious table.",
  "tags":["origin:anatolia","diet:meat","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:meat","temp:cold","theme:no-cook","theme:raki","theme:classic"],
  "ing":[[150,"g","pastırma","sliced thin"],[200,"g","sucuk",null],[1,null,"melon or tomato","to serve"]]},
@@ -90,11 +93,13 @@
  "ing":[[3,null,"mackerel","large, whole"],[2,null,"onions","finely chopped"],[3,"tbsp","pine nuts",null],[3,"tbsp","currants",null],[50,"g","walnuts",null],[1,"tsp","cinnamon",null],[1,"tsp","allspice",null],[0.5,"tsp","ground cloves",null],[1,"bunch","parsley & dill",null],[2,null,"eggs","for the coating"],[100,"g","plain flour",null],[300,"ml","sunflower oil","for frying"]]},
 
 {"id":"icli-kofte","name":"Stuffed bulgur kibbeh","tr":"İçli köfte","file":"07-arasicak","emoji":"🥚","serves":6,"prep":120,"count":11,"recipe":"https://turkishstylecooking.com/icli-kofte-turkish-kibbeh-recipe.html","recipeSource":"Turkish Style Cooking",
+ "photo":"/img/icli-kofte.webp","credit":"Wikimedia Commons, CC BY-SA 3.0",
  "desc":"A thin bulgur shell moulded around spiced lamb and walnuts, then deep-fried. Getting the shell thin without tearing it is a skill measured in years.",
  "tags":["origin:southeast","diet:meat","complexity:showoff","time:slow","ingredients:many","main:grains","temp:hot","theme:fried","theme:arasicak","theme:centrepiece"],
  "ing":[[400,"g","fine bulgur",null],[100,"g","semolina",null],[400,"g","minced lamb",null],[2,null,"onions",null],[80,"g","walnuts",null],[1,"tbsp","pepper paste (biber salçası)",null],[1,"tsp","cinnamon",null],[1,"tsp","allspice",null],[1,"bunch","parsley",null],[1,null,"egg",null],[700,"ml","sunflower oil","for frying"]]},
 
 {"id":"kabak-cicegi-dolma","name":"Stuffed courgette flowers","tr":"Kabak çiçeği dolması","file":"04-zeytinyagli","emoji":"🌼","serves":4,"prep":75,"count":9,"recipe":"https://www.almostturkishrecipes.com/2008/08/vegetarian-stuffed-zucchini-flowers.html","recipeSource":"Almost Turkish Recipes",
+ "photo":"/img/kabak-cicegi-dolma.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Courgette flowers filled with herbed rice and poached in olive oil, served cold. Fragile, seasonal and impossible to hurry.",
  "tags":["origin:aegean","diet:vegetarian","diet:vegan","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:showoff","time:slow","ingredients:some","main:veg","temp:cold","theme:stuffed","theme:zeytinyagli","theme:centrepiece"],
  "ing":[[20,null,"courgette flowers",null],[200,"g","short-grain rice",null],[2,null,"onions",null],[1,"bunch","dill",null],[1,"bunch","mint",null],[100,"ml","olive oil",null],[1,null,"lemon",null],[1,"tsp","sugar",null],[1,"tsp","dried mint",null]]},
@@ -105,6 +110,7 @@
  "ing":[[16,null,"courgette flowers",null],[200,"g","white cheese or ricotta",null],[120,"g","plain flour",null],[200,"ml","fizzy water",null],[1,null,"egg",null],[400,"ml","sunflower oil","for frying"]]},
 
 {"id":"ciroz","name":"Dried mackerel","tr":"Çiroz","file":"08-seafood","emoji":"🐟","serves":4,"prep":15,"count":5,"recipe":"https://www.lezzet.com.tr/yemek-tarifleri/salata-ve-meze-tarifleri/salata-tarifleri/ciroz-salatasi","recipeSource":"Lezzet.com.tr",
+ "photo":"/img/ciroz.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Mackerel split and dried in the wind until board-stiff, then beaten soft and dressed with vinegar and oil. Deeply old-fashioned and a serious drinker's meze.",
  "tags":["origin:istanbul","heritage:greek","diet:seafood","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:seafood","temp:cold","theme:classic","theme:raki","theme:no-cook","theme:adventurous"],
  "ing":[[2,null,"dried mackerel (çiroz)",null],[4,"tbsp","olive oil",null],[2,"tbsp","white wine vinegar",null],[1,"bunch","parsley",null],[1,null,"lemon",null]]},
@@ -185,6 +191,7 @@
  "ing":[[600,"g","sardines","cleaned"],[150,"g","plain flour",null],[300,"ml","sunflower oil","for frying"],[1,null,"lemon",null],[1,null,"red onion","with sumac"]]},
 
 {"id":"ahtapot-izgara","name":"Grilled octopus","tr":"Ahtapot ızgara","file":"08-seafood","emoji":"🐙","serves":4,"prep":100,"count":6,"recipe":"https://turkishfoodie.com/grilled-octopus/","recipeSource":"Turkish Foodie",
+ "photo":"/img/ahtapot-izgara.webp","credit":"Flickr (T.Tseng), CC BY 2.0",
  "desc":"Octopus boiled tender, then charred hard on the grill and dressed with oil and oregano. Two cooking methods, one tentacle, no shortcuts.",
  "tags":["origin:aegean","diet:seafood","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:showoff","time:slow","ingredients:few","main:seafood","temp:hot","theme:centrepiece","theme:seaside","theme:arasicak"],
  "ing":[[1,null,"octopus","about 1kg, cleaned"],[1,null,"onion","for the pot"],[100,"ml","olive oil",null],[1,null,"lemon",null],[1,"tsp","dried oregano",null],[1,"tsp","black pepper",null]]},
@@ -195,6 +202,7 @@
  "ing":[[1,"kg","lamb intestines","cleaned thoroughly"],[400,"g","lamb sweetbreads",null],[1,"tbsp","dried oregano",null],[1,"tbsp","pul biber (chilli flakes)",null],[1,"tsp","cumin",null],[4,null,"bread rolls","to serve"]]},
 
 {"id":"kuru-patlican-dolma","name":"Stuffed dried aubergines","tr":"Kuru patlıcan dolması","file":"02-aubergine","emoji":"🍆","serves":6,"prep":90,"count":10,"recipe":"https://ozlemsturkishtable.com/2014/03/stuffed-dried-eggplant-and-pepper-dolma-kuru-patlican-dolmasi/","recipeSource":"Ozlem's Turkish Table",
+ "photo":"/img/kuru-patlican-dolma.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Aubergines dried on strings through the winter, soaked back to life and stuffed with spiced rice. Southeastern pantry cooking, and it tastes of nothing else.",
  "tags":["origin:southeast","diet:vegetarian","diet:vegan","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:showoff","time:slow","ingredients:many","main:aubergine","temp:hot","theme:stuffed","theme:centrepiece"],
  "ing":[[20,null,"dried aubergine shells","soaked"],[300,"g","short-grain rice",null],[2,null,"onions",null],[2,"tbsp","pepper paste (biber salçası)",null],[1,"tbsp","tomato paste",null],[100,"ml","olive oil",null],[1,"tsp","allspice",null],[1,"tsp","pul biber (chilli flakes)",null],[1,"bunch","parsley",null],[1,null,"lemon",null]]}

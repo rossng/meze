@@ -3,7 +3,7 @@
 INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, photo_credit, art_emoji, recipe_url, recipe_source, prep_minutes, ingredient_count, serves) VALUES
 ('havuc-tarator', 'Carrot & yoghurt', 'Havuç tarator',
  'Grated carrot softened in olive oil then folded through garlic yoghurt, so it goes an improbable coral colour. Sweet, cooling, and the first bowl to empty.',
- NULL, NULL, NULL, '🥕',
+ '/img/havuc-tarator.webp', '/img/havuc-tarator-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥕',
  'https://www.giverecipe.com/havuc-tarator-turkish-carrot-dip/', 'Give Recipe', 25, 5, 6),
 
 ('yogurtlu-patlican', 'Aubergine with garlic yoghurt', 'Yoğurtlu patlıcan',

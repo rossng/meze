@@ -3,7 +3,7 @@
 INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, photo_credit, art_emoji, recipe_url, recipe_source, prep_minutes, ingredient_count, serves) VALUES
 ('taze-fasulye', 'Green beans in olive oil', 'Zeytinyağlı taze fasulye',
  'Flat green beans stewed gently with tomato and onion in a lot of olive oil, then left to cool. Never eat these hot; they are a cold dish and they know it.',
- NULL, NULL, NULL, '🫛',
+ '/img/taze-fasulye.webp', '/img/taze-fasulye-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🫛',
  'https://ozlemsturkishtable.com/2010/05/runner-green-beans-onions-and-tomatoes-cooked-in-olive-oil-zeytinyagli-taze-fasulye/', 'Ozlem''s Turkish Table', 50, 6, 6),
 
 ('pirasa', 'Braised leeks with carrot', 'Zeytinyağlı pırasa',
@@ -28,7 +28,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('zeytinyagli-bakla', 'Fresh broad beans in olive oil', 'Zeytinyağlı bakla',
  'Young broad beans cooked in their pods with spring onion and dill, finished with garlic yoghurt on the side. A dish with a season of about three weeks, so seize it.',
- NULL, NULL, NULL, '🫛',
+ '/img/zeytinyagli-bakla.webp', '/img/zeytinyagli-bakla-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🫛',
  'https://www.sbs.com.au/food/recipe/olive-oil-braised-beans-with-lemon-and-tomato-zeytinyagli-bakla/dhprko50g', 'SBS Food', 40, 6, 4),
 
 ('sevketibostan', 'Blessed thistle in olive oil', 'Şevketibostan',
@@ -63,7 +63,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('kabak-cicegi-dolma', 'Stuffed courgette flowers', 'Kabak çiçeği dolması',
  'Courgette flowers filled with herbed rice and poached in olive oil, served cold. Fragile, seasonal and impossible to hurry.',
- NULL, NULL, NULL, '🌼',
+ '/img/kabak-cicegi-dolma.webp', '/img/kabak-cicegi-dolma-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🌼',
  'https://www.almostturkishrecipes.com/2008/08/vegetarian-stuffed-zucchini-flowers.html', 'Almost Turkish Recipes', 75, 9, 4),
 
 ('hardalotu', 'Mustard greens in olive oil', 'Hardal otu',

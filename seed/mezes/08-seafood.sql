@@ -3,17 +3,17 @@
 INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, photo_credit, art_emoji, recipe_url, recipe_source, prep_minutes, ingredient_count, serves) VALUES
 ('tarama', 'Fish roe dip', 'Tarama',
  'Cured cod roe beaten with soaked bread, lemon and oil until it turns pale and fluffy. The real thing is beige, not pink — be suspicious of anything the colour of a birthday cake.',
- NULL, NULL, NULL, '🐟',
+ '/img/tarama.webp', '/img/tarama-thumb.webp', 'Wikimedia Commons, CC BY-SA 2.5', '🐟',
  'https://www.196flavors.com/taramosalata/', '196 flavors', 15, 6, 6),
 
 ('ahtapot-salatasi', 'Octopus salad', 'Ahtapot salatası',
  'Octopus simmered slow until a knife slides through, then dressed cold with olive oil, lemon and parsley. Half the work is waiting, which is what rakı is for.',
- NULL, NULL, NULL, '🐙',
+ '/img/ahtapot-salatasi.webp', '/img/ahtapot-salatasi-thumb.webp', 'Wikimedia Commons, CC BY 3.0', '🐙',
  'http://www.cypnet.co.uk/ncyprus/culture/cuisine/seafood/ahtapot.html', 'Turkish-Cypriot Cuisine (Cypnet)', 90, 8, 6),
 
 ('midye-tava', 'Fried mussels with tarator', 'Midye tava',
  'Mussels in a beer batter, fried hard and fast, with a walnut tarator to drag them through. Sold on skewers on the street, and just as good on a plate.',
- NULL, NULL, NULL, '🦪',
+ '/img/midye-tava.webp', '/img/midye-tava-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🦪',
  'https://www.sbs.com.au/food/recipe/fried-mussels-with-tarator-midye-tava/kqxrcu79m', 'SBS Food', 40, 9, 4),
 
 ('hamsi-tava', 'Fried Black Sea anchovies', 'Hamsi tava',
@@ -28,7 +28,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('ciroz', 'Dried mackerel', 'Çiroz',
  'Mackerel split and dried in the wind until board-stiff, then beaten soft and dressed with vinegar and oil. Deeply old-fashioned and a serious drinker''s meze.',
- NULL, NULL, NULL, '🐟',
+ '/img/ciroz.webp', '/img/ciroz-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🐟',
  'https://www.lezzet.com.tr/yemek-tarifleri/salata-ve-meze-tarifleri/salata-tarifleri/ciroz-salatasi', 'Lezzet.com.tr', 15, 5, 4),
 
 ('balik-marin', 'Marinated bonito', 'Torik marin',
@@ -68,7 +68,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('ahtapot-izgara', 'Grilled octopus', 'Ahtapot ızgara',
  'Octopus boiled tender, then charred hard on the grill and dressed with oil and oregano. Two cooking methods, one tentacle, no shortcuts.',
- NULL, NULL, NULL, '🐙',
+ '/img/ahtapot-izgara.webp', '/img/ahtapot-izgara-thumb.webp', 'Flickr (T.Tseng), CC BY 2.0', '🐙',
  'https://turkishfoodie.com/grilled-octopus/', 'Turkish Foodie', 100, 6, 4);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES

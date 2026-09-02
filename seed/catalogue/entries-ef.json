@@ -10,6 +10,7 @@
  "ing":[[250,"g","hellim (halloumi)","sliced thick"],[1,"tbsp","olive oil",null],[1,"tbsp","pomegranate molasses",null],[1,"tsp","dried thyme",null],[1,"tsp","pul biber (chilli flakes)",null]]},
 
 {"id":"mihlama","name":"Cheese & cornmeal fondue","tr":"Mıhlama (kuymak)","file":"07-arasicak","emoji":"🫕","serves":4,"prep":25,"count":4,"recipe":"https://cookingorgeous.com/blog/kuymak-mihlama/","recipeSource":"Cooking Gorgeous",
+ "photo":"/img/mihlama.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Butter, cornmeal and a young stretchy cheese beaten in a pan until it pulls into ropes. Black Sea food that arrives at the table still bubbling and is gone in four minutes.",
  "tags":["origin:blacksea","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:medium","time:moderate","ingredients:few","main:cheese","temp:hot","theme:arasicak","theme:crowd","theme:classic"],
  "ing":[[250,"g","kolot or young kaşar cheese","grated"],[100,"g","butter",null],[80,"g","coarse cornmeal",null],[null,null,"salt",null]]},
@@ -60,6 +61,7 @@
  "ing":[[250,"g","dried apricots",null],[1,"l","water",null],[3,"tbsp","sugar",null],[3,null,"cloves","or a strip of lemon peel"]]},
 
 {"id":"meyve-tabagi","name":"The fruit plate","tr":"Meyve tabağı","file":"10-meyve","emoji":"🍇","serves":8,"prep":10,"count":5,
+ "photo":"/img/meyve-tabagi.webp","credit":"Wikimedia Commons, CC BY-SA 3.0",
  "desc":"Melon, grapes, figs and whatever else is in season, cut cold and brought out unasked at the end of the night. The meyhane's way of saying it is time, gently.",
  "tags":["origin:istanbul","diet:vegetarian","diet:vegan","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:fruit","temp:cold","theme:classic","theme:no-cook","theme:crowd","theme:raki"],
  "ing":[[1,null,"melon","chilled, in wedges"],[1,"bunch","grapes",null],[6,null,"figs","quartered"],[4,null,"apricots","or plums, halved"],[1,null,"lemon","for the apples"]]}

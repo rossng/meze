@@ -33,7 +33,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('meyve-tabagi', 'The fruit plate', 'Meyve tabağı',
  'Melon, grapes, figs and whatever else is in season, cut cold and brought out unasked at the end of the night. The meyhane''s way of saying it is time, gently.',
- NULL, NULL, NULL, '🍇',
+ '/img/meyve-tabagi.webp', '/img/meyve-tabagi-thumb.webp', 'Wikimedia Commons, CC BY-SA 3.0', '🍇',
  NULL, NULL, 10, 5, 8);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES

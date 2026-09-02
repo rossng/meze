@@ -3,7 +3,7 @@
 INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, photo_credit, art_emoji, recipe_url, recipe_source, prep_minutes, ingredient_count, serves) VALUES
 ('ali-nazik', 'Ali Nazik', 'Ali Nazik',
  'Smoked aubergine beaten into garlic yoghurt, spread on a plate and topped with buttery minced lamb. Named for a compliment from a sultan, and it does rather live up to it.',
- NULL, NULL, NULL, '🍆',
+ '/img/ali-nazik.webp', '/img/ali-nazik-thumb.webp', 'Wikimedia Commons, public domain', '🍆',
  'https://ozlemsturkishtable.com/2014/09/ali-nazik-kebab-lamb-stew-over-smoked-eggplant-and-yoghurt-puree/', 'Ozlem''s Turkish Table', 45, 8, 4),
 
 ('abagannuc', 'Antakya aubergine & walnut', 'Abagannuç',
@@ -23,12 +23,12 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('kuru-patlican-dolma', 'Stuffed dried aubergines', 'Kuru patlıcan dolması',
  'Aubergines dried on strings through the winter, soaked back to life and stuffed with spiced rice. Southeastern pantry cooking, and it tastes of nothing else.',
- NULL, NULL, NULL, '🍆',
+ '/img/kuru-patlican-dolma.webp', '/img/kuru-patlican-dolma-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🍆',
  'https://ozlemsturkishtable.com/2014/03/stuffed-dried-eggplant-and-pepper-dolma-kuru-patlican-dolmasi/', 'Ozlem''s Turkish Table', 90, 10, 6),
 
 ('mutebbel', 'Aubergine with tahini & yoghurt', 'Mütebbel',
  'Charred aubergine beaten with tahini, yoghurt, garlic and lemon until it goes pale and silky. Babaganuş''s richer cousin: the yoghurt is what tells them apart.',
- NULL, NULL, NULL, '🍆',
+ '/img/mutebbel.webp', '/img/mutebbel-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🍆',
  'https://www.yayla.de/en/recipes/mutebbel', 'Yayla', 35, 6, 6);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES

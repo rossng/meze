@@ -1,45 +1,54 @@
 [
 {"id":"gavurdagi","name":"Walnut & tomato salad","tr":"Gavurdağı salatası","file":"05-salads","emoji":"🍅","serves":6,"prep":15,"count":8,"recipe":"https://ozlemsturkishtable.com/2012/08/gavurdagi-salad-of-ripe-tomatoes-onion-parsley-and-walnuts-with-olive-oil-pomegranate-sauce-dressing-gavurdagi-salatasi/","recipeSource":"Ozlem's Turkish Table",
+ "photo":"/img/gavurdagi.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Tomatoes, onion and walnuts chopped small and dressed with pomegranate molasses. Antep's answer to the shepherd's salad, and the one that actually goes with rakı.",
  "tags":["origin:southeast","diet:vegetarian","diet:vegan","diet:gluten-free","diet:dairy-free","complexity:easy","time:quick","ingredients:some","main:tomato","main:nuts","temp:cold","theme:salad","theme:raki","theme:classic"],
  "ing":[[4,null,"ripe tomatoes","finely diced"],[1,null,"red onion",null],[1,"bunch","parsley",null],[100,"g","walnuts","roughly chopped"],[2,"tbsp","pomegranate molasses",null],[3,"tbsp","olive oil",null],[1,"tsp","sumac",null],[1,"tsp","pul biber (chilli flakes)",null]]},
 
 {"id":"mercimek-koftesi","name":"Red lentil balls","tr":"Mercimek köftesi","file":"03-pulses","emoji":"🫘","serves":8,"prep":40,"count":9,"recipe":"https://www.themediterraneandish.com/mercimek-koftesi-turkish-lentil-balls/","recipeSource":"The Mediterranean Dish",
+ "photo":"/img/mercimek-koftesi.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Red lentils and fine bulgur worked into a paste with pepper paste and spring onion, then squeezed into little ridged patties in your fist. Eaten wrapped in a lettuce leaf with a squeeze of lemon.",
  "tags":["origin:southeast","origin:anatolia","diet:vegetarian","diet:vegan","diet:dairy-free","diet:nut-free","complexity:medium","time:moderate","ingredients:some","main:pulses","temp:cold","theme:classic","theme:crowd","theme:make-ahead"],
  "ing":[[250,"g","red lentils",null],[150,"g","fine bulgur",null],[1,null,"onion","finely chopped"],[2,"tbsp","pepper paste (biber salçası)",null],[1,"tbsp","tomato paste",null],[4,"tbsp","olive oil",null],[1,"bunch","spring onions",null],[1,"bunch","parsley",null],[1,null,"lemon","and lettuce leaves, to serve"]]},
 
 {"id":"pacanga-boregi","name":"Pastırma & kaşar börek","tr":"Paçanga böreği","file":"07-arasicak","emoji":"🌯","serves":4,"prep":30,"count":6,"recipe":"https://www.turkeysforlife.com/2016/01/pacanga-boregi.html","recipeSource":"Turkey's For Life",
+ "photo":"/img/pacanga-boregi.webp","credit":"Wikimedia Commons, public domain",
  "desc":"Yufka rolled around pastırma, kaşar and peppers, then fried until it blisters. The hot meze that empties a meyhane table fastest.",
  "tags":["origin:istanbul","diet:meat","complexity:medium","time:moderate","ingredients:some","main:meat","temp:hot","theme:fried","theme:arasicak","theme:classic","theme:raki"],
  "ing":[[6,null,"sheets of yufka","or filo"],[150,"g","pastırma","sliced thin"],[200,"g","kaşar cheese","grated"],[2,null,"green peppers","diced"],[1,null,"tomato","deseeded and diced"],[500,"ml","sunflower oil","for frying"]]},
 
 {"id":"tarama","name":"Fish roe dip","tr":"Tarama","file":"08-seafood","emoji":"🐟","serves":6,"prep":15,"count":6,"recipe":"https://www.196flavors.com/taramosalata/","recipeSource":"196 flavors",
+ "photo":"/img/tarama.webp","credit":"Wikimedia Commons, CC BY-SA 2.5",
  "desc":"Cured cod roe beaten with soaked bread, lemon and oil until it turns pale and fluffy. The real thing is beige, not pink — be suspicious of anything the colour of a birthday cake.",
  "tags":["origin:istanbul","heritage:greek","diet:seafood","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:seafood","temp:cold","theme:dip","theme:classic","theme:raki","theme:seaside"],
  "ing":[[150,"g","cured cod roe (tarama)",null],[4,null,"slices of stale white bread","crusts off, soaked and squeezed"],[200,"ml","sunflower oil",null],[1,null,"lemon","juiced"],[1,null,"small onion","grated"],[null,null,"salt","to taste"]]},
 
 {"id":"cerkez-tavugu","name":"Circassian chicken","tr":"Çerkez tavuğu","file":"09-meat","emoji":"🍗","serves":8,"prep":60,"count":9,"recipe":"https://ozlemsturkishtable.com/2010/08/cerkez-tavugu-circassian-chicken-with-walnut-sauce/","recipeSource":"Ozlem's Turkish Table",
+ "photo":"/img/cerkez-tavugu.webp","credit":"Photo by jeffreyw, Flickr, CC BY 2.0",
  "desc":"Poached chicken shredded into a thick walnut and garlic sauce, spread flat and finished with red pepper oil. Made the day before and better for it.",
  "tags":["origin:anatolia","heritage:circassian","diet:meat","complexity:medium","time:slow","ingredients:some","main:meat","main:nuts","temp:cold","theme:classic","theme:centrepiece","theme:crowd","theme:make-ahead"],
  "ing":[[4,null,"chicken thighs","poached, skin off"],[200,"g","walnuts",null],[3,null,"slices of stale bread","soaked in the stock"],[3,"clove","garlic",null],[1,null,"onion","for the stock"],[1,"tsp","sweet paprika",null],[2,"tbsp","walnut or olive oil","to finish"],[1,null,"bay leaf",null],[null,null,"salt & black pepper",null]]},
 
 {"id":"ali-nazik","name":"Ali Nazik","tr":"Ali Nazik","file":"02-aubergine","emoji":"🍆","serves":4,"prep":45,"count":8,"recipe":"https://ozlemsturkishtable.com/2014/09/ali-nazik-kebab-lamb-stew-over-smoked-eggplant-and-yoghurt-puree/","recipeSource":"Ozlem's Turkish Table",
+ "photo":"/img/ali-nazik.webp","credit":"Wikimedia Commons, public domain",
  "desc":"Smoked aubergine beaten into garlic yoghurt, spread on a plate and topped with buttery minced lamb. Named for a compliment from a sultan, and it does rather live up to it.",
  "tags":["origin:southeast","diet:meat","diet:gluten-free","diet:nut-free","complexity:medium","time:moderate","ingredients:some","main:aubergine","temp:hot","theme:arasicak","theme:centrepiece","theme:classic"],
  "ing":[[3,null,"large aubergines","charred over a flame"],[300,"g","minced lamb",null],[200,"g","thick strained yoghurt (süzme)",null],[2,"clove","garlic",null],[1,null,"tomato","grated"],[30,"g","butter",null],[1,"tsp","pul biber (chilli flakes)",null],[null,null,"salt",null]]},
 
 {"id":"ahtapot-salatasi","name":"Octopus salad","tr":"Ahtapot salatası","file":"08-seafood","emoji":"🐙","serves":6,"prep":90,"count":8,"recipe":"http://www.cypnet.co.uk/ncyprus/culture/cuisine/seafood/ahtapot.html","recipeSource":"Turkish-Cypriot Cuisine (Cypnet)",
+ "photo":"/img/ahtapot-salatasi.webp","credit":"Wikimedia Commons, CC BY 3.0",
  "desc":"Octopus simmered slow until a knife slides through, then dressed cold with olive oil, lemon and parsley. Half the work is waiting, which is what rakı is for.",
  "tags":["origin:aegean","diet:seafood","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:medium","time:slow","ingredients:some","main:seafood","temp:cold","theme:salad","theme:seaside","theme:raki","theme:make-ahead"],
  "ing":[[1,null,"octopus","about 1kg, cleaned"],[1,null,"onion","for the pot"],[1,null,"bay leaf",null],[100,"ml","olive oil",null],[1,null,"lemon","juiced"],[1,"bunch","parsley",null],[1,"stick","celery","for the pot"],[1,"tsp","black pepper",null]]},
 
 {"id":"midye-tava","name":"Fried mussels with tarator","tr":"Midye tava","file":"08-seafood","emoji":"🦪","serves":4,"prep":40,"count":9,"recipe":"https://www.sbs.com.au/food/recipe/fried-mussels-with-tarator-midye-tava/kqxrcu79m","recipeSource":"SBS Food",
+ "photo":"/img/midye-tava.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Mussels in a beer batter, fried hard and fast, with a walnut tarator to drag them through. Sold on skewers on the street, and just as good on a plate.",
  "tags":["origin:istanbul","diet:seafood","complexity:medium","time:moderate","ingredients:some","main:seafood","temp:hot","theme:fried","theme:arasicak","theme:street","theme:classic"],
  "ing":[[500,"g","shelled mussels",null],[150,"g","plain flour",null],[200,"ml","beer or fizzy water",null],[1,"tsp","baking powder",null],[500,"ml","sunflower oil","for frying"],[100,"g","walnuts","for the tarator"],[3,null,"slices of stale bread","for the tarator"],[2,"clove","garlic",null],[1,null,"lemon",null]]},
 
 {"id":"taze-fasulye","name":"Green beans in olive oil","tr":"Zeytinyağlı taze fasulye","file":"04-zeytinyagli","emoji":"🫛","serves":6,"prep":50,"count":6,"recipe":"https://ozlemsturkishtable.com/2010/05/runner-green-beans-onions-and-tomatoes-cooked-in-olive-oil-zeytinyagli-taze-fasulye/","recipeSource":"Ozlem's Turkish Table",
+ "photo":"/img/taze-fasulye.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Flat green beans stewed gently with tomato and onion in a lot of olive oil, then left to cool. Never eat these hot; they are a cold dish and they know it.",
  "tags":["origin:aegean","diet:vegetarian","diet:vegan","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:slow","ingredients:few","main:veg","temp:cold","theme:zeytinyagli","theme:classic","theme:make-ahead"],
  "ing":[[700,"g","flat green beans","topped and tailed"],[2,null,"onions","sliced"],[3,null,"tomatoes","grated"],[120,"ml","olive oil",null],[1,"tsp","sugar",null],[null,null,"salt",null]]},
@@ -65,6 +74,7 @@
  "ing":[[12,null,"small sweet peppers",null],[250,"g","short-grain rice",null],[3,null,"onions","finely chopped"],[3,"tbsp","pine nuts",null],[3,"tbsp","currants",null],[120,"ml","olive oil",null],[1,"bunch","dill & mint",null],[1,"tsp","allspice",null],[1,null,"lemon",null]]},
 
 {"id":"zeytinyagli-bakla","name":"Fresh broad beans in olive oil","tr":"Zeytinyağlı bakla","file":"04-zeytinyagli","emoji":"🫛","serves":4,"prep":40,"count":6,"recipe":"https://www.sbs.com.au/food/recipe/olive-oil-braised-beans-with-lemon-and-tomato-zeytinyagli-bakla/dhprko50g","recipeSource":"SBS Food",
+ "photo":"/img/zeytinyagli-bakla.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Young broad beans cooked in their pods with spring onion and dill, finished with garlic yoghurt on the side. A dish with a season of about three weeks, so seize it.",
  "tags":["origin:aegean","diet:vegetarian","diet:vegan","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:moderate","ingredients:few","main:pulses","temp:cold","theme:zeytinyagli","theme:classic"],
  "ing":[[700,"g","young broad beans","in the pod, sliced"],[1,"bunch","spring onions",null],[1,"bunch","dill",null],[100,"ml","olive oil",null],[1,"tsp","sugar",null],[1,null,"lemon","juiced"]]},
@@ -75,6 +85,7 @@
  "ing":[[250,"g","cracked green olives","stoned"],[80,"g","walnuts","chopped"],[1,"bunch","spring onions",null],[2,"tbsp","pomegranate molasses",null],[3,"tbsp","olive oil",null],[1,"tsp","pul biber (chilli flakes)",null],[0.5,"bunch","parsley",null]]},
 
 {"id":"havuc-tarator","name":"Carrot & yoghurt","tr":"Havuç tarator","file":"01-dips","emoji":"🥕","serves":6,"prep":25,"count":5,"recipe":"https://www.giverecipe.com/havuc-tarator-turkish-carrot-dip/","recipeSource":"Give Recipe",
+ "photo":"/img/havuc-tarator.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Grated carrot softened in olive oil then folded through garlic yoghurt, so it goes an improbable coral colour. Sweet, cooling, and the first bowl to empty.",
  "tags":["origin:istanbul","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:easy","time:moderate","ingredients:few","main:yoghurt","temp:cold","theme:dip","theme:classic"],
  "ing":[[4,null,"carrots","coarsely grated"],[400,"g","thick strained yoghurt (süzme)",null],[2,"clove","garlic",null],[3,"tbsp","olive oil",null],[null,null,"salt",null]]},
@@ -165,6 +176,7 @@
  "ing":[[250,"g","tulum cheese",null],[80,"g","walnuts",null],[2,"tbsp","olive oil",null]]},
 
 {"id":"tursu","name":"Pickle plate","tr":"Turşu","file":"06-board","emoji":"🥒","serves":8,"prep":5,"count":4,"recipe":"https://www.turkeysforlife.com/2021/04/turkish-pickles-recipe-tursu.html","recipeSource":"Turkey's For Life",
+ "photo":"/img/tursu.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Whatever the pickle shop had: gherkins, green tomatoes, cabbage, hot peppers. Drinking the brine afterwards is traditional and, the following morning, medicinal.",
  "tags":["origin:thrace","diet:vegetarian","diet:vegan","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:quick","ingredients:few","main:veg","temp:cold","theme:pickle","theme:raki","theme:classic","theme:no-cook"],
  "ing":[[1,"jar","pickled gherkins",null],[1,"jar","pickled green tomatoes",null],[200,"g","pickled cabbage",null],[100,"g","pickled hot peppers",null]]},

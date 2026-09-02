@@ -3,12 +3,12 @@
 INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, photo_credit, art_emoji, recipe_url, recipe_source, prep_minutes, ingredient_count, serves) VALUES
 ('cerkez-tavugu', 'Circassian chicken', 'Çerkez tavuğu',
  'Poached chicken shredded into a thick walnut and garlic sauce, spread flat and finished with red pepper oil. Made the day before and better for it.',
- NULL, NULL, NULL, '🍗',
+ '/img/cerkez-tavugu.webp', '/img/cerkez-tavugu-thumb.webp', 'Photo by jeffreyw, Flickr, CC BY 2.0', '🍗',
  'https://ozlemsturkishtable.com/2010/08/cerkez-tavugu-circassian-chicken-with-walnut-sauce/', 'Ozlem''s Turkish Table', 60, 9, 8),
 
 ('beyin-salatasi', 'Brain salad', 'Beyin salatası',
  'Lamb''s brain poached in vinegared water, cooled and dressed with lemon, olive oil and parsley. A genuine meyhane classic that has quietly gone out of fashion, texture being what it is.',
- NULL, NULL, NULL, '😈',
+ '/img/beyin-salatasi.webp', '/img/beyin-salatasi-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '😈',
  'https://yemek.com/tarif/beyin-salatasi/', 'Yemek.com', 40, 5, 4),
 
 ('dil-sogus', 'Cold tongue with lemon', 'Dil söğüş',
@@ -23,7 +23,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('pastirma-sucuk', 'Pastırma & sucuk plate', 'Pastırma sucuk tabağı',
  'Air-dried beef under its coat of fenugreek paste, sliced tissue-thin, with cured sausage alongside. Kayseri''s contribution to every serious table.',
- NULL, NULL, NULL, '🥩',
+ '/img/pastirma-sucuk.webp', '/img/pastirma-sucuk-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥩',
  NULL, NULL, 5, 3, 6),
 
 ('kokorec', 'Kokoreç', 'Kokoreç',
@@ -33,7 +33,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('sac-kavurma', 'Lamb seared on the griddle', 'Sac kavurma',
  'Diced lamb thrown onto a screaming hot sac with onion, pepper and tomato and kept moving until it catches. Urfa keeps it to meat, fat and pepper alone; everywhere else adds the vegetables.',
- NULL, NULL, NULL, '🥩',
+ '/img/sac-kavurma.webp', '/img/sac-kavurma-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥩',
  'https://cookingorgeous.com/blog/sac-kavurma-turkish-lamb-saute/', 'Cooking Gorgeous', 30, 7, 6);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES

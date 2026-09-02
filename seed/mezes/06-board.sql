@@ -18,7 +18,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('tursu', 'Pickle plate', 'Turşu',
  'Whatever the pickle shop had: gherkins, green tomatoes, cabbage, hot peppers. Drinking the brine afterwards is traditional and, the following morning, medicinal.',
- NULL, NULL, NULL, '🥒',
+ '/img/tursu.webp', '/img/tursu-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥒',
  'https://www.turkeysforlife.com/2021/04/turkish-pickles-recipe-tursu.html', 'Turkey''s For Life', 5, 4, 8),
 
 ('zeytin-tabagi', 'Olive plate', 'Zeytin tabağı',

@@ -3,7 +3,7 @@
 INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, photo_credit, art_emoji, recipe_url, recipe_source, prep_minutes, ingredient_count, serves) VALUES
 ('gavurdagi', 'Walnut & tomato salad', 'Gavurdağı salatası',
  'Tomatoes, onion and walnuts chopped small and dressed with pomegranate molasses. Antep''s answer to the shepherd''s salad, and the one that actually goes with rakı.',
- NULL, NULL, NULL, '🍅',
+ '/img/gavurdagi.webp', '/img/gavurdagi-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🍅',
  'https://ozlemsturkishtable.com/2012/08/gavurdagi-salad-of-ripe-tomatoes-onion-parsley-and-walnuts-with-olive-oil-pomegranate-sauce-dressing-gavurdagi-salatasi/', 'Ozlem''s Turkish Table', 15, 8, 6),
 
 ('zeytin-piyazi', 'Olive & walnut salad', 'Zeytin piyazı',
@@ -53,7 +53,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('rus-salatasi', 'Russian salad', 'Rus salatası',
  'Diced potato, peas, carrot and gherkin bound in mayonnaise, domed on a plate and studded with olives. Brought to Istanbul by White Russian émigrés, and on every meyhane list since — briefly renamed ''American salad'' during the Cold War, which fooled nobody.',
- NULL, NULL, NULL, '🥔',
+ '/img/rus-salatasi.webp', '/img/rus-salatasi-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🥔',
  'https://www.turkishfoodandrecipes.com/2009/01/russian-salad-rus-salatasi.html', 'Turkish Food & Recipes', 40, 8, 8),
 
 ('fatus', 'Fattoush with toasted bread', 'Fatuş',

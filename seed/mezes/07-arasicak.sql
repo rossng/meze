@@ -3,12 +3,12 @@
 INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, photo_credit, art_emoji, recipe_url, recipe_source, prep_minutes, ingredient_count, serves) VALUES
 ('pacanga-boregi', 'Pastırma & kaşar börek', 'Paçanga böreği',
  'Yufka rolled around pastırma, kaşar and peppers, then fried until it blisters. The hot meze that empties a meyhane table fastest.',
- NULL, NULL, NULL, '🌯',
+ '/img/pacanga-boregi.webp', '/img/pacanga-boregi-thumb.webp', 'Wikimedia Commons, public domain', '🌯',
  'https://www.turkeysforlife.com/2016/01/pacanga-boregi.html', 'Turkey''s For Life', 30, 6, 4),
 
 ('icli-kofte', 'Stuffed bulgur kibbeh', 'İçli köfte',
  'A thin bulgur shell moulded around spiced lamb and walnuts, then deep-fried. Getting the shell thin without tearing it is a skill measured in years.',
- NULL, NULL, NULL, '🥚',
+ '/img/icli-kofte.webp', '/img/icli-kofte-thumb.webp', 'Wikimedia Commons, CC BY-SA 3.0', '🥚',
  'https://turkishstylecooking.com/icli-kofte-turkish-kibbeh-recipe.html', 'Turkish Style Cooking', 120, 11, 6),
 
 ('kabak-cicegi-tava', 'Fried courgette flowers', 'Kabak çiçeği tava',
@@ -68,7 +68,7 @@ INSERT INTO mezes (id, name, name_tr, description, photo_url, photo_thumb_url, p
 
 ('mihlama', 'Cheese & cornmeal fondue', 'Mıhlama (kuymak)',
  'Butter, cornmeal and a young stretchy cheese beaten in a pan until it pulls into ropes. Black Sea food that arrives at the table still bubbling and is gone in four minutes.',
- NULL, NULL, NULL, '🫕',
+ '/img/mihlama.webp', '/img/mihlama-thumb.webp', 'Wikimedia Commons, CC BY-SA 4.0', '🫕',
  'https://cookingorgeous.com/blog/kuymak-mihlama/', 'Cooking Gorgeous', 25, 4, 4);
 
 INSERT INTO meze_tags (meze_id, tag_id) VALUES

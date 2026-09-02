@@ -1,10 +1,12 @@
 [
 {"id":"rus-salatasi","name":"Russian salad","tr":"Rus salatası","file":"05-salads","emoji":"🥔","serves":8,"prep":40,"count":8,"recipe":"https://www.turkishfoodandrecipes.com/2009/01/russian-salad-rus-salatasi.html","recipeSource":"Turkish Food & Recipes",
+ "photo":"/img/rus-salatasi.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Diced potato, peas, carrot and gherkin bound in mayonnaise, domed on a plate and studded with olives. Brought to Istanbul by White Russian émigrés, and on every meyhane list since — briefly renamed 'American salad' during the Cold War, which fooled nobody.",
  "tags":["origin:istanbul","heritage:greek","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:easy","time:moderate","ingredients:some","main:potato","temp:cold","theme:classic","theme:crowd","theme:make-ahead"],
  "ing":[[500,"g","waxy potatoes","boiled, in 1cm dice"],[2,null,"carrots","boiled and diced"],[150,"g","peas","cooked"],[4,null,"pickled gherkins","diced"],[200,"g","mayonnaise",null],[1,"tsp","mustard",null],[2,null,"eggs","hard-boiled, to garnish"],[1,"handful","black olives","to garnish"]]},
 
 {"id":"mutebbel","name":"Aubergine with tahini & yoghurt","tr":"Mütebbel","file":"02-aubergine","emoji":"🍆","serves":6,"prep":35,"count":6,"recipe":"https://www.yayla.de/en/recipes/mutebbel","recipeSource":"Yayla",
+ "photo":"/img/mutebbel.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Charred aubergine beaten with tahini, yoghurt, garlic and lemon until it goes pale and silky. Babaganuş's richer cousin: the yoghurt is what tells them apart.",
  "tags":["origin:hatay","origin:levant","heritage:arab","diet:vegetarian","diet:gluten-free","diet:nut-free","complexity:easy","time:moderate","ingredients:few","main:aubergine","temp:cold","theme:dip","theme:classic","theme:crowd"],
  "ing":[[3,null,"large aubergines","charred over a flame"],[3,"tbsp","tahini",null],[200,"g","thick strained yoghurt (süzme)",null],[2,"clove","garlic",null],[1,null,"lemon","juiced"],[2,"tbsp","olive oil","to finish"]]},
@@ -30,6 +32,7 @@
  "ing":[[600,"g","mustard greens (hardal otu)","thick stalks trimmed"],[4,"tbsp","olive oil",null],[1,null,"lemon","juiced"],[2,"clove","garlic","optional"],[null,null,"salt",null]]},
 
 {"id":"sac-kavurma","name":"Lamb seared on the griddle","tr":"Sac kavurma","file":"09-meat","emoji":"🥩","serves":6,"prep":30,"count":7,"recipe":"https://cookingorgeous.com/blog/sac-kavurma-turkish-lamb-saute/","recipeSource":"Cooking Gorgeous",
+ "photo":"/img/sac-kavurma.webp","credit":"Wikimedia Commons, CC BY-SA 4.0",
  "desc":"Diced lamb thrown onto a screaming hot sac with onion, pepper and tomato and kept moving until it catches. Urfa keeps it to meat, fat and pepper alone; everywhere else adds the vegetables.",
  "tags":["origin:southeast","origin:anatolia","diet:meat","diet:gluten-free","diet:dairy-free","diet:nut-free","complexity:easy","time:moderate","ingredients:some","main:meat","temp:hot","theme:arasicak","theme:centrepiece","theme:raki","theme:crowd"],
  "ing":[[600,"g","lamb shoulder or loin","in small dice"],[2,null,"onions","sliced"],[3,null,"green peppers","sliced"],[2,null,"tomatoes","diced"],[30,"g","butter or tail fat",null],[1,"tsp","dried oregano",null],[null,null,"salt & black pepper",null]]}
