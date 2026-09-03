@@ -8,6 +8,11 @@ Stack: TypeScript, [Hono](https://hono.dev), Cloudflare Workers, D1 (SQLite), on
 Object per night for WebSocket fan-out, Preact on the client (bundled with esbuild, no framework
 CLI).
 
+|                                          |                                          |
+| ---------------------------------------- | ---------------------------------------- |
+| ![Home screen](docs/screenshots/home.png) | ![Voting on the table's meze](docs/screenshots/vote.png) |
+| ![Crowned menu](docs/screenshots/menu.png) | ![Browsing the meze catalogue](docs/screenshots/explore.png) |
+
 ## Run it locally
 
 ```sh
