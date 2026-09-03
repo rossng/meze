@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'preact/hooks';
 import type { Menu, Meze } from '../shared/types';
 import { useToast } from './toast';
-import { Modal, PeoplePicker, ingredientLine, scaleIngredient } from './ui';
+import { Modal, PeoplePicker, copyText, ingredientLine, scaleIngredient } from './ui';
 
 /** Scaled, per-dish shopping list for a menu, with a copy button. */
 export function ShoppingList({ menu, mezeById, defaultPeople, onClose }: { menu: Menu; mezeById: Map<string, Meze>; defaultPeople: number; onClose: () => void }) {
@@ -22,7 +22,7 @@ export function ShoppingList({ menu, mezeById, defaultPeople, onClose }: { menu:
   }, [dishes, people, menu.name]);
 
   function copy() {
-    navigator.clipboard?.writeText(text).then(
+    copyText(text).then(
       () => toast('Shopping list copied. Off to the market!'),
       () => toast('Could not copy; select the text instead.', 'error'),
     );

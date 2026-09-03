@@ -4,6 +4,7 @@ import { Explore } from './pages/Explore';
 import { Home } from './pages/Home';
 import { Link } from './pages/Link';
 import { Night } from './pages/Night';
+import { Shared } from './pages/Shared';
 import { onLinkClick, usePath } from './router';
 import { setActiveNight, useStore } from './store';
 import { ToastProvider } from './toast';
@@ -59,7 +60,9 @@ function App() {
   let page;
   const night = path.match(/^\/n\/([a-z0-9]+)\/?$/i);
   const link = path.match(/^\/link(?:\/([a-z0-9]+))?\/?$/i);
+  const menu = path.match(/^\/m\/([a-z0-9]+)\/?$/i);
   if (night) page = <Night code={night[1].toLowerCase()} key={night[1]} />;
+  else if (menu) page = <Shared token={menu[1].toLowerCase()} key={menu[1]} />;
   else if (link) page = <Link code={link[1]?.toLowerCase()} />;
   else if (path === '/mezes') page = <Explore />;
   else page = <Home />;

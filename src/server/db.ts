@@ -1,4 +1,4 @@
-import type { Catalogue, Ingredient, Meze, Member, Menu, NightOption, NightState, NightSummary, TagType, Vote, VoteValue } from '../shared/types';
+import type { Catalogue, Ingredient, Meze, Member, Menu, NightOption, NightState, NightSummary, SharedMenu, TagType, Vote, VoteValue } from '../shared/types';
 
 type Row = Record<string, unknown>;
 
@@ -112,7 +112,7 @@ export async function getNightState(db: D1Database, code: string, userId: string
   if (!nightRow) return null;
   const night = nightFromRow(nightRow);
 
-  const [members, options, optionVotes, menus, menuItems, menuVotes, custom] = await db.batch([
+  const [members, options, optionVotes, menus, menuItems, menuVotes, custom, shares] = await db.batch([
     db.prepare('SELECT * FROM night_members WHERE night_id = ? ORDER BY joined_at').bind(night.id),
     db.prepare('SELECT * FROM night_options WHERE night_id = ? ORDER BY added_at').bind(night.id),
     db.prepare('SELECT meze_id, user_id, value FROM option_votes WHERE night_id = ?').bind(night.id),
@@ -120,6 +120,7 @@ export async function getNightState(db: D1Database, code: string, userId: string
     db.prepare('SELECT mi.* FROM menu_items mi JOIN menus m ON m.id = mi.menu_id WHERE m.night_id = ? ORDER BY mi.sort').bind(night.id),
     db.prepare('SELECT mv.* FROM menu_votes mv JOIN menus m ON m.id = mv.menu_id WHERE m.night_id = ?').bind(night.id),
     db.prepare('SELECT * FROM mezes WHERE night_id = ? ORDER BY created_at').bind(night.id),
+    db.prepare('SELECT s.menu_id, s.token FROM menu_shares s JOIN menus m ON m.id = s.menu_id WHERE m.night_id = ?').bind(night.id),
   ]);
 
   const memberList: Member[] = (members.results as Row[]).map((r) => ({
@@ -155,6 +156,8 @@ export async function getNightState(db: D1Database, code: string, userId: string
     votesByMenu.get(k)!.push({ userId: r.user_id as string, value: r.value as VoteValue });
   }
 
+  const tokenByMenu = new Map((shares.results as Row[]).map((r) => [r.menu_id as string, r.token as string]));
+
   const menuList: Menu[] = (menus.results as Row[]).map((r) => ({
     id: r.id as string,
     name: r.name as string,
@@ -162,6 +165,7 @@ export async function getNightState(db: D1Database, code: string, userId: string
     createdAt: r.created_at as string,
     mezeIds: itemsByMenu.get(r.id as string) ?? [],
     votes: votesByMenu.get(r.id as string) ?? [],
+    shareToken: tokenByMenu.get(r.id as string) ?? null,
   }));
 
   const me = memberList.find((m) => m.userId === userId);
@@ -179,5 +183,46 @@ export async function getNightState(db: D1Database, code: string, userId: string
     options: optionList,
     menus: menuList,
     customMezes,
+  };
+}
+
+/**
+ * A published menu. Read live, so a later edit to the menu shows up on the link.
+ * `isCurrent` goes false once the table has un-crowned it; the link works either
+ * way. `photoUrl` is for the link preview only, not the card.
+ */
+export async function getSharedMenu(db: D1Database, token: string): Promise<(SharedMenu & { photoUrl: string | null }) | null> {
+  const head = await db
+    .prepare(
+      `SELECT s.token, s.created_at, m.id AS menu_id, m.name AS menu_name, n.name AS night_name,
+              (n.chosen_menu_id = m.id) AS is_current, n.id AS night_id
+       FROM menu_shares s JOIN menus m ON m.id = s.menu_id JOIN nights n ON n.id = m.night_id
+       WHERE s.token = ?`,
+    )
+    .bind(token)
+    .first<Row>();
+  if (!head) return null;
+
+  const [dishes, guests] = await db.batch([
+    db
+      .prepare(
+        `SELECT z.name, z.name_tr, z.art_emoji, z.photo_url FROM menu_items i JOIN mezes z ON z.id = i.meze_id
+         WHERE i.menu_id = ? ORDER BY i.sort`,
+      )
+      .bind(head.menu_id),
+    db.prepare("SELECT display_name FROM night_members WHERE night_id = ? AND display_name <> '' ORDER BY joined_at").bind(head.night_id),
+  ]);
+
+  const dishRows = dishes.results as Row[];
+  return {
+    token: head.token as string,
+    url: '',
+    nightName: head.night_name as string,
+    menuName: head.menu_name as string,
+    dishes: dishRows.map((r) => ({ name: r.name as string, nameTr: (r.name_tr as string) ?? null, artEmoji: (r.art_emoji as string) ?? null })),
+    guests: (guests.results as Row[]).map((r) => r.display_name as string),
+    isCurrent: !!head.is_current,
+    createdAt: head.created_at as string,
+    photoUrl: (dishRows.find((r) => r.photo_url)?.photo_url as string) ?? null,
   };
 }

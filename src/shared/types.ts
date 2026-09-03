@@ -96,6 +96,8 @@ export interface Menu {
   createdAt: string;
   mezeIds: string[];
   votes: Vote[];
+  /** Set once this menu has been published to a link; see SharedMenu. */
+  shareToken: string | null;
 }
 
 export interface NightState {
@@ -118,3 +120,27 @@ export type RoomServerMessage =
 export type RoomClientMessage =
   | { type: 'hello'; userId: string }
   | { type: 'cheers'; text: string };
+
+/** One dish as it appears on a published menu card. */
+export interface SharedDish {
+  name: string;
+  nameTr: string | null;
+  artEmoji: string | null;
+}
+
+/**
+ * A menu published to a link. It carries no night code and no user ids, so a
+ * viewer needs no identity to fetch it.
+ */
+export interface SharedMenu {
+  token: string;
+  url: string;
+  nightName: string;
+  menuName: string;
+  dishes: SharedDish[];
+  /** Guest names, in the order they pulled up a chair. */
+  guests: string[];
+  /** False once the table has un-crowned this menu or crowned another. */
+  isCurrent: boolean;
+  createdAt: string;
+}

@@ -70,6 +70,34 @@ let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{
   console.log("all assertions passed");
 });'
 
+echo "# publishing the crowned menu"
+SH=$(j $B -X POST "$BASE/api/nights/$CODE/menus/$M/share")
+TOK=$(echo "$SH" | node -pe 'JSON.parse(require("fs").readFileSync(0)).token')
+[ "$(j $B -X POST "$BASE/api/nights/$CODE/menus/$M/share" | node -pe 'JSON.parse(require("fs").readFileSync(0)).token')" = "$TOK" ] && echo ok-share-idempotent
+# a stranger with the link: no x-user-id header at all
+curl -sf "$BASE/api/shared/$TOK" | node -e '
+let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{
+  const m=JSON.parse(s);
+  const assert=(c,x)=>{if(!c){console.error("FAIL:",x);process.exit(1)}};
+  assert(m.nightName==="Smoke test night","night name");
+  assert(m.menuName==="Everyones menu","menu name");
+  assert(JSON.stringify(m.dishes.map(d=>d.name))===JSON.stringify(["Haydari","Hummus"]),"dishes in menu order: "+JSON.stringify(m.dishes));
+  assert(JSON.stringify(m.guests)===JSON.stringify(["Alice","Bobby"]),"guests: "+JSON.stringify(m.guests));
+  assert(m.isCurrent===true,"still crowned");
+  assert(m.url.endsWith("/m/"+m.token),"link points at the page: "+m.url);
+  console.log("ok-public-read");
+});'
+curl -sf "$BASE/m/$TOK" | grep -q 'og:title' && echo ok-unfurl-tags
+j $A "$BASE/api/nights/$CODE" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const st=JSON.parse(s);if(st.menus[0].shareToken!=="'"$TOK"'"){console.error("FAIL share token missing from night state");process.exit(1)}console.log("ok-token-in-state")})'
+
+echo "# an un-crowned menu keeps its link, flagged as stale"
+j $A -X PUT "$BASE/api/nights/$CODE/chosen" -d '{"menuId":null}' >/dev/null
+curl -sf "$BASE/api/shared/$TOK" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const m=JSON.parse(s);if(m.isCurrent!==false){console.error("FAIL stale flag");process.exit(1)}console.log("ok-stale")})'
+curl -s -o /dev/null -w '%{http_code}
+' -H "x-user-id: $B" -H 'content-type: application/json' -X POST "$BASE/api/nights/$CODE/menus/$M/share" | grep -q 400 && echo ok-400-share-uncrowned
+j $A -X PUT "$BASE/api/nights/$CODE/chosen" -d "{\"menuId\":\"$M\"}" >/dev/null
+curl -s -o /dev/null -w '%{http_code}\n' "$BASE/api/shared/nosuchtoken0000" | grep -q 404 && echo ok-404-unknown-token
+
 echo "# removing a custom option deletes the dish"
 CID=$(j $A "$BASE/api/nights/$CODE" | node -pe 'JSON.parse(require("fs").readFileSync(0)).customMezes[0].id')
 j $A -X DELETE "$BASE/api/nights/$CODE/options/$CID" >/dev/null
@@ -78,6 +106,7 @@ j $A "$BASE/api/nights/$CODE" | node -e 'let s="";process.stdin.on("data",d=>s+=
 echo "# delete menu clears chosen"
 j $A -X DELETE "$BASE/api/nights/$CODE/menus/$M" >/dev/null
 j $A "$BASE/api/nights/$CODE" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const st=JSON.parse(s);if(st.menus.length!==0||st.night.chosenMenuId!==null){console.error("FAIL delete");process.exit(1)}console.log("ok")})'
+curl -s -o /dev/null -w '%{http_code}\n' "$BASE/api/shared/$TOK" | grep -q 404 && echo ok-404-share-torn-up
 
 echo "# pairing a second device"
 PH=phone000000003

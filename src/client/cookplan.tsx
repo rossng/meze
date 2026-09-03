@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'preact/hooks';
 import type { Menu, Meze } from '../shared/types';
 import { useToast } from './toast';
-import { Modal, PeoplePicker } from './ui';
+import { Modal, PeoplePicker, copyText } from './ui';
 
 /** One line per dish: English name, Turkish name and the recipe link. */
 function dishLine(m: Meze, i: number) {
@@ -31,7 +31,7 @@ export function CookPlan({ menu, mezeById, defaultPeople, onClose }: { menu: Men
   );
 
   function copy() {
-    navigator.clipboard?.writeText(text).then(
+    copyText(text).then(
       () => toast('Brief copied. Paste it into ChatGPT or Claude!'),
       () => toast('Could not copy; select the text instead.', 'error'),
     );

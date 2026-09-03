@@ -25,6 +25,16 @@ export function fold(s: string) {
     .toLowerCase();
 }
 
+/**
+ * Copy to the clipboard. The clipboard API only exists in a secure context, so
+ * over plain http:// (a LAN address while testing, say) it is missing outright.
+ * Reject in that case rather than throwing on `undefined.then`.
+ */
+export async function copyText(text: string) {
+  if (!navigator.clipboard) throw new Error('the clipboard needs an https address');
+  await navigator.clipboard.writeText(text);
+}
+
 export function initials(name: string) {
   const n = name.trim();
   if (!n) return '?';

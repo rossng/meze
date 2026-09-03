@@ -83,6 +83,7 @@ src/shared/types.ts   Types shared by server and client.
 src/client/           Preact SPA: Home (create/join), Explore (filter catalogue), Night (vote, menus).
 src/client/lexicon.ts Turkish <-> English ingredient words used to widen a search.
 src/client/qr.ts      Small QR encoder, used to hand an identity to a second device.
+src/client/menucard.ts Draws a crowned menu as a PNG card on a canvas, for sharing.
 migrations/           D1 schema.  seed/seed.sql   taxonomy + the original mezes.
 seed/catalogue/       Authored entries (JSON) -> seed/mezes/*.sql via npm run catalogue.
 public/               index.html, styles.css, and the built app.js.
@@ -131,6 +132,24 @@ as text. Ingredients are not merged across dishes; the UI suggests pasting into 
 row with `night_id` set and only a name (max 50 chars), invisible to other nights, and deleted
 when removed from the table.
 
+**Sharing a crowned menu.** Once the host has crowned a menu, anyone at the table can publish
+it. `POST /api/nights/:code/menus/:menuId/share` mints a 16-character token; there is one per
+menu, so asking twice returns the link that has already been sent round. `/m/<token>` then shows
+the menu to anyone, with no identity and no joining.
+
+The card is drawn in the browser on a `<canvas>` (`src/client/menucard.ts`): cream paper, gold
+rules, Turkish names large with the English underneath. It is a canvas rather than an SVG because
+the result has to go on the clipboard and into a chat message, and a PNG works everywhere. There
+are three buttons: the OS share sheet with the card attached (which is how it reaches WhatsApp,
+Messages or Signal), a copy button that puts the PNG and the link on the clipboard together, and
+a plain download.
+
+`GET /api/shared/:token` and `/m/:token` are registered before the identity middleware, since
+holding the token is the whole permission. The link outlives the crown: un-crown the menu and the
+link still works, with a banner saying it is no longer the latest. Deleting the menu deletes the
+link (404). `/m/*` is in `run_worker_first` so the worker can serve the app shell with that
+night's Open Graph tags filled in, which is what makes the link unfurl in a chat.
+
 **Hosts** can rename the night, crown a menu, and remove guests (their votes go too).
 
 **The catalogue.** 128 mezes. The original set lives inline in `seed/seed.sql`; everything
@@ -150,6 +169,9 @@ the catalogue is baked into the code.
 
 `nights` (code, creator, chosen_menu_id) → `night_members`, `night_options` (candidate mezes),
 `option_votes` (2 / 1 / −1 per person per meze), `menus` → `menu_items`, `menu_votes`.
+
+`menu_shares` (token → menu, one row per menu) publishes a crowned menu to a link. It is read
+live, so a late edit to the menu shows up, and it survives the menu being un-crowned.
 
 `device_links` (code → user_id, short-lived, single use) sits off to the side: it only exists to
 move an identity between devices.

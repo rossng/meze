@@ -1,8 +1,8 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import type { Env } from './env';
-import { ensureUser, findNightByCode, getCatalogue, getNightState, getNightSummaries } from './db';
-import type { DeviceLink, DeviceLinkClaim, RoomServerMessage, VoteValue } from '../shared/types';
+import { ensureUser, findNightByCode, getCatalogue, getNightState, getNightSummaries, getSharedMenu } from './db';
+import type { DeviceLink, DeviceLinkClaim, RoomServerMessage, SharedMenu, VoteValue } from '../shared/types';
 
 export { NightRoom } from './room';
 
@@ -19,6 +19,51 @@ app.get('/api/nights/:code/ws', async (c) => {
   const night = await findNightByCode(c.env.DB, code);
   if (!night) return c.json({ error: 'no such night' }, 404);
   return c.env.NIGHT_ROOM.get(c.env.NIGHT_ROOM.idFromName(code)).fetch(c.req.raw);
+});
+
+// --- published menus --------------------------------------------------------
+//
+// A crowned menu can be handed out as a link. Both routes are registered before
+// the identity middleware, because holding the token is the whole permission and
+// someone opening the link from a group chat has no identity at all.
+
+function shareUrl(base: string, token: string) {
+  return new URL(`/m/${token}`, base).toString();
+}
+
+app.get('/api/shared/:token', async (c) => {
+  const shared = await getSharedMenu(c.env.DB, c.req.param('token'));
+  if (!shared) return c.json({ error: 'that menu link has been torn up' }, 404);
+  const { photoUrl: _photoUrl, ...menu } = shared;
+  return c.json({ ...menu, url: shareUrl(c.req.url, shared.token) } satisfies SharedMenu, 200, { 'cache-control': 'no-cache' });
+});
+
+const escapeHtml = (s: string) => s.replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[ch]!);
+
+// The menu page is an ordinary SPA route, but a messenger only reads the HTML it
+// is served, so hand it the app shell with this night's preview tags filled in.
+app.get('/m/:token', async (c) => {
+  const res = await c.env.ASSETS.fetch(new URL('/index.html', c.req.url));
+  let html = await res.text();
+  const shared = await getSharedMenu(c.env.DB, c.req.param('token'));
+  if (shared) {
+    const title = `${shared.menuName} — ${shared.nightName}`;
+    const desc = shared.dishes.map((d) => d.nameTr ?? d.name).join(' · ') || 'A meze menu with nothing on it yet.';
+    const tags = [
+      `<title>${escapeHtml(title)} 🧿</title>`,
+      `<meta name="description" content="${escapeHtml(desc)}" />`,
+      `<meta property="og:type" content="article" />`,
+      `<meta property="og:site_name" content="Meze Night" />`,
+      `<meta property="og:title" content="${escapeHtml(title)}" />`,
+      `<meta property="og:description" content="${escapeHtml(desc)}" />`,
+      `<meta property="og:url" content="${escapeHtml(shareUrl(c.req.url, shared.token))}" />`,
+      `<meta name="twitter:card" content="${shared.photoUrl ? 'summary_large_image' : 'summary'}" />`,
+      shared.photoUrl ? `<meta property="og:image" content="${escapeHtml(new URL(shared.photoUrl, c.req.url).toString())}" />` : '',
+      shared.photoUrl ? `<meta property="og:image:alt" content="${escapeHtml(shared.dishes[0]?.name ?? 'Meze')}" />` : '',
+    ].join('\n    ');
+    html = html.replace(/<title>[^<]*<\/title>/, '').replace('</head>', `${tags}\n  </head>`);
+  }
+  return c.html(html, shared ? 200 : 404);
 });
 
 // Identity is a client-generated id sent as a header. This is a friends-only
@@ -322,10 +367,36 @@ member.delete('/menus/:menuId', async (c) => {
     c.env.DB.prepare('UPDATE nights SET chosen_menu_id = NULL WHERE id = ? AND chosen_menu_id = ?').bind(nightId, menuId),
     c.env.DB.prepare('DELETE FROM menu_votes WHERE menu_id = ?').bind(menuId),
     c.env.DB.prepare('DELETE FROM menu_items WHERE menu_id = ?').bind(menuId),
+    c.env.DB.prepare('DELETE FROM menu_shares WHERE menu_id = ?').bind(menuId),
     c.env.DB.prepare('DELETE FROM menus WHERE id = ? AND night_id = ?').bind(menuId, nightId),
   ]);
   await notify(c.env, c.get('code'), { type: 'refresh', reason: 'menu-deleted' });
   return c.json({ ok: true });
+});
+
+// Only the crowned menu can be published. The link outlives the crown: if the
+// menu is un-crowned later the page says so rather than breaking.
+member.post('/menus/:menuId/share', async (c) => {
+  const menuId = c.req.param('menuId');
+  const row = await c.env.DB.prepare('SELECT n.chosen_menu_id AS chosen FROM menus m JOIN nights n ON n.id = m.night_id WHERE m.id = ? AND m.night_id = ?')
+    .bind(menuId, c.get('nightId'))
+    .first<{ chosen: string | null }>();
+  if (!row) return c.json({ error: 'no such menu' }, 404);
+  if (row.chosen !== menuId) return c.json({ error: 'crown the menu before sharing it' }, 400);
+
+  // One link per menu. The no-op update makes the insert idempotent, so asking
+  // twice returns the link that has already been sent round.
+  const share = await c.env.DB.prepare(
+    `INSERT INTO menu_shares (token, menu_id, created_by) VALUES (?, ?, ?)
+     ON CONFLICT (menu_id) DO UPDATE SET menu_id = menu_shares.menu_id RETURNING token`,
+  )
+    .bind(randomCode(16), menuId, c.get('userId'))
+    .first<{ token: string }>();
+  const shared = await getSharedMenu(c.env.DB, share!.token);
+  if (!shared) return c.json({ error: 'could not publish that menu' }, 500);
+  const { photoUrl: _photoUrl, ...menu } = shared;
+  await notify(c.env, c.get('code'), { type: 'refresh', reason: 'menu-shared' });
+  return c.json({ ...menu, url: shareUrl(c.req.url, shared.token) } satisfies SharedMenu, 201);
 });
 
 member.put('/menus/:menuId/vote', async (c) => {

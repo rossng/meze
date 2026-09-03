@@ -1,4 +1,4 @@
-import type { Catalogue, DeviceLink, DeviceLinkClaim, NightState, NightSummary, VoteValue } from '../shared/types';
+import type { Catalogue, DeviceLink, DeviceLinkClaim, NightState, NightSummary, SharedMenu, VoteValue } from '../shared/types';
 
 const USER_KEY = 'meze:userId';
 
@@ -67,4 +67,21 @@ export const api = {
   createLink: () => call<DeviceLink>('POST', '/api/me/link'),
   claimLink: (code: string) => call<DeviceLinkClaim>('POST', `/api/me/link/${code}/claim`),
   cheers: (code: string, text: string) => call('POST', `/api/nights/${code}/cheers`, { text }),
+  shareMenu: (code: string, menuId: string) => call<SharedMenu>('POST', `/api/nights/${code}/menus/${menuId}/share`),
 };
+
+/**
+ * A published menu. Deliberately not part of `api`: it takes no identity, so a
+ * stranger following the link never gets an id minted for them.
+ */
+export async function fetchSharedMenu(token: string): Promise<SharedMenu> {
+  const res = await fetch(`/api/shared/${encodeURIComponent(token)}`);
+  if (!res.ok) {
+    let msg = res.statusText;
+    try {
+      msg = ((await res.json()) as { error?: string }).error ?? msg;
+    } catch {}
+    throw new ApiError(res.status, msg);
+  }
+  return res.json() as Promise<SharedMenu>;
+}

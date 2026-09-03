@@ -8,8 +8,9 @@ import { navigate } from '../router';
 import { rememberNight, setActiveNight } from '../store';
 import { useToast } from '../toast';
 import { CookPlan } from '../cookplan';
+import { ShareMenuModal } from '../share';
 import { ShoppingList } from '../shopping';
-import { Avatar, MezeDetail, Modal, Photo, Score, VoteButtons, VoterRow, score } from '../ui';
+import { Avatar, MezeDetail, Modal, Photo, Score, VoteButtons, VoterRow, copyText, score } from '../ui';
 
 type Tab = 'table' | 'menus' | 'guests';
 
@@ -25,6 +26,7 @@ export function Night({ code }: { code: string }) {
   const [tab, setTab] = useState<Tab>('table');
   const [nameDraft, setNameDraft] = useState('');
   const [editingName, setEditingName] = useState(false);
+  const [sharingId, setSharingId] = useState<string | null>(null);
   const roomRef = useRef<ReturnType<typeof connectRoom> | null>(null);
 
   const refresh = useCallback(async () => {
@@ -92,7 +94,7 @@ export function Night({ code }: { code: string }) {
 
   function copyLink() {
     const url = `${location.origin}/n/${code}`;
-    navigator.clipboard?.writeText(url).then(
+    copyText(url).then(
       () => toast('Invite link copied. Send it to the hungry.'),
       () => toast(url),
     );
@@ -106,6 +108,7 @@ export function Night({ code }: { code: string }) {
 
   const optionsSorted = [...state.options].sort((a, b) => score(b.votes) - score(a.votes) || a.addedAt.localeCompare(b.addedAt));
   const chosen = state.menus.find((m) => m.id === state.night.chosenMenuId) ?? null;
+  const sharingMenu = state.menus.find((m) => m.id === sharingId) ?? null;
 
   return (
     <div class="night">
@@ -182,6 +185,9 @@ export function Night({ code }: { code: string }) {
             <b>Tonight we're eating: {chosen.name}</b>
             <div class="chosen-items">{chosen.mezeIds.map((id) => mezeById.get(id)?.name ?? '?').join(' · ')}</div>
           </div>
+          <button class="btn btn-small btn-primary chosen-share" type="button" onClick={() => setSharingId(chosen.id)}>
+            🖼️ Share the menu
+          </button>
         </div>
       )}
 
@@ -198,8 +204,10 @@ export function Night({ code }: { code: string }) {
       </nav>
 
       {tab === 'table' && <TableTab code={code} state={state} options={optionsSorted} mezeById={mezeById} catalogue={catalogue} online={online} toast={toast} />}
-      {tab === 'menus' && <MenusTab code={code} state={state} options={optionsSorted} mezeById={mezeById} online={online} toast={toast} refresh={refresh} />}
+      {tab === 'menus' && <MenusTab code={code} state={state} options={optionsSorted} mezeById={mezeById} online={online} toast={toast} refresh={refresh} onShare={setSharingId} />}
       {tab === 'guests' && <GuestsTab code={code} state={state} online={online} toast={toast} />}
+
+      {sharingMenu && <ShareMenuModal code={code} menu={sharingMenu} isChosen={sharingMenu.id === state.night.chosenMenuId} onClose={() => setSharingId(null)} />}
     </div>
   );
 }
@@ -429,6 +437,7 @@ function MenusTab({
   online,
   toast,
   refresh,
+  onShare,
 }: {
   code: string;
   state: NightState;
@@ -437,6 +446,7 @@ function MenusTab({
   online: Set<string>;
   toast: (t: string, k?: 'info' | 'error' | 'cheers') => void;
   refresh: () => void;
+  onShare: (menuId: string) => void;
 }) {
   const [composing, setComposing] = useState(false);
   const [editing, setEditing] = useState<Menu | null>(null);
@@ -526,6 +536,11 @@ function MenusTab({
                 <button class="link-btn" type="button" onClick={() => setBriefing(menu)} disabled={menu.mezeIds.length === 0}>
                   🧑‍🍳 Cooking brief
                 </button>
+                {(isChosen || menu.shareToken) && (
+                  <button class="link-btn gold" type="button" onClick={() => onShare(menu.id)} title="Get a card and a link you can send to anyone">
+                    🖼️ Share
+                  </button>
+                )}
                 {state.me.isCreator && (
                   <button class={`link-btn ${isChosen ? '' : 'gold'}`} type="button" onClick={() => crown(menu)}>
                     {isChosen ? '⭕ Un-crown' : '👑 Crown this menu'}
