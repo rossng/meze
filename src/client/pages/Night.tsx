@@ -7,6 +7,7 @@ import { PairDeviceButton } from '../pair';
 import { navigate } from '../router';
 import { rememberNight, setActiveNight } from '../store';
 import { useToast } from '../toast';
+import { CookPlan } from '../cookplan';
 import { ShoppingList } from '../shopping';
 import { Avatar, MezeDetail, Modal, Photo, Score, VoteButtons, VoterRow, score } from '../ui';
 
@@ -440,6 +441,7 @@ function MenusTab({
   const [composing, setComposing] = useState(false);
   const [editing, setEditing] = useState<Menu | null>(null);
   const [shopping, setShopping] = useState<Menu | null>(null);
+  const [briefing, setBriefing] = useState<Menu | null>(null);
   const myId = getUserId();
   const menus = [...state.menus].sort((a, b) => {
     if (a.id === state.night.chosenMenuId) return -1;
@@ -521,6 +523,9 @@ function MenusTab({
                 <button class="link-btn" type="button" onClick={() => setShopping(menu)} disabled={menu.mezeIds.length === 0}>
                   🛒 Shopping list
                 </button>
+                <button class="link-btn" type="button" onClick={() => setBriefing(menu)} disabled={menu.mezeIds.length === 0}>
+                  🧑‍🍳 Cooking brief
+                </button>
                 {state.me.isCreator && (
                   <button class={`link-btn ${isChosen ? '' : 'gold'}`} type="button" onClick={() => crown(menu)}>
                     {isChosen ? '⭕ Un-crown' : '👑 Crown this menu'}
@@ -536,6 +541,8 @@ function MenusTab({
       </div>
 
       {shopping && <ShoppingList menu={shopping} mezeById={mezeById} defaultPeople={state.members.length} onClose={() => setShopping(null)} />}
+
+      {briefing && <CookPlan menu={briefing} mezeById={mezeById} defaultPeople={state.members.length} onClose={() => setBriefing(null)} />}
 
       {(composing || editing) && (
         <MenuComposer

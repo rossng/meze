@@ -141,6 +141,24 @@ export function Modal({ title, children, onClose }: { title: string; children: C
   );
 }
 
+/** Shared "how many people?" stepper used by the shopping list and the cooking brief. */
+export function PeoplePicker({ people, setPeople }: { people: number; setPeople: (f: (p: number) => number) => void }) {
+  return (
+    <div class="people-row">
+      <span>How many people?</span>
+      <div class="stepper">
+        <button type="button" class="btn btn-small" onClick={() => setPeople((p) => Math.max(1, p - 1))} aria-label="Fewer people">
+          −
+        </button>
+        <b>{people}</b>
+        <button type="button" class="btn btn-small" onClick={() => setPeople((p) => Math.min(60, p + 1))} aria-label="More people">
+          +
+        </button>
+      </div>
+    </div>
+  );
+}
+
 /** Renders a QR matrix as one SVG path, so it stays crisp at any size. */
 export function QrCode({ text, label }: { text: string; label: string }) {
   const modules = useMemo(() => qrMatrix(text), [text]);

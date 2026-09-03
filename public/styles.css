@@ -397,6 +397,7 @@ svg.photo-tiny { width: 40px; height: 40px; }
 .shopping { max-height: 45vh; overflow: auto; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; padding: 0.6rem 0.9rem; background: white; }
 .shopping section + section { border-top: 1px dashed rgba(0, 0, 0, 0.15); margin-top: 0.5rem; padding-top: 0.5rem; }
 .shopping h3 { color: var(--wine); font-size: 1.1rem; margin: 0; }
+.brief { max-height: 40vh; overflow: auto; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px; padding: 0.6rem 0.9rem; background: white; white-space: pre-wrap; word-break: break-word; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8rem; line-height: 1.5; margin: 0; }
 .tip { margin-top: 0.8rem; background: #fff3cc; border-left: 4px solid var(--gold); padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.88rem; }
 
 .tab-tools-actions { display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; }

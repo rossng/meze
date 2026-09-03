@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'preact/hooks';
 import type { Menu, Meze } from '../shared/types';
 import { useToast } from './toast';
-import { Modal, ingredientLine, scaleIngredient } from './ui';
+import { Modal, PeoplePicker, ingredientLine, scaleIngredient } from './ui';
 
 /** Scaled, per-dish shopping list for a menu, with a copy button. */
 export function ShoppingList({ menu, mezeById, defaultPeople, onClose }: { menu: Menu; mezeById: Map<string, Meze>; defaultPeople: number; onClose: () => void }) {
@@ -30,18 +30,7 @@ export function ShoppingList({ menu, mezeById, defaultPeople, onClose }: { menu:
 
   return (
     <Modal title={`🛒 Shopping for "${menu.name}"`} onClose={onClose}>
-      <div class="people-row">
-        <span>How many people?</span>
-        <div class="stepper">
-          <button type="button" class="btn btn-small" onClick={() => setPeople((p) => Math.max(1, p - 1))} aria-label="Fewer people">
-            −
-          </button>
-          <b>{people}</b>
-          <button type="button" class="btn btn-small" onClick={() => setPeople((p) => Math.min(60, p + 1))} aria-label="More people">
-            +
-          </button>
-        </div>
-      </div>
+      <PeoplePicker people={people} setPeople={setPeople} />
       <p class="muted small">Amounts are scaled from each recipe's meze portion size and rounded, so treat them as a guide.</p>
       <div class="shopping">
         {dishes.map((m) => {
