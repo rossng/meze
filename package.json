@@ -14,6 +14,7 @@
     "db:reset:local": "rm -rf .wrangler/state && npm run db:migrate:local && npm run db:seed:local",
     "db:migrate:remote": "wrangler d1 migrations apply meze --remote",
     "db:seed:remote": "npm run seed:build && wrangler d1 execute meze --remote --file=.wrangler/seed-all.sql",
+    "db:backup:remote": "./scripts/backup-db.sh",
     "deploy": "npm run build:client && wrangler deploy",
     "typecheck": "tsc --noEmit",
     "test": "./scripts/smoke.sh",

@@ -3,4 +3,5 @@ node_modules
 .dev.vars
 public/app.js
 scratch
+backups
 !public/img
